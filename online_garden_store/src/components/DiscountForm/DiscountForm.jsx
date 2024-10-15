@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './DiscountForm.module.css'
+import { addDiscount } from '../../requests/discountForm_req';
 
 export default function DiscountForm() {
 
@@ -9,11 +10,13 @@ export default function DiscountForm() {
         const { name, number, email } = e.target;
 
         const getDiscount = {
-            id: Date.now(),
             name: name.value,
             number: number.value,
             email: email.value
         }
+
+        addDiscount(getDiscount)
+        console.log(getDiscount)
 
         e.target.reset();
 
@@ -26,7 +29,7 @@ export default function DiscountForm() {
     
         <div>
             <img src="discount.png" alt="discount" />
-            <form className={s.form}>
+            <form className={s.form} onSubmit={submit}>
                 <input type='text' placeholder='Name' name='name'/>
                 <input type='number' placeholder='Phone number' name='number'/>
                 <input type='email' placeholder='Email' name='email'/>
