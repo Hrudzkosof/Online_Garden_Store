@@ -1,0 +1,40 @@
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 56px; 
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700; 
+  color: #424436; 
+  letter-spacing: 2px; 
+  
+}
+
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #DDDDDD;
+  margin: 0 20px;
+}
+
+.rectangle {
+  border: 1px solid #DDDDDD;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: transparent; 
+}
+
+.rectangleText {
+  color: gray; 
+  text-decoration: none; 
+  font-size: 1rem;
+}
+
+.rectangleText:hover {
+  text-decoration: underline; 
+}
