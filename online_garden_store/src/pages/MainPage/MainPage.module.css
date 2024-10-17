@@ -1,0 +1,42 @@
+.main_page {
+    background-color: #FFFFF1;
+    padding: 20px;
+}
+
+.sales_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding-bottom: 10px;
+}
+
+.sale_text {
+    font-size: 40px; 
+    font-weight: bold; 
+    color: black;
+    padding-left: 22px;
+}
+
+.separator {
+    flex-grow: 1; 
+    height: 2px; 
+    background-color: lightgrey; 
+    margin-left: 15px; 
+    margin-right: 0;
+}
+
+.main_page a {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    font-size: 15px; 
+    color: lightgray;
+}
+
+.all_sales_link{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+   
+    
+}

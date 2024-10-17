@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import s from './index.module.css';
 
 
-const Header = () => {
+const CategorieName = () => {
   return (
     <div className={s.headerContainer}>
       <h1 className={s.title}>Categories</h1>
@@ -18,4 +18,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default CategorieName;

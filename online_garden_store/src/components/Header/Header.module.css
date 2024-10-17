@@ -1,0 +1,22 @@
+.header{
+    display: flex; /* Используем Flexbox для размещения элементов */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: center; /* Центрируем элементы по вертикали */
+    padding: 25px 0; /* Отступы для заголовка */
+    background-color: #FFFFF1;
+    position: relative;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-left: 25px; /* Отступ слева */
+}
+
+.basket {
+    width: 45px; 
+    height: 45px; 
+    object-fit: contain;
+    margin-right: 30px; /* Отступ справа */
+}
