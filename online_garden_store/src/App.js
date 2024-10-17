@@ -22,7 +22,7 @@ function App() {
 
     <Routes>
       <Route path='/' element={<MainPage/>}/>
-      <Route path="/categories/all" element={<AllCategoriesPage />} />
+      <Route path="/categories" element={<AllCategoriesPage />} />
       <Route path='/all_products' element={<AllProductsPage/>} />
       <Route path='/all_sales' element={<AllSalesPage/>} />
       <Route path='/cart' element={<CartPage/>} />
