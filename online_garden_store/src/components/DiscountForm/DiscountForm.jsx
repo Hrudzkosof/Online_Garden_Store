@@ -3,7 +3,6 @@ import s from './DiscountForm.module.css'
 import { addDiscount } from '../../requests/discountForm_req';
 
 export default function DiscountForm() {
-
     const submit = e => {
         e.preventDefault();
     
@@ -19,7 +18,6 @@ export default function DiscountForm() {
         console.log(getDiscount)
 
         e.target.reset();
-
     }
 
   return (
