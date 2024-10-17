@@ -1,0 +1,9 @@
+.sales_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 20px auto;
+    background-color: #FFFFF1;
+    max-width: 100%;
+    padding: 10px;
+}
