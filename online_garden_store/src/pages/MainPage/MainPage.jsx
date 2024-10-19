@@ -8,7 +8,6 @@ import Categories from '../../components/Categories';
 
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
 
-import DiscountForm from '../../components/DiscountForm/DiscountForm'
 
 
 export default function MainPage() {
