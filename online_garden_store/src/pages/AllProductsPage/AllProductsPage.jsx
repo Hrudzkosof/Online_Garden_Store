@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import AllProductsContainer from '../../components/AllProductsContainer/AllProductsContainer';
 import { showAllProducts } from '../../requests/products';
+import FilterForm from '../../components/FilterForm/FilterForm';
 
 export default function AllProductsPage() {
 
@@ -20,6 +21,7 @@ export default function AllProductsPage() {
   return (
     <div>
       <h1>All Products</h1>
+      <FilterForm/>
       <AllProductsContainer allProducts = {allProductsState }/>
     </div>
   )
