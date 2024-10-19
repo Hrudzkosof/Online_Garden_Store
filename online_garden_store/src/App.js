@@ -32,14 +32,6 @@ function App() {
 
     </Routes>
     
-    {/* // <>
-    //   <Routes>
-    //     <Route path="/" element={<Categories />} />
-    //     <Route path="/categories/all" element={<AllCategoriesPage />} />
-    //    
-    //   </Routes>
-    //   </>
-    */}
 
     </div>
   );
