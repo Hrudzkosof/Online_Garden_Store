@@ -7,14 +7,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    padding-bottom: 10px;
 }
 
 .sale_text {
-    font-size: 40px; 
+    font-size: 50px; 
     font-weight: bold; 
-    color: black;
+    color: #424436;
     padding-left: 22px;
+    font-family: montserrat;
 }
 
 .separator {
