@@ -1,11 +1,11 @@
 import React from 'react'
 import AllProductCard from '../AllProductCard/AllProductCard'
+import s from './AllProductsContainer.module.css'
 
 export default function AllProductsContainer({allProducts}) {
-    console.log("All Products in Container:", allProducts);
    
   return (
-    <div>
+    <div className={s.products_container}>
         {
             allProducts.map( el => <AllProductCard key={el.id} {...el}/>)
         }
