@@ -5,7 +5,11 @@ import { getAllProducts } from '../../requests/salesProducts';
 import s from './MainPage.module.css'
 import { Link } from 'react-router-dom';
 import Categories from '../../components/Categories';
+
+import DiscountForm from '../../components/DiscountForm/DiscountForm';
+
 import DiscountForm from '../../components/DiscountForm/DiscountForm'
+
 
 export default function MainPage() {
 
@@ -22,7 +26,10 @@ const saleProducts = useSelector(state => state.salesProducts.discountedProducts
       
       <Categories/>
       <DiscountForm/>
+
+
       
+
       <div className={s.sales_block}>
       <span className={s.sale_text}> Sale </span>
       <div className={s.separator}></div>
