@@ -2,7 +2,7 @@ import React from 'react';
 import CardsList from '../Cards';
 import s from './index.module.css';
 import CategorieName from '../CategorieName';
-import FilterForm from '../FilterForm/FilterForm';
+
 
 const Categories = () => {
   return (

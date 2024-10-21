@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import s from './index.module.css';
-import FilterForm from '../FilterForm/FilterForm';
+
 
 
 const CategoriesName = () => {
@@ -13,10 +13,6 @@ const CategoriesName = () => {
 
        
         <Link to="/categories" className={s.rectangleText}>
-
-
-       
-
           All Categories
         </Link>
       </div>
