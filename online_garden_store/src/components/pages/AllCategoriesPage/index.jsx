@@ -21,11 +21,8 @@ const AllCategoriesPage = () => {
 
   return (
     <div className={s.container}>
-      <h1 className={s.title}>All Categories</h1>
-      
-      <Link to="/categories" className={s.allProductsButton}>
-        All Products
-      </Link>
+      <h1 className={s.title}>Categories</h1>
+    
 
       <div className={s.categoriesList}>
         {categories.length > 0 ? (

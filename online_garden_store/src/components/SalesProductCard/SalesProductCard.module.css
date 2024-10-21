@@ -1,7 +1,7 @@
 .sales_card{
     width: 100%; 
     max-width: 300px; 
-    margin: 10px; 
+    margin: 10px ; 
     overflow: hidden; 
     border: 1px solid lightgrey;
     border-radius: 8px;
@@ -12,6 +12,8 @@
     position: relative; 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     z-index: 1; 
+    margin: 0 18px;
+  
 }
 .sales_card img {
     width: 100%; 

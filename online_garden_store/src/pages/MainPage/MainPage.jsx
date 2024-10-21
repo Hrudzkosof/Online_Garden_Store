@@ -26,9 +26,6 @@ const saleProducts = useSelector(state => state.salesProducts.discountedProducts
       <Categories/>
       <DiscountForm/>
 
-
-      
-
       <div className={s.sales_block}>
       <span className={s.sale_text}> Sale </span>
       <div className={s.separator}></div>

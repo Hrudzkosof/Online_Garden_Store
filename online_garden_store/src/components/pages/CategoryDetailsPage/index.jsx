@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCategoryDetails } from '../../../requests/categories_req';
-
-
-
 import s from './index.module.css'
 import FilterForm from '../../FilterForm/FilterForm';
 
@@ -20,7 +17,9 @@ const CategoryDetailsPage = () => {
   
   const toggleDescription = (productId) => {
     setExpandedProduct((prevId) => (prevId === productId ? null : productId)); 
+    
   };
+
 
   return (
     <div className={s.container}>
@@ -30,11 +29,7 @@ const CategoryDetailsPage = () => {
             
             <h1 className={s.title}>{categoryData.category.title}</h1>
             
-            <img 
-              className={s.categoryImage} 
-              src={`http://localhost:3333${categoryData.category.image}`} 
-              alt={categoryData.category.title} 
-            />
+        
           </div>
           <FilterForm/>
           <div className={s.productList}>

@@ -12,19 +12,22 @@
   font-weight: 700; 
   color: #424436; 
   letter-spacing: 2px; 
+  padding: 10px;
+  margin-left: -23px;
   
 }
 
 .line {
-  flex-grow: 1;
-  height: 2px;
-  background-color: #DDDDDD;
-  margin: 0 20px;
+  flex-grow: 1; 
+  height: 2px; 
+  background-color: lightgrey; 
+  margin-left: 15px; 
+  margin-right: 0;
 }
 
 .rectangle {
   border: 1px solid #DDDDDD;
-  padding: 10px 20px;
+  padding: 5px;
   border-radius: 5px;
   background-color: transparent; 
 }
@@ -33,6 +36,8 @@
   color: gray; 
   text-decoration: none; 
   font-size: 1rem;
+  padding: 5px;
+
 }
 
 .rectangleText:hover {

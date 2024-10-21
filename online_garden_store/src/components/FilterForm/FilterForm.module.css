@@ -1,8 +1,9 @@
 .filter_form {
   display: flex;
-  margin: 30px;
+  margin: 25px;
   padding: 10px;
   gap: 20px;
+  background-color: #FFFFF1;
 }
 
 .label {
