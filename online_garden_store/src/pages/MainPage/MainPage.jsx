@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Categories from '../../components/Categories';
 
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
+import Footer from '../../components/Footer/Footer';
 
 
 
@@ -34,6 +35,7 @@ const saleProducts = useSelector(state => state.salesProducts.discountedProducts
      
 
       <SalesProductsContainer saleProducts={saleProducts}/>
+      <Footer/>
     </div>
   )
 }
