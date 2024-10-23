@@ -3,7 +3,6 @@ import { getAllCategories } from '../../../requests/categories_req';
 import { Link } from 'react-router-dom'; 
 import s from './index.module.css';
 
-
 const AllCategoriesPage = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,7 +21,9 @@ const AllCategoriesPage = () => {
 
   return (
     <div className={s.container}>
-      <h1 className={s.title}>All Categories</h1>
+      <h1 className={s.title}>Categories</h1>
+    
+
       <div className={s.categoriesList}>
         {categories.length > 0 ? (
           categories.map((category) => (

@@ -3,6 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import AllProductsContainer from '../../components/AllProductsContainer/AllProductsContainer';
 import { showAllProducts } from '../../requests/products';
 
+import FilterForm from '../../components/FilterForm/FilterForm';
+
+  
+import s from './AllProductsPage.module.css'
+
+
 export default function AllProductsPage() {
 
 
@@ -18,8 +24,9 @@ export default function AllProductsPage() {
 
 
   return (
-    <div>
+    <div className={s.title} >
       <h1>All Products</h1>
+      <FilterForm/>
       <AllProductsContainer allProducts = {allProductsState }/>
     </div>
   )

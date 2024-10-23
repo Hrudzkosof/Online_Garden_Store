@@ -2,12 +2,11 @@
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-between; 
-  padding: 20px; 
+  padding: 10px; 
 }
 
 .card {
   width: calc(25% - 20px); 
-  margin: 10px; 
   text-align: center;
   text-decoration: none; 
 }
