@@ -23,7 +23,7 @@ useEffect(() => {
 const saleProducts = useSelector(state => state.salesProducts.discountedProducts);
   return (
     <div className={s.main_page}>
-      
+     
       <Categories/>
       <DiscountForm/>
 
@@ -35,7 +35,8 @@ const saleProducts = useSelector(state => state.salesProducts.discountedProducts
      
 
       <SalesProductsContainer saleProducts={saleProducts}/>
-      <Footer/>
+     
+      
     </div>
   )
 }

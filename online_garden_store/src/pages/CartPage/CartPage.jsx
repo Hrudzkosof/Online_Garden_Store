@@ -1,9 +1,13 @@
 import React from 'react'
+
+
+
 import CartContainer from '../../components/CartContainer/CartContainer'
 import { useSelector } from 'react-redux'
 import s from './CartPage.module.css'
 import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
+
 
 export default function CartPage() {
 

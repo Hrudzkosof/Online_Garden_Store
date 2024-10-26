@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getAllCategories } from '../../../requests/categories_req'; 
 import { Link } from 'react-router-dom'; 
 import s from './index.module.css';
+import Footer from '../../Footer/Footer';
 
 const AllCategoriesPage = () => {
   const [categories, setCategories] = useState([]);
@@ -42,6 +43,8 @@ const AllCategoriesPage = () => {
           <p>No categories available.</p>
         )}
       </div>
+
+      <Footer/>
     </div>
   );
 };
