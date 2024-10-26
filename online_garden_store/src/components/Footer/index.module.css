@@ -1,7 +1,11 @@
 .footer {
-    width: 1324.8px; 
-    height: 697.36px; 
-    background-color: #fcfdef;
+
+  
+
+ width: 1440px;
+    height: 948px;
+    /* background-color: #fcfdef; */
+
     margin: 0 auto;
 }
 
@@ -13,10 +17,14 @@
     padding: 36.8px; 
 }
 
-.footerContact {
-    height: 588.8px; 
-    width: 1256.32px; 
-    background-color: #fcfdef;
+
+    
+ 
+
+    height: 800px;
+    width: 1360px;
+    /* background-color: #fcfdef; */
+
     margin: 0 auto;
 }
 
@@ -24,7 +32,9 @@
     width: 728.8px; 
     height: 138px; 
     background-color: #F2F6D3;
-    padding: 23px; 
+
+
+    padding: 25px;
     border: none;
     border-radius: 10px;
 }
