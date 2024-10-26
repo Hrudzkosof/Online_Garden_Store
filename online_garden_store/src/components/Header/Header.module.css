@@ -5,6 +5,7 @@
     padding: 25px 0; /* Отступы для заголовка */
     background-color: #FFFFF1;
     position: relative;
+    border-bottom: 1px solid #DDDDDD
 }
 
 .logo {

@@ -1,38 +1,49 @@
 .footer {
-    width: 1440px;
-    height: 948px;
-    background-color: #fcfdef;
-    margin: 0 auto;
 
+  
+
+ width: 1440px;
+    height: 948px;
+    /* background-color: #fcfdef; */
+
+    margin: 0 auto;
 }
+
 .footerH {
     font-family: Montserrat;
-    font-size: 64px;
+    font-size: 50px; 
     font-weight: 700;
     color: #424436;
-    padding: 40px;
+    padding: 36.8px; 
 }
 
-.footerContact {
+
+    
+ 
+
     height: 800px;
     width: 1360px;
-    background-color: #fcfdef;
-    margin: 0 auto;
+    /* background-color: #fcfdef; */
 
+    margin: 0 auto;
 }
+
 .cards1 {
-    width: 790px;
-    height: 150px;
+    width: 728.8px; 
+    height: 138px; 
     background-color: #F2F6D3;
-   padding: 25px;
+
+
+    padding: 25px;
     border: none;
     border-radius: 10px;
 }
+
 .cards2 {
-    width: 500px;
-    height: 150px;
+    width: 460px; 
+    height: 138px; 
     background-color: #F2F6D3;
-    padding: 25px;
+    padding: 23px;
     border: none;
     border-radius: 10px;
 }
@@ -41,30 +52,33 @@
     display: flex;
     justify-content: space-between;
 }
+
 .cardsMain2 {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 27.6px; 
 }
 
 .contactP {
     font-family: Montserrat;
-    font-size: 20px;
+    font-size: 18.4px; 
     font-weight: 500;
     color: #8B8B8B;
 }
+
 .contactA {
     text-decoration: none;
     font-family: Montserrat;
-    font-size: 35px;
+    font-size: 32.2px; 
     color: rgb(57, 56, 56);
 }
 
 .map {
-    margin-top: 60px;
+    margin-top: 55.2px; 
 }
+
 .contactInstaWhats {
-    font-size: 38px;
+    font-size: 34.96px; 
     color: #424436;
-    margin-right: 20px;
+    margin-right: 18.4px; 
 }

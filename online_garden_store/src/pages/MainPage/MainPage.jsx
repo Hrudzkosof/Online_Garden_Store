@@ -24,6 +24,7 @@ useEffect(() => {
 const saleProducts = useSelector(state => state.salesProducts.discountedProducts);
   return (
     <div className={s.main_page}>
+
       <AmazingDiscount/>
       
       <Categories/>
@@ -37,7 +38,8 @@ const saleProducts = useSelector(state => state.salesProducts.discountedProducts
      
 
       <SalesProductsContainer saleProducts={saleProducts}/>
-      <Footer/>
+     
+      
     </div>
   )
 }
