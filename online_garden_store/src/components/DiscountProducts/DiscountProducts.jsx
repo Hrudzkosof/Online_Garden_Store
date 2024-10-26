@@ -3,8 +3,6 @@ import DiscountProductsCard from '../DiscountProductsCard/DiscountProductsCard'
 import s from './index.module.css'
 export default function DiscountProducts() {
     const [products, setProducts] = useState([])
-  
-
 
     useEffect(() => {
         fetch('http://localhost:3333/products/all')
@@ -20,7 +18,8 @@ export default function DiscountProducts() {
   return (
     <div>
       <h1>Discounted items</h1>
-        <div className={s.discountProductsContainer}>
+     
+      <div className={s.discountProductsContainer}>
         {discountProducts.map((product) => (
           <div key={product.id} >
             <DiscountProductsCard
@@ -32,6 +31,8 @@ export default function DiscountProducts() {
           </div>
         ))}
       </div>
+    
+        
     </div>
   )
 }
