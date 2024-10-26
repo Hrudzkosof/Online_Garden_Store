@@ -1,0 +1,14 @@
+.discountProductsContainer {
+    height: 1400px;
+    background-color: #fcfdef;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+h1 {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: left;
+    color: #424436;
+}

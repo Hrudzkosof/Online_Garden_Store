@@ -1,13 +1,13 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
 import React from 'react';
-import AllCategoriesPage from './components/pages/AllCategoriesPage';
-import CategoryDetailsPage from './components/pages/CategoryDetailsPage'; 
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
 import Header from './components/Header/Header';
-import MainPage from './pages/MainPage/MainPage';
+import AllCategoriesPage from './components/pages/AllCategoriesPage';
+import CategoryDetailsPage from './components/pages/CategoryDetailsPage';
 import AllProductsPage from './pages/AllProductsPage/AllProductsPage';
 import AllSalesPage from './pages/AllSalesPage/AllSalesPage';
 import CartPage from './pages/CartPage/CartPage';
+import MainPage from './pages/MainPage/MainPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import SingleProductPage from './pages/SingleProductPage/SingleProductPage';
 
@@ -19,7 +19,6 @@ function App() {
 
 <div>
     <Header/>
-    
 
     <Routes>
       <Route path='/' element={<MainPage/>}/>
@@ -40,3 +39,6 @@ function App() {
 };
 
 export default App;
+/**
+ 
+ */

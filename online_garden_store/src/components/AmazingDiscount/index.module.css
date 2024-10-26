@@ -1,0 +1,44 @@
+.amazingDiscountImg {
+    width: 1440px;
+    height: 600px;
+    top: 128px;
+    background-repeat: no-repeat;
+    background-image: url(./imgDiscount.png);
+    margin: 0 auto;
+}
+.amazingDiscountH {
+    font-family: Montserrat;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 105.6px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.amazingDiscountButton {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 7px;
+    background-color: #92A134;
+    border: none;
+    height: 58px;
+    width: 218px;
+    margin-top: 25px;
+}
+h1 {
+    width: 1200px;
+}
+.discountText {
+    width: 1360px;
+    height: 400px;
+    margin: 0 auto;
+    top: 40px;
+}
+.leer {
+    width: 1360px;
+    height: 74px;
+    margin: 0 auto;
+}
