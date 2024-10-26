@@ -41,8 +41,9 @@
 
 .prices span:first-child{
     font-size: 30px; 
-    font-weight: bolder;
+    font-weight: 550;
     color: rgb(66, 65, 65); 
+    font-family: montserrat;
     
 }
 .prices span:last-child{
