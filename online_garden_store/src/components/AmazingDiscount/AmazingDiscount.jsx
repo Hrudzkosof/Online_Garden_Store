@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import DiscountProducts from '../DiscountProducts/DiscountProducts'
 import s from './index.module.css'
+
+
 export default function AmazingDiscount() {
   const [showDiscountProducts, setShowDiscountProducts] = useState(false)
 

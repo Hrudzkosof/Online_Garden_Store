@@ -1,7 +1,4 @@
 import React from 'react'
-
-
-
 import CartContainer from '../../components/CartContainer/CartContainer'
 import { useSelector } from 'react-redux'
 import s from './CartPage.module.css'
@@ -12,6 +9,10 @@ import Footer from '../../components/Footer/Footer'
 export default function CartPage() {
 
   const cartState = useSelector(store => store.cart)
+  console.log(cartState)
+
+  const totalCount = cartState.reduce((acc, el) => acc + el.count, 0);
+  const totalSum = cartState.reduce((acc, el) => acc + (el.price * el.count), 0).toFixed(2)
 
   return (
     <div>
@@ -28,6 +29,10 @@ export default function CartPage() {
           ? <p>Looks like you have no items in your basket currently.</p>
           : <div>
             <CartContainer cartState={cartState}/>
+
+            <h3>Order details</h3>
+            <p>{totalCount} items</p>
+            <p>Total ${totalSum}</p>
           </div>
         }
         <Link to='/categories'>

@@ -1,11 +1,6 @@
 .footer {
-
-  
-
- width: 1440px;
+    width: 1440px;
     height: 948px;
-    /* background-color: #fcfdef; */
-
     margin: 0 auto;
 }
 
@@ -19,12 +14,9 @@
 
 
     
- 
-
+.footer {
     height: 800px;
     width: 1360px;
-    /* background-color: #fcfdef; */
-
     margin: 0 auto;
 }
 
@@ -32,8 +24,6 @@
     width: 728.8px; 
     height: 138px; 
     background-color: #F2F6D3;
-
-
     padding: 25px;
     border: none;
     border-radius: 10px;
