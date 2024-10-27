@@ -19,6 +19,7 @@ export default function CartPage() {
         
           <div>
             <h2>Shopping cart</h2>
+            <h3>Test title</h3>
             <div className={s.separator}></div>
             <Link to='/categories' className={s.back_to_categories}>Back to the store</Link>
           </div>
