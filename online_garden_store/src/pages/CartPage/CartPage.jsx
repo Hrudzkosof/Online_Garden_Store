@@ -34,6 +34,7 @@ export default function CartPage() {
         <Link to='/categories'>
           <button>Continue Shopping</button>
         </Link>
+        <div>test Link</div>
         
         </div>
         <Footer/>
