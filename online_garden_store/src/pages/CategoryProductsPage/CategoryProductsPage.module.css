@@ -1,0 +1,24 @@
+.categoryHeader {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.categoryImage {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.categoryImage:hover {
+    
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.productsContainer {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Categories from '../../components/Categories';
 import SalesProductsContainer from '../../components/SalesProductsContainer/SalesProductsContainer';
 import { getAllProducts } from '../../requests/salesProducts';
 import s from './MainPage.module.css';
+import CategoriesPage from '../CategoriesPage/CategoriesPage';
 
 import AmazingDiscount from '../../components/AmazingDiscount/AmazingDiscount';
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
@@ -27,7 +27,7 @@ const saleProducts = useSelector(state => state.salesProducts.discountedProducts
 
       <AmazingDiscount/>
       
-      <Categories/>
+      <CategoriesPage />
       <DiscountForm/>
 
       <div className={s.sales_block}>
