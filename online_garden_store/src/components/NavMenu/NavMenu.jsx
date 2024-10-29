@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import s from './NavMenu.module.css'
 
 export default function NavMenu() {
+ 
   return (
     <nav className={s.nav_menu}>
         <Link to='/'> Main Page </Link>
