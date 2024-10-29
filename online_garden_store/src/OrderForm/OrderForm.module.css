@@ -1,0 +1,60 @@
+.order_form {
+    padding: 32px 32px 0px 32px;
+    border-radius: 12px;
+    background: #F2F6D3;
+    margin: 28px;
+  }
+  
+  .order_form p {
+    font-family: Montserrat;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 70.4px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  .order_form img {
+    width: 60%;
+  }
+  
+  .order_form > div {
+    display: flex;
+    background: #92A134;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+  }
+  
+  .form > input {
+    border: 1px solid #fffff1;
+    color: #fffff1;
+    border-radius: 6px;
+    padding: 16px 32px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    background-color: transparent;
+  }
+  
+  ::placeholder {
+    color: #fffff1;
+  }
+  
+  button {
+    border-radius: 6px;
+    padding: 16px 32px;
+    color: #424436;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    background-color: #fffff1;
+    margin-bottom: 10px;
+  }

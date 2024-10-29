@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import AllProductCard from '../../components/AllProductCard/AllProductCard';
 import { useDispatch } from 'react-redux';
-import { addProductToCartAction } from '../../store/cartReducer'; 
-import { getCategoryProducts } from '../../requests/categoryProducts_req';
+import { addProductToCartAction } from '../../store/cartReducer'
+import { getCategoryProducts } from '../../requests/categoryProducts_req'
 import s from './CategoryProductsPage.module.css'; 
 
 export default function CategoryProductsPage() {
