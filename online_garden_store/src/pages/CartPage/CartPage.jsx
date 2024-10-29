@@ -16,30 +16,40 @@ export default function CartPage() {
 
   return (
     <div>
-        <div className={s.cart_page}>
+             <div className={s.cart_page}>
         
-          <div>
-            <h2>Shopping cart</h2>
-            <div className={s.separator}></div>
-            <Link to='/categories' className={s.back_to_categories}>Back to the store</Link>
-          </div>
-
-        {
-          cartState.length === 0
-          ? <p>Looks like you have no items in your basket currently.</p>
-          : <div>
-            <CartContainer cartState={cartState}/>
-
-            <h3>Order details</h3>
-            <p>{totalCount} items</p>
-            <p>Total ${totalSum}</p>
-          </div>
-        }
-        <Link to='/categories'>
-          <button>Continue Shopping</button>
-        </Link>
-        
+        <div>
+          <h2>Shopping cart</h2>
+          <div className={s.separator}></div>
+          <Link to='/categories' className={s.back_to_categories}>Back to the store</Link>
         </div>
+
+      {
+        cartState.length === 0
+        ? <p>Looks like you have no items in your basket currently.</p>
+        : <div>
+          <CartContainer cartState={cartState}/>
+            <div className={s.order_details}>
+              <h3>Order details</h3>
+              <p>{totalCount} items</p>
+              <div>
+                <p>Total</p>
+                <p>${totalSum}</p>
+              </div>
+              <form></form>
+            </div>
+        </div>
+      }
+      
+      {
+        cartState.length === 0 && (
+          <Link to='/categories'>
+            <button>Continue Shopping</button>
+          </Link>
+        )
+      }
+      
+      </div>
         <Footer/>
       </div>
   )
