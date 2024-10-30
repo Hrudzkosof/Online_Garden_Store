@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import AllProductCard from '../../components/AllProductCard/AllProductCard';
 import { useDispatch } from 'react-redux';
-import { addProductToCartAction } from '../../store/cartReducer'
-import { getCategoryProducts } from '../../requests/categoryProducts_req'
-import s from './CategoryProductsPage.module.css'; 
+import { addProductToCartAction } from '../../store/cartReducer';
+import { getCategoryProducts } from '../../requests/categoryProducts_req';
+import s from './CategoryProductsPage.module.css';
 
 export default function CategoryProductsPage() {
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState(null);
+  const [clickedButtonIds, setClickedButtonIds] = useState([]); // отслеживание кликов по кнопкам
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function CategoryProductsPage() {
 
   const handleAddToCart = (product) => {
     dispatch(addProductToCartAction(product));
+    setClickedButtonIds((prevIds) => [...prevIds, product.id]); // добавляем ID продукта в массив
   };
 
   return (
@@ -47,7 +49,7 @@ export default function CategoryProductsPage() {
                 title: product.title,
                 price: product.price,
               })}
-              className={s.addToCartButton}
+              className={`${s.addToCartButton} ${clickedButtonIds.includes(product.id) ? s.clicked : ''}`}
             >
               Add to cart
             </button>

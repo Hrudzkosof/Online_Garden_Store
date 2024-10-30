@@ -21,7 +21,6 @@
 .line {
     flex-grow: 1; 
     height: 2px; 
-    background-color: lightgrey; 
     margin-left: 15px; 
     margin-right: 0;
 }
@@ -34,7 +33,7 @@
 }
 
 .rectangleText {
-    border: 1px solid lightgray;
+   
     border-radius: 5px;
     padding: 5px;
     margin-right: 28px;

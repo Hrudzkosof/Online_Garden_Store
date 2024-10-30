@@ -16,16 +16,29 @@
 }
 
 .addToCartButton {
-    background-color: #F26D22;
-    color: white;
-    border: none;
+    background-color: transparent;
+    color: transparent;
+    border: 2px solid transparent;
     border-radius: 5px;
-    padding: 10px;
+    padding: 16px 32px; 
     font-weight: bold;
     cursor: pointer;
-    width: 100%;
+    width: 284px; 
+    height: 58px; 
     position: absolute; 
-    bottom: 10px; 
-    left: 0; 
-    margin: 0; 
+    top: 200px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 10;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.productWrapper:hover .addToCartButton {
+    background-color: #F26D22;
+    color: white;
+}
+
+.clicked {
+    background-color: #424436;
+    color: white;
 }

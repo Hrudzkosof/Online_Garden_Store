@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import s from './CartPage.module.css'
 import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
+import OrderForm from '../../OrderForm/OrderForm'
 
 
 export default function CartPage() {
@@ -24,7 +25,10 @@ export default function CartPage() {
         cartState.length === 0
         ? <p>Looks like you have no items in your basket currently.</p>
         : <div>
+          <div className={s.cartContainer}>
           <CartContainer cartState={cartState}/>
+          </div>
+          <OrderForm />
         </div>
       }
       
