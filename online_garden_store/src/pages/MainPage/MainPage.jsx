@@ -7,6 +7,7 @@ import s from './MainPage.module.css';
 import AmazingDiscount from '../../components/AmazingDiscount/AmazingDiscount';
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
 import CategoriesContainer from '../../components/CategoryContainer/CategoriesContainer'; 
+import Footer from '../../components/Footer/Footer';
 
 export default function MainPage() {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ export default function MainPage() {
       </div>
 
       <SalesProductsContainer saleProducts={saleProducts} />
+      <Footer />
     </div>
   );
 }
