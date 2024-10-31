@@ -37,12 +37,7 @@ export default function CartPage() {
                 <p>Total</p>
                 <p>${totalSum}</p>
               </div>
-              <form>
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-                <button></button>
-              </form>
+              <OrderForm />
             </div>
         </div>
       }
