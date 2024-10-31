@@ -14,18 +14,20 @@ export default function Header() {
 
   return (
     <div className={s.header}>
-         <Link to='/'>
-            <img src={logo} alt="LOGO" className={s.logo} />
-        </Link>
-        <NavMenu />
-        <Link to='/cart'>
-            <img src={basket} alt="Basket" className={s.basket} />
-          {
-            cartState.length === 0
-            ? ''
-            : <span>{ totalCount }</span>
-          }
-        </Link>
+      <div className='wrapper'>
+          <Link to='/'>
+              <img src={logo} alt="LOGO" className={s.logo} />
+          </Link>
+          <NavMenu />
+          <Link to='/cart'>
+              <img src={basket} alt="Basket" className={s.basket} />
+            {
+              cartState.length === 0
+              ? ''
+              : <span>{ totalCount }</span>
+            }
+          </Link>
+        </div>
     </div>
   )
 }

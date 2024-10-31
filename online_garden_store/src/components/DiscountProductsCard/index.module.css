@@ -17,10 +17,11 @@
     position: relative;
 }
 .discountProductImg {
-    width: 316px;
+    max-width: 300px;
     height: 284px;
     margin-bottom: 10px;
     background-repeat: no-repeat;
+    object-fit: contain;
 }
 .discountProductTitle {
     font-size: 16px;

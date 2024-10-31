@@ -39,6 +39,7 @@ const saleProducts = useSelector(state => state.salesProducts.discountedProducts
 
       <SalesProductsContainer saleProducts={saleProducts}/>
      
+     <Footer/>
       
     </div>
   )

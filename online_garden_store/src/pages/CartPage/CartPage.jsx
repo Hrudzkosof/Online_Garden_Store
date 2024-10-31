@@ -16,9 +16,9 @@ export default function CartPage() {
 
   return (
     <div>
-             <div className={s.cart_page}>
+      <div className={s.cart_page}>
         
-        <div>
+        <div className={s.cart_page_navigation}>
           <h2>Shopping cart</h2>
           <div className={s.separator}></div>
           <Link to='/categories' className={s.back_to_categories}>Back to the store</Link>
@@ -27,16 +27,21 @@ export default function CartPage() {
       {
         cartState.length === 0
         ? <p>Looks like you have no items in your basket currently.</p>
-        : <div>
+        : <div className={s.cart_page_products}>
           <CartContainer cartState={cartState}/>
-            <div className={s.order_details}>
+          <div className={s.order_details}>
               <h3>Order details</h3>
               <p>{totalCount} items</p>
               <div>
                 <p>Total</p>
                 <p>${totalSum}</p>
               </div>
-              <form></form>
+              <form>
+                <input type="text" />
+                <input type="text" />
+                <input type="text" />
+                <button></button>
+              </form>
             </div>
         </div>
       }

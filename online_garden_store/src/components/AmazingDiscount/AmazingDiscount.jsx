@@ -10,7 +10,7 @@ export default function AmazingDiscount() {
     setShowDiscountProducts(true) 
   }
   return (
-    <div>
+    <div className={s.banner}>
       {!showDiscountProducts ? (
         <div className={s.amazingDiscountImg}>
           <div className={s.leer}></div>

@@ -5,6 +5,10 @@
 }
 body {
   background-color: #FFFFF1;
-  width: 1440px;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
