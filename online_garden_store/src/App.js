@@ -23,21 +23,20 @@ function App() {
 
 <div>
     <Header/>
+      <main className='wrapper'>
+        <Routes>
+          <Route path='/' element={<MainPage/>}/>
+          <Route path='/categories' element={<CategoriesPage />} />
+          <Route path='/all_products' element={<AllProductsPage/>} />
+          <Route path='/all_sales' element={<AllSalesPage/>} />
+          <Route path='/cart' element={<CartPage/>} />
+          <Route path='*' element={<NotFoundPage/>} />
+          \<Route path='/categories/:id' element={<CategoryProductsPage />} />
+          <Route path='products/:product_id' element={<SingleProductPage />}/>
+        </Routes>
+      </main>
 
-    <Routes>
-      <Route path='/' element={<MainPage/>}/>
-      <Route path='/all_products' element={<AllProductsPage/>} />
-      <Route path='/all_sales' element={<AllSalesPage/>} />
-      <Route path='/cart' element={<CartPage/>} />
-      <Route path='*' element={<NotFoundPage/>} />
-      <Route path='products/:product_id' element={<SingleProductPage />}/>
-      <Route path='/categories' element={<CategoriesPage />} />
-        <Route path='/categories/:id' element={<CategoryProductsPage />} />
-        
-      
-
-
-    </Routes>
+    
     
 
     </div>

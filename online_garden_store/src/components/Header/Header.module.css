@@ -1,11 +1,16 @@
-.header{
+.header {
+    /* height: 128px; */
+    
+}
+
+.header > div {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 25px 0; 
     background-color: #FFFFF1;
     position: relative;
-    border-bottom: 1px solid #DDDDDD
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .logo {
@@ -28,11 +33,11 @@
     position: relative;
 }
 
-.header > a span {
+.header span {
     background-color: #92A134;
     position: absolute;
-    top: 6px;
-    right: 50px;
+    top: 38px;
+    right: 55px;
     font-size: 14px;
     border-radius: 50%; 
     width: 24px;      

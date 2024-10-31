@@ -1,11 +1,25 @@
-.amazingDiscountImg {
+/* .amazingDiscountImg {
     width: 1440px;
     height: 600px;
     top: 128px;
     background-repeat: no-repeat;
     background-image: url(./imgDiscount.png);
     margin: 0 auto;
+} */
+
+.amazingDiscountImg {
+    width: 100vw; 
+    height: 600px; 
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    background-image: url(./imgDiscount.png);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
+
 .amazingDiscountH {
     font-family: Montserrat;
     font-size: 80px;

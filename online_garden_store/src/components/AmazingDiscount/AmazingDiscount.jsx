@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import DiscountProducts from '../DiscountProducts/DiscountProducts'
 import s from './index.module.css'
+
+
 export default function AmazingDiscount() {
   const [showDiscountProducts, setShowDiscountProducts] = useState(false)
 
@@ -8,7 +10,7 @@ export default function AmazingDiscount() {
     setShowDiscountProducts(true) 
   }
   return (
-    <div>
+    <div className={s.banner}>
       {!showDiscountProducts ? (
         <div className={s.amazingDiscountImg}>
           <div className={s.leer}></div>
