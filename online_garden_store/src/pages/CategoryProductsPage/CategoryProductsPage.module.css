@@ -1,0 +1,44 @@
+.categoryHeader {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.productsContainer {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.productWrapper {
+    position: relative;
+    margin: 15px;
+}
+
+.addToCartButton {
+    background-color: transparent;
+    color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 16px 32px; 
+    font-weight: bold;
+    cursor: pointer;
+    width: 284px; 
+    height: 58px; 
+    position: absolute; 
+    top: 200px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 10;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.productWrapper:hover .addToCartButton {
+    background-color: #F26D22;
+    color: white;
+}
+
+.clicked {
+    background-color: #424436;
+    color: white;
+}

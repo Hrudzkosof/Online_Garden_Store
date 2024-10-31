@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import s from './CartPage.module.css'
 import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
+import OrderForm from '../../OrderForm/OrderForm'
 
 
 export default function CartPage() {
