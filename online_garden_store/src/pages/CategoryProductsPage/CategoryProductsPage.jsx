@@ -10,7 +10,7 @@ export default function CategoryProductsPage() {
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState(null);
-  const [clickedButtonIds, setClickedButtonIds] = useState([]); // отслеживание кликов по кнопкам
+  const [clickedButtonIds, setClickedButtonIds] = useState([]); 
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function CategoryProductsPage() {
 
   const handleAddToCart = (product) => {
     dispatch(addProductToCartAction(product));
-    setClickedButtonIds((prevIds) => [...prevIds, product.id]); // добавляем ID продукта в массив
+    setClickedButtonIds((prevIds) => [...prevIds, product.id]); 
   };
 
   return (

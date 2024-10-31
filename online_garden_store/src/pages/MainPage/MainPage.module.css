@@ -3,6 +3,41 @@
     padding: 20px;
 }
 
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    margin-top: 15px;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #424436;
+    font-family: montserrat;
+}
+
+.line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: lightgrey;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+.rectangleText {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 300;
+    font-size: 15px;
+    color: lightgrey;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .sales_block {
     display: flex;
     align-items: center;
