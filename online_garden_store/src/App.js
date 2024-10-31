@@ -19,21 +19,18 @@ function App() {
 
 <div>
     <Header/>
-
-    <Routes>
-      <Route path='/' element={<MainPage/>}/>
-      <Route path="/categories" element={<AllCategoriesPage />} />
-      <Route path='/all_products' element={<AllProductsPage/>} />
-      <Route path='/all_sales' element={<AllSalesPage/>} />
-      <Route path='/cart' element={<CartPage/>} />
-      <Route path='*' element={<NotFoundPage/>} />
-      <Route path="/categories/:id" element={<CategoryDetailsPage />} /> 
-      <Route path='products/:product_id' element={<SingleProductPage />}/>
-
-
-    </Routes>
-    
-
+      <main className='wrapper'>
+        <Routes>
+          <Route path='/' element={<MainPage/>}/>
+          <Route path="/categories" element={<AllCategoriesPage />} />
+          <Route path='/all_products' element={<AllProductsPage/>} />
+          <Route path='/all_sales' element={<AllSalesPage/>} />
+          <Route path='/cart' element={<CartPage/>} />
+          <Route path='*' element={<NotFoundPage/>} />
+          <Route path="/categories/:id" element={<CategoryDetailsPage />} /> 
+          <Route path='products/:product_id' element={<SingleProductPage />}/>
+        </Routes>
+      </main>
     </div>
   );
 };

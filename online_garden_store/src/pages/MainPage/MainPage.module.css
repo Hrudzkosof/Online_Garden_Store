@@ -1,12 +1,13 @@
 .main_page {
     background-color: #FFFFF1;
-    padding: 20px;
+    padding: 0;
 }
 
 .sales_block {
     display: flex;
     align-items: center;
     justify-content: space-between; 
+    margin-top: 50px;
 }
 
 .sale_text {
@@ -15,7 +16,7 @@
     color: #424436;
     padding-left: 25px;
     font-family: montserrat;
-    margin-top: 15px;
+    line-height: 70.4px;
 }
 
 .separator {

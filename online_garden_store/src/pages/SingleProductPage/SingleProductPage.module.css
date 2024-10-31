@@ -151,6 +151,10 @@
     cursor: pointer;
 }
 
+.quantity_wrapper button:hover {
+    background: #707b28; 
+}
+
 .product_description p:first-child {
     font-family: Montserrat;
     font-size: 20px;
