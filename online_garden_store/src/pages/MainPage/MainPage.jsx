@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import SalesProductsContainer from '../../components/SalesProductsContainer/SalesProductsContainer';
@@ -11,7 +11,6 @@ import Footer from '../../components/Footer/Footer';
 
 export default function MainPage() {
   const dispatch = useDispatch();
-  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     getAllProducts(dispatch);
@@ -20,9 +19,6 @@ export default function MainPage() {
   const saleProducts = useSelector(state => state.salesProducts.discountedProducts);
   const categories = useSelector(state => state.categories); 
 
-  
-  const handleShowAll = () => setShowAll(prevState => !prevState); 
-
   return (
     <div className={s.main_page}>
       <AmazingDiscount />
@@ -30,12 +26,12 @@ export default function MainPage() {
       <div className={s.headerContainer}>
         <h1 className={s.title}>Categories</h1>
         <div className={s.line}></div>
-        <button onClick={handleShowAll} className={s.rectangleText}>
+        <Link to='/categories' className={s.rectangleText}>
           All Categories
-        </button>
+        </Link>
       </div>
 
-      <CategoriesContainer categories={categories} showAll={showAll} /> 
+      <CategoriesContainer categories={categories.slice(0, 4)} /> 
 
       <DiscountForm />
 
