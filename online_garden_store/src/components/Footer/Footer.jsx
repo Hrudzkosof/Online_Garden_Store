@@ -29,7 +29,7 @@ export default function Footer() {
       <div className={s.cardsMain2}>
           <div className={s.cards1}>
             <p className={s.contactP}>Address</p>
-            <br />
+           
             <a href="https://g.co/kgs/dikFxiR"  className={s.contactA}>Linkstraße 2, 8 OG, 10785, Berlin, Deutschland</a>
           </div>
 
