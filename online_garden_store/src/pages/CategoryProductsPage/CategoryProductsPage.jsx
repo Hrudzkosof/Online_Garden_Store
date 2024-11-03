@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import AllProductCard from '../../components/AllProductCard/AllProductCard';
 import { getCategoryProducts } from '../../requests/categoryProducts_req';
 import s from './CategoryProductsPage.module.css';
+import FilterForm from '../../components/FilterForm/FilterForm';
 import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
 
 export default function CategoryProductsPage() {
@@ -26,6 +27,9 @@ export default function CategoryProductsPage() {
           <h1>{category.title}</h1>
         </div>
       )}
+
+      <FilterForm/>
+
       <div className={s.productsContainer}>
         {products.map((product) => (
           <div key={product.id} className={s.productWrapper}>

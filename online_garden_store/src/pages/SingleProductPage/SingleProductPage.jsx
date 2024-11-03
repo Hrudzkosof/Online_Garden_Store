@@ -64,7 +64,7 @@ export default function SingleProductPage() {
                     <button onClick={() => dispatch(addProductToCartAction({...data, count }))}>Add to cart</button>
                 </div>
                 <div className={s.product_description}>
-                    <p>Desciption</p>
+                    <p>Description</p>
                     <p>{description}</p>
                     <p>Read more</p>
                 </div>
