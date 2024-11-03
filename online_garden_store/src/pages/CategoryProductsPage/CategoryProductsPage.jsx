@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { addProductToCartAction } from '../../store/cartReducer';
 import { getCategoryProducts } from '../../requests/categoryProducts_req';
 import s from './CategoryProductsPage.module.css';
+import FilterForm from '../../components/FilterForm/FilterForm';
 
 export default function CategoryProductsPage() {
   const { id } = useParams();
@@ -32,6 +33,9 @@ export default function CategoryProductsPage() {
           <h1>{category.title}</h1>
         </div>
       )}
+
+      <FilterForm/>
+
       <div className={s.productsContainer}>
         {products.map((product) => (
           <div key={product.id} className={s.productWrapper}>
