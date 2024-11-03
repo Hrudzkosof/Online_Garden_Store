@@ -1,29 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import AllProductCard from '../../components/AllProductCard/AllProductCard';
-import { useDispatch } from 'react-redux';
-import { addProductToCartAction } from '../../store/cartReducer';
 import { getCategoryProducts } from '../../requests/categoryProducts_req';
 import s from './CategoryProductsPage.module.css';
+import FilterForm from '../../components/FilterForm/FilterForm';
+import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
 
 export default function CategoryProductsPage() {
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState(null);
-  const [clickedButtonIds, setClickedButtonIds] = useState([]); 
-  const dispatch = useDispatch();
 
   useEffect(() => {
-    getCategoryProducts(id).then(data => {
+    const fetchCategoryProducts = async () => {
+      const data = await getCategoryProducts(id);
       setCategory(data.category);
       setProducts(data.data);
-    });
+    };
+    fetchCategoryProducts();
   }, [id]);
-
-  const handleAddToCart = (product) => {
-    dispatch(addProductToCartAction(product));
-    setClickedButtonIds((prevIds) => [...prevIds, product.id]); 
-  };
 
   return (
     <div>
@@ -32,29 +27,22 @@ export default function CategoryProductsPage() {
           <h1>{category.title}</h1>
         </div>
       )}
+
+      <FilterForm/>
+
       <div className={s.productsContainer}>
         {products.map((product) => (
           <div key={product.id} className={s.productWrapper}>
-            <AllProductCard 
-              id={product.id} 
-              image={product.image} 
-              title={product.title} 
-              price={product.price} 
-              discont_price={product.discont_price} 
-            />
-            <button 
-              onClick={() => handleAddToCart({
-                id: product.id,
-                image: product.image,
-                title: product.title,
-                price: product.price,
-                discont_price: product.discont_price
-                
-              })}
-              className={`${s.addToCartButton} ${clickedButtonIds.includes(product.id) ? s.clicked : ''}`}
-            >
-              Add to cart
-            </button>
+            <div className={s.cards_container}> 
+              <AllProductCard 
+                id={product.id}
+                image={product.image}
+                title={product.title}
+                price={product.price}
+                discont_price={product.discont_price}
+              />
+              <AddToCartButton product={product} /> 
+            </div>
           </div>
         ))}
       </div>

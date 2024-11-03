@@ -76,7 +76,7 @@ export default function SingleProductPage() {
                     </button>
                 </div>
                 <div className={s.product_description}>
-                    <p>Desciption</p>
+                    <p>Description</p>
                     <p>{description}</p>
                     <p>Read more</p>
                 </div>

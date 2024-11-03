@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import AllProductsContainer from '../../components/AllProductsContainer/AllProductsContainer';
 import { showAllProducts } from '../../requests/products';
@@ -12,16 +12,17 @@ import Footer from '../../components/Footer/Footer';
 
 export default function AllProductsPage() {
 
+  
 
   const allProductsState = useSelector(store => store.allProducts);
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
     useEffect(() => {
       showAllProducts(dispatch);
   }, [dispatch]);
 
-
+  console.log(allProductsState)
 
 
   return (

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import DiscountProductsCard from '../DiscountProductsCard/DiscountProductsCard'
 import s from './index.module.css'
-import FilterForm from '../FilterForm/FilterForm'
-export default function DiscountProducts() {
+import { Link } from 'react-router-dom';
+import FilterForm from '../FilterForm/FilterForm';
+
+export default function DiscountProducts({}) {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -19,17 +21,21 @@ export default function DiscountProducts() {
   return (
     <div>
       <h1>Discounted items</h1>
+
       <FilterForm/>
      
       <div className={s.discountProductsContainer}>
         {discountProducts.map((product) => (
+          
           <div key={product.id} >
             <DiscountProductsCard
+              id={product.id}
               title={product.title}
               price={product.price}
               discont_price={product.discont_price}
               image={product.image}
             />
+            
           </div>
         ))}
       </div>
