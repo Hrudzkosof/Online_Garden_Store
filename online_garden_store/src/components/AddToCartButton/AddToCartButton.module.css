@@ -1,0 +1,30 @@
+.addToCartButton {
+    opacity: 0;
+    background-color: transparent;
+    color: transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 16px 32px;
+    font-family: montserrat;
+    font-size: 20px;
+    text-align: center;
+    width: 90%;
+    height: 58px;
+    position: absolute;
+    top: 192px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.addToCartButton:hover {
+    opacity: 1;
+    background-color: #F26D22;
+    color: white;
+}
+
+.addToCartButton.clicked:hover {
+    background-color: #424436;
+    color: white;
+}

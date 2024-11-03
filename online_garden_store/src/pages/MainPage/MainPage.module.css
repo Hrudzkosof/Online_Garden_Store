@@ -6,23 +6,26 @@
 .headerContainer {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; 
     padding-left: 25px;
     margin-top: 15px;
+    
 }
 
 .title {
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 50px; 
+    font-weight: bold; 
     color: #424436;
+    padding-left: 25px;
     font-family: montserrat;
+    line-height: 70.4px;
 }
 
 .line {
-    flex-grow: 1;
-    height: 2px;
-    background-color: lightgrey;
-    margin-left: 15px;
+    flex-grow: 1; 
+    height: 2px; 
+    background-color: lightgrey; 
+    margin-left: 15px; 
     margin-right: 0;
 }
 
@@ -36,6 +39,7 @@
     background-color: transparent;
     text-decoration: none;
     cursor: pointer;
+    margin-left: 15px;
 }
 
 .sales_block {
