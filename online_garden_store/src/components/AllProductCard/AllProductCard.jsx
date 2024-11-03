@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './AllProductCard.module.css';
 import { Link } from 'react-router-dom';
+import AddToCartButton from '../AddToCartButton/AddToCartButton';
 
 export default function AllProductCard({ id, image, title, price, discont_price }) {
 
@@ -31,6 +32,7 @@ export default function AllProductCard({ id, image, title, price, discont_price 
           </div>
         </div>
       </Link>
+      <AddToCartButton product={{ id, image, title, price }} />
     </div>
     </div>
   );
