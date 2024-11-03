@@ -1,9 +1,11 @@
 import React from 'react'
 import s from './index.module.css'
+import AddToCartButton from '../AddToCartButton/AddToCartButton'
 
 export default function DiscountProductsCard({title, price, discont_price, image}) {
 
     const discountPercentage = Math.round(((price - discont_price) / price) * 100)
+    const product = { title, price, discont_price, image }
 
   return (
     <div className={s.discountProductsCards}>
@@ -12,6 +14,7 @@ export default function DiscountProductsCard({title, price, discont_price, image
             <p className={s.discountProductTitle}>{title}</p>
             <p className={s.discounProductDisPrice}>${discont_price}   <span className={s.discountProductPrice}>${price}</span></p>
             <p className={s.discountProductDisPercentage}>{discountPercentage} %</p>
+            <AddToCartButton product={product} />
         </div>
     </div>
   )
