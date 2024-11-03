@@ -14,8 +14,6 @@ export default function SalesProductCard({title, price, discont_price, image}) {
 
     <div>
       <p className={s.card_title}>{title}</p>
-
-
       <div className={s.prices}>
       <span>${discont_price}</span>
       <span>${price}</span>

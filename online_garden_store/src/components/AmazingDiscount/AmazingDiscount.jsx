@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import DiscountProducts from '../DiscountProducts/DiscountProducts'
 import s from './index.module.css'
+import { Link } from 'react-router-dom'
 
 
 export default function AmazingDiscount() {
@@ -16,7 +17,7 @@ export default function AmazingDiscount() {
           <div className={s.leer}></div>
           <div className={s.discountText}>
             <h1 className={s.amazingDiscountH}>Amazing Discounts on Garden Products!</h1>
-            <button className={s.amazingDiscountButton} onClick={handleClick}>Check out</button>
+            <Link to="/all_sales" className={s.amazingDiscountButton}>Check out</Link>
           </div>
         </div>
       ) : (

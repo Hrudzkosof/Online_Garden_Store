@@ -14,13 +14,16 @@
     width: 150px;
     height: 150px;
     object-fit: contain;
+    border-radius: 5px;
 }
 
 .title {
     position: absolute;
-    top: 0; 
+    top: 20px; 
     left: 25%;
+    font-size: 20px;
     font-family: montserrat;
+   
 }
 
 .card svg {
@@ -30,12 +33,11 @@
     cursor: pointer;
 }
 
-.quantityControls {
-    position: absolute;
-    left: 30%;
-}
-
 .quantityPrice > p {
+    position: absolute;
+    left: 50%;
+    margin: 10px 0;
+    top: 73px;
     font-size: 30px;
     font-weight: 550;
     color: rgb(66, 65, 65);
@@ -45,7 +47,50 @@
   
 .quantityPrice > span {
     font-size: 20px; 
-    color: lightgray; 
+    color: #8B8B8B;
     text-decoration: line-through; 
+    position: absolute;
+    left: 67%;
+    margin: 10px 0;
+    top: 82px;
     
+}
+
+  .quantityControls{
+    position: absolute;
+    left: 25%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 35px;
+
+  }
+  .quantityControls > div:first-child{
+    outline: 1px solid lightgray;
+    padding: 0 18px ;
+    border-radius: 5px;
+    font-size: 40px;
+    font-family: montserrat;  
+    font-weight: 200;
+
+  }
+
+  .quantityControls > p {
+    padding: 0 15px ;
+    font-size: 20px;
+    font-family: montserrat;
+    box-sizing: border-box;
+    font-weight: 550;
+     padding: 0 20px;
+
+  }
+
+  .quantityControls > div:last-child{
+    outline: 1px solid lightgray;
+    padding: 0 15px ;
+    border-radius: 5px;
+    font-size: 40px;
+    font-family: montserrat;
+    font-weight: 200;
+
   }

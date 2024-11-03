@@ -18,7 +18,7 @@
     border: 1px solid #DDDDDD;
     background: #FFFFFF;
     /* flex: 1; */
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .product_page {

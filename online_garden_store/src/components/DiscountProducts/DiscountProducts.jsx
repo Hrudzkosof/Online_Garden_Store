@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import DiscountProductsCard from '../DiscountProductsCard/DiscountProductsCard'
 import s from './index.module.css'
+import FilterForm from '../FilterForm/FilterForm'
 export default function DiscountProducts() {
     const [products, setProducts] = useState([])
 
@@ -18,6 +19,7 @@ export default function DiscountProducts() {
   return (
     <div>
       <h1>Discounted items</h1>
+      <FilterForm/>
      
       <div className={s.discountProductsContainer}>
         {discountProducts.map((product) => (

@@ -29,18 +29,24 @@
     color: #FFFFFF;
 }
 .amazingDiscountButton {
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 600;
+    font-family: montserrat !important;;
+    font-size: 20px !important;;
+    font-weight: 600 !important;;
     line-height: 26px;
     text-align: center;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     border-radius: 7px;
     background-color: #92A134;
     border: none;
     height: 58px;
     width: 218px;
     margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    cursor: pointer; 
+    margin: 20px 30px;
 }
 h1 {
     width: 1200px;

@@ -48,6 +48,8 @@ export default function CategoryProductsPage() {
                 image: product.image,
                 title: product.title,
                 price: product.price,
+                discont_price: product.discont_price
+                
               })}
               className={`${s.addToCartButton} ${clickedButtonIds.includes(product.id) ? s.clicked : ''}`}
             >
