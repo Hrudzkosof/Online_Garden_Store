@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import s from './OrderForm.module.css';
 import { addOrder } from '../requests/orderForm_req'; 
+import { Context } from '../context';
 
 export default function OrderForm() {
+
+    const { openModalWindow } = useContext(Context);
+
+
+
     const submit = e => {
         e.preventDefault();
-        const { name, address, number, email } = e.target;
+        const { name, number, email } = e.target;
         const newOrder = {
             name: name.value,
-            address: address.value,
             number: number.value,
             email: email.value
         };
         addOrder(newOrder);
         console.log(newOrder);
+        
+        openModalWindow()
+
         e.target.reset();
     };
 

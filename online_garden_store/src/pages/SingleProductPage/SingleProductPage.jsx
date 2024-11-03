@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { getSingleProduct } from '../../requests/products'
 import s from './SingleProductPage.module.css'
 import { addProductToCartAction } from '../../store/cartReducer'
 import Footer from '../../components/Footer/Footer'
+import { Context } from '../../context'
 
 export default function SingleProductPage() {
+
+    const { openSecondModalWindow } = useContext(Context);
 
     let [count, setCount] = useState(1);
 
@@ -33,6 +36,8 @@ export default function SingleProductPage() {
     const { image, title, description, price, discont_price } = data; 
 
     console.log(image)
+
+    
 
     const discountPercent = Math.round(((price - discont_price) / price) * 100);
   return (
@@ -61,7 +66,14 @@ export default function SingleProductPage() {
                     <div onClick={decrCount}>-</div>
                     <p>{count}</p>
                     <div onClick={incrCount}>+</div>
-                    <button onClick={() => dispatch(addProductToCartAction({...data, count }))}>Add to cart</button>
+                    <button 
+                    onClick={() => {
+                        dispatch(addProductToCartAction({ ...data, count })); 
+                        openSecondModalWindow(); 
+                    }}
+                    >
+                    Add to cart
+                    </button>
                 </div>
                 <div className={s.product_description}>
                     <p>Description</p>
