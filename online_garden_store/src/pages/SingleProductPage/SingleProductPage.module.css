@@ -190,7 +190,9 @@
     line-height: 20.8px;
     color: #424436;
 }
-.product_description p:nth-child(3) {
+
+
+.read_more {
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 500;

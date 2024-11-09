@@ -17,8 +17,8 @@ export default function SalesProductCard({id, title, price, discont_price, image
       </Link>
 
       <div>
-        <p className={s.card_title}>{title}</p>
-        <div className={s.prices}>
+        <p>{title}</p>
+        <div>
           <span>${discont_price}</span>
           <span>${price}</span>
         </div>
