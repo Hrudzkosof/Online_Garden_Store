@@ -15,6 +15,16 @@
     color: black;
     font-weight: 300;
     font-family: montserrat;
-    font-weight: 500px;
+    font-weight: 500;
 }
+/* 
+@media (max-width: 768px) {
+    .nav_menu{
+   font-size: 14px;
+    }
+    .nav_menu a{
 
+    }
+  
+  } 
+ */
