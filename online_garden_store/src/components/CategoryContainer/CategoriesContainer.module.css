@@ -72,3 +72,22 @@
     text-decoration: none; 
     background: transparent; 
   }
+
+@media (max-width: 480px) {
+
+  .container {
+    background-color: #FFFFF1; 
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categoriesList {
+    width: 440px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+
+  }
+
+}

@@ -13,3 +13,20 @@ h1 {
     margin: 0 30px;
     color: #424436;
 }
+
+@media (max-width: 480px) {
+
+    .discountProductsContainer {
+      background-color: #FFFFF1; 
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0;
+      height: auto;
+    }
+    h1 {
+        font-size: 48px;
+        line-height: 52.8px; 
+        margin: 40px 0 20px 20px;
+    }
+}

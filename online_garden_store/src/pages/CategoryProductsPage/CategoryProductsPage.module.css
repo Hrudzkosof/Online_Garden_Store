@@ -16,3 +16,25 @@
     width: 100%; 
     max-width: 300px; 
 }
+
+@media (max-width: 480px){
+    .productsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cards_container {
+        width: 210px;
+        height: 358px;
+        gap: 20px;
+    }
+    .productWrapper {
+        margin: 0;
+    }
+
+    .categoryHeader {
+        font-size: 48px;
+        line-height: 52.8px; 
+        margin-bottom: 20px;
+        margin: 20px;
+    }
+}
