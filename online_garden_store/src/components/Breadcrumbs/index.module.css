@@ -1,0 +1,32 @@
+.breadcrumbs {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #DDDDDD;
+  display: flex;
+  align-items: center;
+  background-color: #FFFFF1;
+  height: 80px;
+}
+.breadcrumbsContainer {
+  margin-left: 60px;
+}
+.crumb {
+  display: inline-block;
+  margin: 0 5px;
+}
+.link {
+  text-decoration: none;
+  color: #8B8B8B; 
+  padding: 6px 12px;
+  background-color: transparent; 
+  border: 2px solid #DDDDDD;
+  border-radius: 5px;
+  width: 120px;
+  height: 36px;
+  text-align: center;
+}
+
+
+
+
+
