@@ -1,8 +1,3 @@
-.header {
-    /* width: 1440px;
-    height: 128px;
-     */
-}
 
 .header > div {
     display: flex; 
@@ -49,14 +44,45 @@
     color: white;
 }
 
-/* 
-@media (max-width: 768px) {
-   .logo{
-    width: 60px;
-    height: 60px;
-   }
+.header > div >div > svg {
+    display: none;
+}
 
-   .header {
-    width: 768px;
-   }
-    } */
+@media (max-width: 480px){
+    .header {
+        height: 68px;
+        padding-top: 5px;
+    }
+
+    .header > div {
+        padding: 0;
+        padding-bottom: 0;
+        align-items: center;
+        height: 68px;
+    }
+
+    .header > div > div > svg {
+        display: block;
+        font-size: 40px;
+        margin-right: 20px;
+        width: 40px;
+    }
+
+    .basket {
+        margin-right: 0;
+    }
+
+    .logo {
+        width: 44px;
+        height: 44px;
+    }
+    .media_menu {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .wrapper {
+        padding: 0;
+        align-items: center;
+    }
+}

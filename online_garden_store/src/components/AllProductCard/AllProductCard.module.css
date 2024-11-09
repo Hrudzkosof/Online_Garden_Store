@@ -93,3 +93,12 @@
     text-decoration: none;
     color: black;
 }
+
+@media (max-width: 480px){
+    .products_card {
+        width: 210px;
+        height: 358px;
+        gap: 20px;
+        padding-bottom: 0;
+    }
+}

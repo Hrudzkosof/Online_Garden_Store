@@ -21,7 +21,9 @@ import SecondModalWindow from './components/SecondModalWindow/SecondModalWindow'
 function App() {
   const dispatch = useDispatch();
 
-  const [ modalActive, setModalActive ] = useState(false)
+  const [ modalActive, setModalActive ] = useState(false);
+
+  const [ menuActive, setMenuActive ] = useState(false)
 
   const closeModalWindow = () => {
     dispatch(clearCartAction())
@@ -34,10 +36,14 @@ function App() {
   const closeSecondModalWindow = () => setSecondModalActive(false); 
   const openSecondModalWindow = () => setSecondModalActive(true);
 
+  const openMenu = () => setMenuActive(true);
+  const closeMenu = () => setMenuActive(false);
+
 
 return (
 <div>
-  <Context.Provider value={{ closeModalWindow, openModalWindow, modalActive, openSecondModalWindow, closeSecondModalWindow, secondModalActive}}>
+  <Context.Provider value={{ closeModalWindow, openModalWindow, modalActive, openSecondModalWindow, 
+    closeSecondModalWindow, secondModalActive, openMenu, closeMenu, menuActive}}>
     <SecondModalWindow/>
     <ModalWindow/>
       <Header/>

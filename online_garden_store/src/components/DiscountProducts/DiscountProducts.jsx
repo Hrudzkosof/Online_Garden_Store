@@ -3,29 +3,27 @@ import DiscountProductsCard from '../DiscountProductsCard/DiscountProductsCard'
 import s from './index.module.css'
 import { Link } from 'react-router-dom';
 import FilterForm from '../FilterForm/FilterForm';
+import { useDispatch, useSelector } from 'react-redux';
+import { getSaleProducts } from '../../requests/salesProducts';
 
 export default function DiscountProducts({}) {
-    const [products, setProducts] = useState([])
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        fetch('http://localhost:3333/products/all')
-            .then(res => res.json())
-            .then(data => {
-                setProducts(data)
-            })
-            .catch(err => console.error(err))
-    }, [])
-    
-    const discountProducts = products.filter(product => product.discont_price > 0)
+  useEffect(() => {
+    getSaleProducts(dispatch);
+  }, [dispatch]);
+
+  const salesProducts = useSelector(state => state.salesProducts);
+  console.log('discountedProd', salesProducts)
 
   return (
     <div>
       <h1>Discounted items</h1>
 
-      <FilterForm/>
+      <FilterForm hideSection='discountedItems'/>
      
       <div className={s.discountProductsContainer}>
-        {discountProducts.map((product) => (
+        {salesProducts.map((product) => (
           
           <div key={product.id} >
             <DiscountProductsCard

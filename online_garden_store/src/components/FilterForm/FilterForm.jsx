@@ -3,14 +3,12 @@ import s from './FilterForm.module.css'
 import { filterProductsAction, getDiscountProductsAction, sortProductsAction } from '../../store/allProductsReducer';
 import { useDispatch } from 'react-redux';
 
-export default function FilterForm() {
-
-  
+export default function FilterForm({ hideSection }) {
 
     const dispatch = useDispatch();
 
     const sort = e => dispatch(sortProductsAction(e.target.value));
-
+    
     const [ isChecked, setIsChecked ] = useState(false);
     const handleCheck = () => setIsChecked(!isChecked);
     const handleClick = (e) => dispatch(getDiscountProductsAction(e.target.checked))
@@ -24,25 +22,31 @@ export default function FilterForm() {
 
     useEffect(() => {
         dispatch(filterProductsAction({ min: minValue, max: maxValue}))
-      }, [minValue, maxValue])
+      }, [minValue, maxValue, dispatch])
     
   return (
     <form className={s.filter_form}>
-        <div>
-            <label className={s.label}>Price</label>
-            <input type="text" placeholder='from' name='price_from' onChange={handleMinValue}/>
-        </div>
+        
+            <div>
+                <label className={s.label}>Price</label>
+                <input type="text" placeholder='from' name='price_from' onChange={handleMinValue}/>
+                <input type="text" placeholder='to' name='price_to' onChange={handleMaxValue} />
+            </div>
 
-        <div>
-            <input type="text" placeholder='to' name='price_to' onChange={handleMaxValue} />
-        </div>
+            <div>
+                
+           
+            </div>
+        
 
-        <div>
-            <label className={s.checkbox_container}><span className={s.label}>Discounted items</span>
-                <input type="checkbox"  checked={isChecked} onChange={handleCheck} onClick={handleClick}/>
-                <span className={s.checkmark}></span>
-            </label>   
-        </div> 
+        {hideSection !== 'discountedItems' && (
+            <div>
+                <label className={s.checkbox_container}><span className={s.label}>Discounted items</span>
+                    <input type="checkbox"  checked={isChecked} onChange={handleCheck} onClick={handleClick}/>
+                    <span className={s.checkmark}></span>
+                </label>   
+            </div> 
+        )}
 
         <div>
             <label className={s.label}>Sorted</label>
