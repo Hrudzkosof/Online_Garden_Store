@@ -1,11 +1,11 @@
 .category_card {
-    border: 1px solid #e0e0e0; 
-    border-radius: 8px; 
+    /* border: 1px solid #e0e0e0;  */
+    border-radius: 12px; 
     overflow: hidden; 
     transition: transform 0.3s; 
     cursor: pointer; 
-    background-color: #fff; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    /* background-color: #fff;  */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
 }
 
 .category_card:hover {
@@ -17,6 +17,7 @@
     width: 100%; 
     height: 300px; 
     object-fit: cover; 
+    border-radius: 12px;
 }
 
 .category_card a {
@@ -32,4 +33,20 @@
     text-align: center; 
     font-family: 'Montserrat', sans-serif; 
     margin-top: 0; 
+}
+
+@media (max-width: 480px){
+
+    .category_card img {
+        width: 100%; 
+        height: 280px; 
+        object-fit: cover; 
+        border-radius: 12px;
+    }
+
+    .category_card {
+        overflow: hidden; 
+        transition: transform 0.3s; 
+        cursor: pointer; 
+    }
 }

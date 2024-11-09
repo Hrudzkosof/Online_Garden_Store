@@ -4,11 +4,11 @@
 }
 
 .headerContainer {
-    display: flex;
-    align-items: center;
+    display: flex; 
+    align-items: center; 
     justify-content: flex-start; 
-    padding-left: 25px;
-    margin-top: 15px;
+    /* padding-left: 25px;
+    margin-top: 15px; */
     
 }
 
@@ -39,7 +39,7 @@
     background-color: transparent;
     text-decoration: none;
     cursor: pointer;
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 
 .sales_block {
@@ -79,6 +79,43 @@
     border-radius: 5px;
     padding: 5px;
     margin-right: 28px;
-   
-    
+}
+
+
+
+@media (max-width: 480px){
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        margin-top: 45px;
+        padding: 0 20px;
+    }
+
+    .title {
+        font-size: 48px; 
+        color: #424436;
+        padding-left: 0px;
+        font-family: Montserrat;
+        font-weight: 700px;
+        line-height: 52.8px;
+        text-align: left;
+        margin-left: 0;
+        width: auto;
+        margin: 0;
+    }
+
+    .rectangleText {
+        /* width: 129px;
+        height: 34px; */
+        border: 1px solid lightgrey;
+        border-radius: 6px;
+        padding: 5px 10px;
+        font-weight: 500;
+        font-size: 15px;
+        color: lightgrey;
+        background-color: transparent;
+        text-decoration: none;
+        cursor: pointer;
+        /* margin-left: 15px; */
+    }
 }

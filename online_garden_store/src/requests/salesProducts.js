@@ -2,17 +2,16 @@ import { loadDiscountedProductsAction, loadProductsAction } from "../store/sales
 
 
 
-export const getAllProducts = (dispatch) => {
+export const getSaleProducts = (dispatch) => 
   fetch('http://localhost:3333/products/all')
     .then(response => response.json())
     .then(products => {
      
-      dispatch(loadProductsAction(products));
 
-    
       let discountedProducts = products.filter(product => product.discont_price !== null && product.discont_price < product.price);
 
-    
+      dispatch(loadProductsAction(discountedProducts));
+
       if (discountedProducts.length < 4) {
         const additionalProducts = Array.from({ length: 4 - discountedProducts.length }, (_, i) => discountedProducts[i % discountedProducts.length]);
         discountedProducts = discountedProducts.concat(additionalProducts);
@@ -24,8 +23,6 @@ export const getAllProducts = (dispatch) => {
         .slice(0, 4);
 
    
-      dispatch(loadDiscountedProductsAction(discountedProducts));
+      return discountedProducts;
     })
    
-
-  };
