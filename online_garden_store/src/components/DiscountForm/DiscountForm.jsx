@@ -25,7 +25,7 @@ export default function DiscountForm() {
     
         <p>5% off on the first order</p>
     
-        <div>
+        <div className={s.form_media}>
             <img src="discount.png" alt="discount" />
             <form className={s.form} onSubmit={submit}>
                 <input type='text' placeholder='Name' name='name'/>

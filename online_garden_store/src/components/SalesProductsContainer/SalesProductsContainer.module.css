@@ -9,3 +9,10 @@
     width: calc(100% - 30px); 
 }
 
+@media (max-width: 480px){
+    .sales_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+

@@ -78,3 +78,43 @@
     color: #424436;
     margin-right: 18.4px; 
 }
+
+@media (max-width: 480px){
+    .footerContact {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .cardsMain1 {
+        display: contents;
+    }
+    .cardsMain2 {
+        display: contents;
+    }
+    .cardsMain2 div {
+        height: 145px;
+    }
+    .contactA {
+        font-size: 28px;
+    }
+    .cards1 {
+        width: 440px;
+        height: 114px;
+        margin-bottom: 12px;
+    }
+    .cards2 {
+        width: 440px;
+        height: 114px;
+        margin-bottom: 12px;
+    }
+
+    .footerH {
+        margin-left: 25px;
+    }
+
+    .map {
+        width: 440px;
+        height: 250px;
+    }
+   
+}

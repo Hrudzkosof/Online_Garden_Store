@@ -1,7 +1,7 @@
 const LOAD_ALL_PRODUCTS = 'LOAD_ALL_PRODUCTS';
-const SORT_PRODUCTS = 'SORT_PRODUCTS';
+export const SORT_PRODUCTS = 'SORT_PRODUCTS';
 const DISCOUNT_PRODUCTS = 'DISCOUNT_PRODUCTS';
-const FILTER_PRODUCTS = 'FILTER_PRODUCTS'
+export const FILTER_PRODUCTS = 'FILTER_PRODUCTS'
 
 
 export const loadAllProductsAction = products => ({ type: LOAD_ALL_PRODUCTS, payload: products});
@@ -10,7 +10,7 @@ export const getDiscountProductsAction = value => ({ type: DISCOUNT_PRODUCTS, pa
 export const filterProductsAction = values => ({ type: FILTER_PRODUCTS, payload: values})
 
 
-export const allProductsReducer = ( state = [], action) => {
+export const allProductsReducer = (state = [], action) => {
     if(action.type === LOAD_ALL_PRODUCTS){
         return action.payload.map(el => {
             el.visible = true;

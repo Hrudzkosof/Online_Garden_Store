@@ -83,3 +83,16 @@
     text-decoration: none;
     color: black;
 }
+
+@media (max-width: 480px){
+    .cards {
+        width: 210px;
+        height: 358px;
+        gap: 20px;
+        padding: 0;
+    }
+    .discountProductsCards {
+        padding: 0;
+        justify-content: center;
+    }
+}
