@@ -14,6 +14,9 @@ export default function CategoriesPage() {
 
   return (
     <div>
+      <div className="categoriesHeader">
+        <h1>Categories</h1> 
+      </div>
       <CategoriesContainer categories={categories} />
       <Footer />
     </div>

@@ -4,7 +4,6 @@ import AllProductCard from '../../components/AllProductCard/AllProductCard';
 import { getCategoryProducts } from '../../requests/categoryProducts_req';
 import s from './CategoryProductsPage.module.css';
 import FilterForm from '../../components/FilterForm/FilterForm';
-import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
 
 export default function CategoryProductsPage() {
   const { id } = useParams();
@@ -40,8 +39,8 @@ export default function CategoryProductsPage() {
                 title={product.title}
                 price={product.price}
                 discont_price={product.discont_price}
+                product={product} 
               />
-              <AddToCartButton product={product} /> 
             </div>
           </div>
         ))}
