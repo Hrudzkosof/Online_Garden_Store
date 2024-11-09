@@ -18,7 +18,7 @@
     border: 1px solid #DDDDDD;
     background: #FFFFFF;
     /* flex: 1; */
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .product_page {
@@ -149,6 +149,10 @@
     border: none;
     margin-left: 32px;
     cursor: pointer;
+}
+
+.quantity_wrapper button:hover {
+    background: #707b28; 
 }
 
 .product_description p:first-child {

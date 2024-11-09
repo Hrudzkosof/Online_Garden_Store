@@ -1,3 +1,4 @@
+
 .products_card {
     width: 100%; 
     max-width: 300px; 
@@ -12,11 +13,12 @@
     position: relative; 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     z-index: 1; 
+    padding-bottom: 10px;
 }
 
 .products_card img {
     width: 100%; 
-    height: 70%; 
+    height: 250px; 
     object-fit: contain; 
     border-bottom: 1px solid lightgrey; 
 }
@@ -29,43 +31,49 @@
     display: block; 
     padding: 10px; 
     font-family: montserrat;
+    margin-left: 10px; 
 }
 
 .prices {
     display: flex;
     align-items: center; 
-    margin-top: 10px;
-    padding-left: 15px; 
+    margin-top: 5px;
+    padding-left: 20px; 
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    font-family: montserrat;
+  
+
 }
 
-
-.discont_price {
-    font-size: 30px; 
-    font-weight: bolder;
-    color: rgb(0, 0, 0); 
+.price {
+    font-size: 28px; 
+    color: rgb(66, 65, 65); ; 
+    margin-top: 0; 
+    margin-bottom: 5px; 
+    font-weight: 550;
    
 }
 
+.discont_price {
+    font-size: 28px; 
+    color: rgb(66, 65, 65); 
+    margin-right: 10px; 
+    margin-top: 0; 
+    padding-bottom: 5px; 
+    font-weight: 550;
+}
 
 .old_price {
     text-decoration: line-through; 
     color: grey; 
-    padding-left: 10px;
-    padding-top: 8px;
-    font-size: 20px; 
-}
-
-
-.regular_price {
-    font-size: 30px; 
-    font-weight: bold;
-    color: black; 
-    padding-left: 15px; 
+    font-size: 18px; 
+    padding: 3px;
 }
 
 .products_card:hover {
     transform: scale(1.05); 
-    box-shadow: 0 4px 15px rgb(0, 0, 0); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
     z-index: 10; 
 }
 
@@ -79,4 +87,9 @@
     padding: 5px;
     border-radius: 5px;
     font-size: 16px;
+}
+
+.products_card a {
+    text-decoration: none;
+    color: black;
 }

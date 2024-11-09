@@ -1,0 +1,18 @@
+.productsContainer {
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.productWrapper {
+    position: relative;
+    margin: 15px;
+    width: 100%; 
+    max-width: 300px;
+}
+
+.cards_container {
+    width: 100%; 
+    max-width: 300px; 
+}

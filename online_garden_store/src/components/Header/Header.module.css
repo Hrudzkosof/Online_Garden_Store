@@ -1,22 +1,49 @@
-.header{
-    display: flex; /* Используем Flexbox для размещения элементов */
-    justify-content: space-between; /* Распределяем пространство между элементами */
-    align-items: center; /* Центрируем элементы по вертикали */
-    padding: 25px 0; /* Отступы для заголовка */
+.header {
+    /* height: 128px; */
+    
+}
+
+.header > div {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 25px 0; 
     background-color: #FFFFF1;
     position: relative;
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .logo {
     width: 60px;
     height: 60px;
     object-fit: contain;
-    margin-left: 25px; /* Отступ слева */
+    margin-left: 25px; 
 }
 
 .basket {
     width: 45px; 
     height: 45px; 
     object-fit: contain;
-    margin-right: 30px; /* Отступ справа */
+    margin-right: 30px; 
+}
+
+.header > a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.header span {
+    background-color: #92A134;
+    position: absolute;
+    top: 38px;
+    right: 55px;
+    font-size: 14px;
+    border-radius: 50%; 
+    width: 24px;      
+    height: 24px;     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
