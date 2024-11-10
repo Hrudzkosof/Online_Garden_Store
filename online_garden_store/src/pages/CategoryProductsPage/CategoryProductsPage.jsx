@@ -5,6 +5,7 @@ import AllProductCard from '../../components/AllProductCard/AllProductCard';
 import { getCategoryProducts } from '../../requests/categoryProducts_req'; 
 import s from './CategoryProductsPage.module.css';
 import FilterForm from '../../components/FilterForm/FilterForm';
+import Footer from '../../components/Footer/Footer'; 
 
 export default function CategoryProductsPage() {
   const { id } = useParams();

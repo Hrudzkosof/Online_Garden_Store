@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import SalesProductsContainer from '../../components/SalesProductsContainer/SalesProductsContainer';
-import { getAllProducts } from '../../requests/salesProducts';
+import { getSaleProducts } from '../../requests/salesProducts'; 
+import { getCategories} from '../../requests/categories_req'
 import s from './MainPage.module.css';
 import AmazingDiscount from '../../components/AmazingDiscount/AmazingDiscount';
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
