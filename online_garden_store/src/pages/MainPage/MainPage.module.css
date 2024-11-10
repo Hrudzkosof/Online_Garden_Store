@@ -4,11 +4,10 @@
 }
 
 .headerContainer {
-    display: flex; 
-    align-items: center; 
-    justify-content: flex-start; 
-    /* padding-left: 25px;
-    margin-top: 15px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 50px;
     
 }
 
@@ -21,25 +20,12 @@
     line-height: 70.4px;
 }
 
-.line {
-    flex-grow: 1; 
-    height: 2px; 
-    background-color: lightgrey; 
-    margin-left: 15px; 
-    margin-right: 0;
-}
 
 .rectangleText {
-    border: 1px solid lightgrey;
+    border: 1px solid lightgray;
     border-radius: 5px;
-    padding: 5px 10px;
-    font-weight: 300;
-    font-size: 15px;
-    color: lightgrey;
-    background-color: transparent;
-    text-decoration: none;
-    cursor: pointer;
-    /* margin-left: 15px; */
+    padding: 5px;
+    margin-right: 23px;
 }
 
 .sales_block {
@@ -66,6 +52,7 @@
     margin-right: 0;
 }
 
+
 .main_page a {
     text-decoration: none;
     color: black;
@@ -81,6 +68,17 @@
     margin-right: 28px;
 }
 
+@media (max-width: 768px){
+
+    .title{
+    font-size: 50px;
+    line-height: 61.6px;
+        
+    }
+    .rectangleText{
+        margin-right: 8px;
+    }
+}
 
 
 @media (max-width: 480px){

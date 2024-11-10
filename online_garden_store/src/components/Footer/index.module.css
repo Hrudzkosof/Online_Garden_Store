@@ -79,6 +79,36 @@
     margin-right: 18.4px; 
 }
 
+@media (max-width: 768px){
+    .footerH{
+        font-size: 45px;
+        margin-left: 20px;
+    }
+    .footerContact {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+  
+    .cards1{
+        width: 479px;
+        height: 150px;
+        margin-bottom: 8px;
+    }
+
+    .cards2{
+        
+    }
+
+    .map{
+        width: 725px;
+        height: 250px;
+        
+    }
+
+}
+
+
 @media (max-width: 480px){
     .footerContact {
         display: flex;
