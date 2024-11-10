@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import SalesProductsContainer from '../../components/SalesProductsContainer/SalesProductsContainer';
-import { getSaleProducts } from '../../requests/salesProducts';
+import { getSaleProducts } from '../../requests/salesProducts'; 
+import { getCategories} from '../../requests/categories_req'
 import s from './MainPage.module.css';
 import AmazingDiscount from '../../components/AmazingDiscount/AmazingDiscount';
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
@@ -15,7 +16,8 @@ export default function MainPage() {
   const [saleProducts, setSaleProducts] = useState([])
 
   useEffect(() => {
-   getSaleProducts(dispatch).then(products => setSaleProducts(products));
+    getSaleProducts(dispatch).then(products => setSaleProducts(products));
+    dispatch(getCategories());
   }, [dispatch]);
 
   const categories = useSelector(state => state.categories); 
@@ -25,14 +27,14 @@ export default function MainPage() {
       <AmazingDiscount />
 
       <div className={s.headerContainer}>
-        <h1 className={s.title}>Categories</h1>
-        <div className={s.separator}></div>
+        <span className={s.title}>Categories</span>
+        <div className={s.line}></div>
         <Link to='/categories' className={s.rectangleText}>
           All Categories
         </Link>
       </div>
 
-      <CategoriesContainer categories={categories.slice(0, 4)} /> 
+      <CategoriesContainer categories={categories} limit={4} /> 
 
       <DiscountForm />
 
