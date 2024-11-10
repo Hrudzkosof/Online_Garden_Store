@@ -1,7 +1,8 @@
+
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import AllProductCard from '../../components/AllProductCard/AllProductCard';
-import { getCategoryProducts } from '../../requests/categoryProducts_req';
+import { getCategoryProducts } from '../../requests/categoryProducts_req'; 
 import s from './CategoryProductsPage.module.css';
 import FilterForm from '../../components/FilterForm/FilterForm';
 
@@ -11,12 +12,10 @@ export default function CategoryProductsPage() {
   const [category, setCategory] = useState(null);
 
   useEffect(() => {
-    const fetchCategoryProducts = async () => {
-      const data = await getCategoryProducts(id);
+    getCategoryProducts(id).then((data) => {
       setCategory(data.category);
       setProducts(data.data);
-    };
-    fetchCategoryProducts();
+    });
   }, [id]);
 
   return (
@@ -27,19 +26,19 @@ export default function CategoryProductsPage() {
         </div>
       )}
 
-      <FilterForm/>
+      <FilterForm />
 
       <div className={s.productsContainer}>
         {products.map((product) => (
           <div key={product.id} className={s.productWrapper}>
-            <div className={s.cards_container}> 
-              <AllProductCard 
+            <div className={s.cards_container}>
+              <AllProductCard
                 id={product.id}
                 image={product.image}
                 title={product.title}
                 price={product.price}
                 discont_price={product.discont_price}
-                product={product} 
+                product={product}
               />
             </div>
           </div>
