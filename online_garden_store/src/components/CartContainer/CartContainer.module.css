@@ -11,5 +11,11 @@
 .cartContainer div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  background-color: #ffffff;
+}
+
+@media (max-width: 480px) {
+    .cartContainer div {
+        /* justify-content: normal; */
+    }
 }

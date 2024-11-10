@@ -9,14 +9,6 @@ import { Context } from '../../context';
 
 export default function SingleProductPage() {
 
-     // Логика для сокращения текста
-     const maxCharacters = 150;
-     const shortDescription =
-         description && description.length > maxCharacters
-             ? description.slice(0, maxCharacters) + '...'
-             : description;
-
-
     const { openSecondModalWindow } = useContext(Context);
     const [count, setCount] = useState(1);
     const [isExpanded, setIsExpanded] = useState(false); // состояние для управления текстом
@@ -40,6 +32,14 @@ export default function SingleProductPage() {
     const { image, title, description, price, discont_price } = data;
 
     const discountPercent = Math.round(((price - discont_price) / price) * 100);
+
+      // Логика для сокращения текста
+      const maxCharacters = 150;
+      const shortDescription =
+          description && description.length > maxCharacters
+              ? description.slice(0, maxCharacters) + '...'
+              : description;
+ 
   return (
     <div>
        <div className={s.layout_container}>   
