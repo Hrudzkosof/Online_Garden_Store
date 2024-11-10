@@ -27,7 +27,7 @@ export default function MainPage() {
       <AmazingDiscount />
 
       <div className={s.headerContainer}>
-        <h1 className={s.title}>Categories</h1>
+        <span className={s.title}>Categories</span>
         <div className={s.line}></div>
         <Link to='/categories' className={s.rectangleText}>
           All Categories
