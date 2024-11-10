@@ -5,10 +5,17 @@
     margin-top: 144px; 
     margin-left: 40px; 
 }
+.layout_container > h3 {
+    display: none;
+}
 
 .single_product_card{
     display: flex;
     gap: 32px;
+}
+.single_product_card > div:first-child{
+    display: flex;
+    flex-direction: row;
 }
 
 .single_product_card img {
@@ -23,6 +30,7 @@
 
 .product_page {
     width: 548px;
+    margin-left: 30px;
 }
 
 .product_page h3 {
@@ -79,13 +87,19 @@
     height: 36px;
 }
 
-.quantity_wrapper {
+.quantity {
     display: flex;
     align-items: center;
     /* gap: 32px; */
     padding-top: 20px;
 }
 
+.quantity_wrapper {
+    display: flex;
+    align-items: center;
+    /* gap: 32px; */
+    padding-top: 20px;
+}
 .quantity_wrapper div:first-child {
         width: 58px;
         height: 58px;
@@ -133,7 +147,7 @@
     text-align: center;
 }
 
-.quantity_wrapper button {
+.quantity button {
     width:  316px;
     height: 58px;
     padding: 16px 32px 16px 32px;
@@ -151,7 +165,7 @@
     cursor: pointer;
 }
 
-.quantity_wrapper button:hover {
+.quantity button:hover {
     background: #707b28; 
 }
 
@@ -163,6 +177,11 @@
     margin-bottom: 20px;
     color: #424436;    
 }
+.product_description {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .product_description p:nth-child(2) {
     font-family: Montserrat;
@@ -171,7 +190,9 @@
     line-height: 20.8px;
     color: #424436;
 }
-.product_description p:nth-child(3) {
+
+
+.read_more {
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 500;
@@ -181,6 +202,132 @@
     cursor: pointer;
     text-decoration: underline;
     margin-top: 30px;
+}
+.product_description_small {
+    display: none;
+}
+
+
+@media (max-width: 480px){
+    .layout_container > h3 {
+        display: flex;
+        font-family: Montserrat;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 30.8px;
+        letter-spacing: 0.03em;
+        text-align: left;
+        margin-bottom: 30px;
+        
+    }
+    .layout_container {
+        margin-top: 50px;
+        margin-left: 20px;
+        width: 100%;
+        gap: 20px;
+        height: auto;
+    }
+    .product_page {
+        margin-left: 20px;
+        margin-top: -10px;
+        width: 210px;
+    }
+
+    .product_page h3 {
+        display: none;
+    }
+    .single_product_card {
+        display: flex;
+        flex-direction: column;
+        width: 440px;
+    }
+    .single_product_card > div {
+        display: flex;
+        flex-direction: row;
+    } 
+    .single_product_card img {
+        width: 210px;
+        height: 179px;
+        object-fit: contain;
+    }
+    .price_single_product > span {
+        position: absolute;
+        left: 130px;
+        top: 220px;
+    }
+    .price_single_product {
+        width: 210px;
+        margin: 0;
+        gap: 0;
+    }
+    .price_single_product p {
+        font-size: 48px;
+    }
+    .price_single_product p:nth-child(2) {
+        font-size: 28px;
+    }
+    .quantity {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+        padding: 0;
+    }
+    .product_description {
+        display: none;
+    }
+    .product_description_small {
+        /* display: flex;
+        flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    .product_description_small p:first-child {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 23.4px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .product_description_small p:nth-child(2){
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18.2px;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .product_description_small p:nth-child(3){
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18.2px;
+        text-align: left;
+        text-decoration: underline;
+    }
+    .quantity_wrapper {
+        padding: 0;
+        width: 164px;
+        height: 47px;
+    }
+    .quantity button {
+        width: 210px;
+        height: 47px;
+        margin-left: 0;
+        margin-top: 12px;
+        font-size: 18px;
+    }
+    .quantity_wrapper div:first-child {
+        width: 47px;
+        height: 47px;
+    }
+    .quantity_wrapper p {
+        height: 47px;
+    }
+    .quantity_wrapper div:nth-child(3) {
+        width: 47px;
+        height: 47px;
+    }
+
 }
 
 

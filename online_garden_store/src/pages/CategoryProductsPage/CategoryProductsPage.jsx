@@ -21,8 +21,8 @@ export default function CategoryProductsPage() {
   return (
     <div>
       {category && (
-        <div className={s.categoryHeader}>
-          <h1>{category.title}</h1>
+        <div>
+          <h1 className={s.categoryHeader}>{category.title}</h1>
         </div>
       )}
 
@@ -44,6 +44,7 @@ export default function CategoryProductsPage() {
           </div>
         ))}
       </div>
+      <Footer/>
     </div>
   );
 }

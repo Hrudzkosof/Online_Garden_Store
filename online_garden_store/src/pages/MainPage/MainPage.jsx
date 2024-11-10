@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import SalesProductsContainer from '../../components/SalesProductsContainer/SalesProductsContainer';
 import { getAllProducts } from '../../requests/salesProducts';
-import { getCategories } from '../../requests/categories_req'
 import s from './MainPage.module.css';
 import AmazingDiscount from '../../components/AmazingDiscount/AmazingDiscount';
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
@@ -13,12 +12,13 @@ import Footer from '../../components/Footer/Footer';
 export default function MainPage() {
   const dispatch = useDispatch();
 
+  const [saleProducts, setSaleProducts] = useState([])
+
   useEffect(() => {
-    getAllProducts(dispatch);
+    getSaleProducts(dispatch).then(products => setSaleProducts(products));
     dispatch(getCategories());
   }, [dispatch]);
 
-  const saleProducts = useSelector(state => state.salesProducts.discountedProducts);
   const categories = useSelector(state => state.categories); 
 
   return (
@@ -26,9 +26,11 @@ export default function MainPage() {
       <AmazingDiscount />
 
       <div className={s.headerContainer}>
-    <span className={s.title}>Categories</span>
-    <div className={s.line}></div> 
-    <Link to='/categories' className={s.rectangleText}>All Categories</Link>
+        <h1 className={s.title}>Categories</h1>
+        <div className={s.line}></div>
+        <Link to='/categories' className={s.rectangleText}>
+          All Categories
+        </Link>
       </div>
 
       <CategoriesContainer categories={categories} limit={4} /> 
