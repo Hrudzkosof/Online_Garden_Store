@@ -24,7 +24,7 @@
 }
 
 .cards1 {
-    width: 728.8px; 
+    width: 780px; 
     height: 138px; 
     background-color: #F2F6D3;
     padding: 25px;
@@ -33,7 +33,7 @@
 }
 
 .cards2 {
-    width: 460px; 
+    width: 548px; 
     height: 138px; 
     background-color: #F2F6D3;
     padding: 23px;
@@ -50,6 +50,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 27.6px; 
+}
+.cardsMain2 div {
+    height: auto;
 }
 
 .contactP {
