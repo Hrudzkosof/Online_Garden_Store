@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
 import AllProductCard from '../../components/AllProductCard/AllProductCard';
+import FilterForm from '../../components/FilterForm/FilterForm';
+import Footer from '../../components/Footer/Footer';
 import { getCategoryProducts } from '../../requests/categoryProducts_req';
 import s from './CategoryProductsPage.module.css';
-import FilterForm from '../../components/FilterForm/FilterForm';
-import AddToCartButton from '../../components/AddToCartButton/AddToCartButton';
-import Footer from '../../components/Footer/Footer';
 
 export default function CategoryProductsPage() {
   const { id } = useParams();

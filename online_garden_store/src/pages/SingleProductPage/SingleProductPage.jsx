@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { getSingleProduct } from '../../requests/products'
-import s from './SingleProductPage.module.css'
-import { addProductToCartAction } from '../../store/cartReducer'
 import Footer from '../../components/Footer/Footer'
 import { Context } from '../../context'
+import { getSingleProduct } from '../../requests/products'
+import { addProductToCartAction } from '../../store/cartReducer'
+import s from './SingleProductPage.module.css'
 
 export default function SingleProductPage() {
 

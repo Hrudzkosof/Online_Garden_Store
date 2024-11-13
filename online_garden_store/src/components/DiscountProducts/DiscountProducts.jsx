@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import DiscountProductsCard from '../DiscountProductsCard/DiscountProductsCard'
-import s from './index.module.css'
-import { Link } from 'react-router-dom';
-import FilterForm from '../FilterForm/FilterForm';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSaleProducts } from '../../requests/salesProducts';
+import DiscountProductsCard from '../DiscountProductsCard/DiscountProductsCard';
+import FilterForm from '../FilterForm/FilterForm';
+import s from './index.module.css';
 
 export default function DiscountProducts({}) {
   const dispatch = useDispatch();
