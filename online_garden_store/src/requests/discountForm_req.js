@@ -1,5 +1,7 @@
+import { domain } from "../domain"
+
 export const addDiscount = (new_discount) => {
-    fetch('http://localhost:3333/sale/send',
+    fetch(`${domain}/sale/send`,
         {
         method: 'POST',
         headers: {

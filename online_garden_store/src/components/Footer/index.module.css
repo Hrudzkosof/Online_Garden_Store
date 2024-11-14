@@ -1,31 +1,29 @@
-.footer {
-    /* width: 1440px; */
-    height: 948px;
-    margin: 0 28px;
-}
 
 .footerH {
     font-family: Montserrat;
     font-size: 50px; 
     font-weight: 700;
     color: #424436;
-    /* padding: 36.8px;  */
     margin-top: 50px;
     margin-bottom: 25px;
+    margin-left: 27px;
 }
 
+.footerContact {
+    margin: 28px;
+}
 
     
  .footer{
-
     height: 800px;
-    width: 1360px;
+    /* width: 1360px; */
     margin: 0 auto;
 }
 
 .cards1 {
-    width: 780px; 
-    height: 138px; 
+    max-width: 780px;
+    width: 57%; 
+    min-height: 138px; 
     background-color: #F2F6D3;
     padding: 25px;
     border: none;
@@ -33,8 +31,9 @@
 }
 
 .cards2 {
-    width: 548px; 
-    height: 138px; 
+    max-width: 558px; 
+    width: 41%;
+    min-height: 138px; 
     background-color: #F2F6D3;
     padding: 23px;
     border: none;
@@ -44,6 +43,7 @@
 .cardsMain1 {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
 }
 
 .cardsMain2 {
@@ -120,4 +120,25 @@
         height: 250px;
     }
    
+}
+
+@media (max-width: 360px){
+    .footer {
+        width: 320px;
+    }
+    .footerContact {
+        margin: 0;
+    }
+    .cards1 {
+        width: 320px;
+    }
+    .cards2 {
+        width: 320px;
+    }
+    .map {
+        width: 320px;
+    }
+    .cardsMain2 div {
+        height: auto;
+    }
 }

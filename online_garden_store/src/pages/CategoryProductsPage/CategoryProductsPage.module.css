@@ -38,3 +38,11 @@
     margin: 20px;
   }
 }
+
+@media (max-width: 360px) {
+    .productsContainer {
+        grid-template-columns: auto;
+        justify-content: normal;
+        margin: 0;
+    }
+}

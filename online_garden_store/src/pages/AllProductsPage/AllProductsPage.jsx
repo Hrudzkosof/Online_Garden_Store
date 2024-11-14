@@ -12,8 +12,6 @@ import Footer from '../../components/Footer/Footer';
 
 export default function AllProductsPage() {
 
-  
-
   const allProductsState = useSelector(store => store.allProducts);
 
   const dispatch = useDispatch();

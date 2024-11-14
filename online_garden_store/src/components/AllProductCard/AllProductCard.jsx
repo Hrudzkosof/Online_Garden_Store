@@ -8,7 +8,7 @@ export default function AllProductCard({ id, image, title, price, discont_price 
   const discountPercent = discont_price ? Math.round(((price - discont_price) / price) * 100) : null;
 
   return (
-    <div class={s.cards_container}>
+    <div className={s.cards_container}>
     <div className={s.products_card}>
       {discountPercent && (
         <div className={s.discount_label}>

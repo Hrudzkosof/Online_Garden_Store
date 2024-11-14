@@ -3,14 +3,23 @@ import s from './OrderForm.module.css';
 import { useForm } from 'react-hook-form';
 import { addOrder } from '../requests/orderForm_req'; 
 import { Context } from '../context';
+import { useSelector } from 'react-redux';
 
 export default function OrderForm() {
     const { register, handleSubmit, reset } = useForm();
+    
     const { openModalWindow } = useContext(Context);
+
+    const cartState = useSelector(store => store.cart);
+    const totalSum = +cartState.reduce((acc, el) => acc + (el.price * el.count), 0).toFixed(2)
 
     const onSubmit = (data) => {
         addOrder(data); 
-        console.log(data);
+        console.log({
+            ...data,
+            total: totalSum,
+            cart: cartState
+        });
         openModalWindow();
         reset(); 
     };

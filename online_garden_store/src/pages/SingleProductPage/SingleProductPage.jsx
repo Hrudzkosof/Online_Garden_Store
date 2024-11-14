@@ -56,8 +56,8 @@ export default function SingleProductPage() {
                                 <h3>{title}</h3>
                             </div>
                             <div className={s.price_single_product}>
-                                <p>${price}</p>
-                                {discont_price ? <><p>${discont_price}</p> 
+                                <p>${price.toFixed(0)}</p>
+                                {discont_price ? <><p>${discont_price.toFixed(0)}</p> 
                                 <span>{-discountPercent}%</span>
                                     
                                 </> : null}        

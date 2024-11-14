@@ -1,9 +1,8 @@
+import { domain } from "../domain";
 import { loadDiscountedProductsAction, loadProductsAction } from "../store/salesReducer";
 
-
-
 export const getSaleProducts = (dispatch) => 
-  fetch('http://localhost:3333/products/all')
+  fetch(`${domain}/products/all`)
     .then(response => response.json())
     .then(products => {
      

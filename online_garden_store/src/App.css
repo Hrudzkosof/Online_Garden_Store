@@ -10,6 +10,7 @@ body {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  /* flex-wrap: wrap; */
 }
 
 @media all and (max-width: 480px) {

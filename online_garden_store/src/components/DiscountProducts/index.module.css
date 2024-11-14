@@ -30,3 +30,14 @@ h1 {
         margin: 40px 0 20px 20px;
     }
 }
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 40px;
+        max-width: 320px;
+    }
+    .discountProductsContainer {
+        grid-template-columns: auto;
+        max-width: 320px;
+    }
+}

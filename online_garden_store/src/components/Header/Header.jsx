@@ -11,13 +11,13 @@ import { Context } from '../../context'
 
 export default function Header() {
 
-  const { openMenu } = useContext(Context)
+  const { openMenu, menuActive } = useContext(Context)
 
   const cartState = useSelector(store => store.cart);
   const totalCount = cartState.reduce((acc, el) => acc + el.count, 0);
 
   return (
-    <div className={s.header}>
+    <div className={[s.header, menuActive ? s.active : ''].join(' ')}>
       <div className='wrapper'>
           <Link to='/'>
               <img src={logo} alt="LOGO" className={s.logo} />

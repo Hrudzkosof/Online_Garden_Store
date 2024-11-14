@@ -91,3 +91,11 @@
   }
 
 }
+@media (max-width: 360px){
+  .categoriesList {
+    grid-template-columns: auto;
+    width: 320px;
+  }
+
+
+}

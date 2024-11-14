@@ -6,18 +6,24 @@ import { getCategoryProducts } from '../../requests/categoryProducts_req';
 import s from './CategoryProductsPage.module.css';
 import FilterForm from '../../components/FilterForm/FilterForm';
 import Footer from '../../components/Footer/Footer'; 
+import { useDispatch, useSelector } from 'react-redux';
+import { loadAllProductsAction } from '../../store/allProductsReducer';
 
 export default function CategoryProductsPage() {
   const { id } = useParams();
-  const [products, setProducts] = useState([]);
+  
   const [category, setCategory] = useState(null);
+
+  const allProducts = useSelector(state => state.oneCategoryProducts)
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getCategoryProducts(id).then((data) => {
       setCategory(data.category);
-      setProducts(data.data);
+      dispatch(loadAllProductsAction(data.data)) ;
     });
-  }, [id]);
+  }, [id, dispatch]);
 
   return (
     <div>
@@ -30,7 +36,9 @@ export default function CategoryProductsPage() {
       <FilterForm />
 
       <div className={s.productsContainer}>
-        {products.map((product) => (
+        {allProducts
+        .filter(product => product.visible)
+        .map((product) => (
           <div key={product.id} className={s.productWrapper}>
             <div className={s.cards_container}>
               <AllProductCard
