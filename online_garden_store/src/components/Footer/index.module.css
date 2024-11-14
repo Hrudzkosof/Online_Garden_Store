@@ -191,3 +191,45 @@
         height: auto;
     }
 }
+
+@media (max-width: 1000px) {
+    .footer {
+        width: 95%; 
+        margin: 0 auto;
+        height: auto;
+    }
+
+    .footerH {
+        font-size: 36px;
+    }
+
+    .cardsMain1,
+    .cardsMain2 {
+        gap: 20px; 
+    }
+
+    .cards1,
+    .cards2 {
+        width: 49%; 
+        height: auto;
+        padding: 15px;
+    }
+
+    .contactP {
+        font-size: 16px;
+    }
+
+    .contactA {
+        font-size: 28px;
+    }
+
+    .contactInstaWhats {
+        font-size: 30px;
+    }
+
+    .map {
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+    }
+}

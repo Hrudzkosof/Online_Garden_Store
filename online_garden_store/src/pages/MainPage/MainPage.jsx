@@ -18,16 +18,16 @@ export default function MainPage() {
   useEffect(() => {
     // Fetch sale products and update state, then fetch categories
     getSaleProducts(dispatch).then(products => setSaleProducts(products));
-    dispatch(getCategories());
+    dispatch(getCategories());                                  // Dispatch action to fetch categories
   }, [dispatch]); // Dependency array ensures useEffect runs on initial render
 
-  const categories = useSelector(state => state.categories);  // Accessing categories from Redux store
+  const categories = useSelector(state => state.categories);  // Accessing categories from Redux store  // Get categories from Redux store
 
   return (
     <div className={s.main_page}>
       <AmazingDiscount />
 
-      <div className={s.headerContainer}>
+      <div className={s.headerContainer}>                      {/* Header section for categories with a link to view all categories */}
         <span className={s.title}>Categories</span>
         <div className={s.separator}></div>
         <Link to='/categories' className={s.rectangleText}>
@@ -35,7 +35,7 @@ export default function MainPage() {
         </Link>
       </div>
 
-      <CategoriesContainer categories={categories} limit={4} /> 
+      <CategoriesContainer categories={categories} limit={4} /> {/* Display categories using the CategoriesContainer component, limit to 4 */}
       <Link to='/categories' className={s.categories_media_360}>
           All Categories
         </Link>

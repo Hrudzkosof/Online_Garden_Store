@@ -41,6 +41,27 @@
   }
 }
 
+@media (max-width: 1000px) {
+    .productsContainer {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-evenly; 
+    }
+
+    .productWrapper {
+        width: 45%; 
+        max-width: 250px; 
+        margin: 10px;
+    }
+
+    .categoryHeader {
+        font-size: 36px; 
+        line-height: 42px;
+        margin-bottom: 10px;
+        text-align: left; 
+    }
+}
+
 @media (max-width: 360px) {
     .productsContainer {
         grid-template-columns: auto;

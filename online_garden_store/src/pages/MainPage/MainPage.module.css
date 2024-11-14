@@ -185,3 +185,43 @@
     margin-top: 30px;
   }
 }
+
+@media (max-width: 1000px) {
+    .headerContainer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+
+    .title {
+        font-size: 36px;
+        font-weight: bold;
+        color: #424436;
+        font-family: Montserrat;
+        line-height: 50px;
+    }
+
+    .line {
+        flex-grow: 1;
+        height: 1.5px;
+        background-color: lightgrey;
+        margin: 0 15px;
+    }
+
+    .rectangleText {
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        color: lightgrey;
+        background-color: transparent;
+        text-decoration: none;
+        cursor: pointer;
+        margin-left: 10px;
+        margin-right: 28px; 
+    }
+}
+}

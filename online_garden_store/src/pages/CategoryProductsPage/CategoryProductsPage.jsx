@@ -9,9 +9,9 @@ import { getCategoryProducts } from '../../requests/categoryProducts_req';
 import { loadAllProductsAction } from '../../store/allProductsReducer';
 import s from './CategoryProductsPage.module.css';
 
-export default function CategoryProductsPage() {
-  const { id } = useParams();
-  
+export default function CategoryProductsPage() {  // Functional component for displaying products of a specific category
+  const { id } = useParams();                     // Get the category ID from the URL parameters
+     // State to hold products and category information
   const [category, setCategory] = useState(null);
 
   const allProducts = useSelector(state => state.oneCategoryProducts)
@@ -26,14 +26,14 @@ export default function CategoryProductsPage() {
   }, [id, dispatch]);
 
   return (
-    <div>
+    <div>                                        {/* Display the category title if available */}
       {category && (
         <div>
           <h1 className={s.categoryHeader}>{category.title}</h1>
         </div>
       )}
 
-      <FilterForm />
+      <FilterForm />                              {/* Render the filter form for product filtering */}
 
       <div className={s.productsContainer}>
         {allProducts
@@ -53,7 +53,7 @@ export default function CategoryProductsPage() {
           </div>
         ))}
       </div>
-      <Footer/>
+      <Footer/>                                   {/* Render the footer at the bottom of the page */}
     </div>
   );
 }

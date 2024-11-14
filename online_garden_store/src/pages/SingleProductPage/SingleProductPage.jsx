@@ -13,7 +13,7 @@ export default function SingleProductPage() {
 
     const { openSecondModalWindow } = useContext(Context);
     const [count, setCount] = useState(1);
-    const [isExpanded, setIsExpanded] = useState(false); // состояние для управления текстом
+    const [isExpanded, setIsExpanded] = useState(false); 
 
     const incrCount = () => setCount(count + 1);
     const decrCount = () => {
@@ -35,7 +35,7 @@ export default function SingleProductPage() {
 
     const discountPercent = Math.round(((price - discont_price) / price) * 100);
 
-     // Логика для сокращения текста
+     
      const maxCharacters = 150;
      const shortDescription =
          description && description.length > maxCharacters

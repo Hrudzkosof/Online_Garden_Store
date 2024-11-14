@@ -117,3 +117,32 @@
 
 
 }
+@media (max-width: 360px){
+  .categoriesList {
+    grid-template-columns: auto;
+    width: 320px;
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 10px; 
+    display: grid;
+    grid-template-columns: 1fr; 
+
+  .categoriesList {
+    grid-template-columns: 1fr; 
+    gap: 8px; 
+  }
+
+  .title {
+    font-size: 30px; 
+  }
+
+  .rectangleText {
+    font-size: 0.9rem; 
+  }
+  }
+}
