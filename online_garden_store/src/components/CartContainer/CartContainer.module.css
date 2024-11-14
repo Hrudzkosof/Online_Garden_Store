@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 10px;
-  max-height: 600px; 
+  max-height: 600px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -11,7 +11,7 @@
 .cartContainer div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  background-color: #ffffff;
 }
 
 

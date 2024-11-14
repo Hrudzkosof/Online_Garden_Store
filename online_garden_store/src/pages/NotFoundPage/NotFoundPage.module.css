@@ -61,5 +61,33 @@
     color: #666;
     margin-top: 10px;
     line-height: 1.5;
-     
+  }
+
+  @media (max-width: 480px){
+    .not_found_page img {
+      width: 181px;
+    }
+    .number {
+      font-size: 183px;
+    }
+    .not_found_content {
+      height: 162px;
+    }
+    .not_found_page {
+      justify-content: flex-start;
+      margin-top: 30px;
+      background-color: #fffff1;
+      height: auto;
+      padding: 0;
+    }
+    .error_text {
+      font-size: 48px;
+    }
+    .subtext {
+      color: #8B8B8B;
+    }
+    .button {
+      width: 191px;
+      height: 47px;
+    }
   }

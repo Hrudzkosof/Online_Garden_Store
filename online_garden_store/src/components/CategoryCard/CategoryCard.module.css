@@ -60,4 +60,9 @@
         transition: transform 0.3s; 
         cursor: pointer; 
     }
+    @media (max-width: 360px) {
+        .category_card img {
+            height: 220px;
+        }
+    }
 }

@@ -1,6 +1,6 @@
-const LOAD_ALL_PRODUCTS = 'LOAD_ALL_PRODUCTS'; // Action type for loading all products
+export const LOAD_ALL_PRODUCTS = 'LOAD_ALL_PRODUCTS'; // Action type for loading all products
 export const SORT_PRODUCTS = 'SORT_PRODUCTS'; // Action type for sorting products
-const DISCOUNT_PRODUCTS = 'DISCOUNT_PRODUCTS'; // Action type for filtering products with a discount
+export const DISCOUNT_PRODUCTS = 'DISCOUNT_PRODUCTS'; // Action type for filtering products with a discount
 export const FILTER_PRODUCTS = 'FILTER_PRODUCTS'; // Action type for filtering products by price range
 
 // Action creators

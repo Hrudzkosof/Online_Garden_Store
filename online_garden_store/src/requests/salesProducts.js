@@ -1,9 +1,8 @@
+import { domain } from "../domain";
 import { loadProductsAction } from "../store/salesReducer";
-
-
 // Function to fetch sale products, adjust list if needed, and dispatch to Redux 
 export const getSaleProducts = (dispatch) => 
-  fetch('http://localhost:3333/products/all')
+  fetch(`${domain}/products/all`)
     .then(response => response.json())
     .then(products => {
      

@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
 import OrderForm from '../../OrderForm/OrderForm'
 
-
-
 export default function CartPage() {
 
   const cartState = useSelector(store => store.cart)
@@ -23,8 +21,7 @@ export default function CartPage() {
   return (
     <div>
       <div className={s.cart_page}>
-        
-        
+        {/* empty cart page */}
         <div className={s.cart_page_navigation}>
           <h2>Shopping cart</h2>
           <div className={s.separator}></div>
@@ -38,7 +35,9 @@ export default function CartPage() {
           <CartContainer cartState={cartState}/>
           <div className={s.order_details}>
               <h3>Order details</h3>
-              <p>{totalCount} items</p>
+              <p>{totalCount} item{
+                totalCount > 1 ? 's' : ''
+                }</p>
               <div>
                 <p>Total</p>
                 <p>${totalSum}</p>
@@ -57,6 +56,9 @@ export default function CartPage() {
       }
       
       </div>
+      { /* media query 360px */ }
+      <Link to='/categories' className={s.back_to_categories_360}>Back to the store</Link>
+      
         <Footer/>
       </div>
   )

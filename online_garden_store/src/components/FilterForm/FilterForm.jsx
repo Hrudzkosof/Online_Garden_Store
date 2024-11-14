@@ -7,12 +7,16 @@ export default function FilterForm({ hideSection }) {
 
     const dispatch = useDispatch();
 
+
+    // Sorting
     const sort = e => dispatch(sortProductsAction(e.target.value));
     
+    // Checkbox
     const [ isChecked, setIsChecked ] = useState(false);
     const handleCheck = () => setIsChecked(!isChecked);
     const handleClick = (e) => dispatch(getDiscountProductsAction(e.target.checked))
 
+    // Filtration
     const [ minValue, setMinValue ] = useState(0);
     const [ maxValue, setMaxValue ] = useState(Infinity);
 

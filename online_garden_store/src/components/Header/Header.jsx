@@ -11,13 +11,13 @@ import { Context } from '../../context'
 
 export default function Header() {
 
-  const { openMenu } = useContext(Context) // Accessing openMenu function from Context
+  const { openMenu, menuActive } = useContext(Context) // Accessing openMenu function from Context
 
   const cartState = useSelector(store => store.cart); // Getting cart state from Redux store
   const totalCount = cartState.reduce((acc, el) => acc + el.count, 0); // Calculating total items in the cart
 
   return (
-    <div className={s.header}>
+    <div className={[s.header, menuActive ? s.active : ''].join(' ')}>
       <div className={s.wrapper}> {/* Wrapper for centering and layout*/}
           <Link to='/'> {/* Logo link to homepage */}
               <img src={logo} alt="LOGO" className={s.logo} />

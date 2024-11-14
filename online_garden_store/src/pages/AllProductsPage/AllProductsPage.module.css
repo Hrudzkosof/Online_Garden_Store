@@ -1,9 +1,9 @@
-.title h1{
-    font-family: montserrat;
-    margin: 0 40px;
-    font-size: 64px;
-    background-color:#FFFFF1 ;
-    color: #424436; 
+.title h1 {
+  font-family: montserrat;
+  margin: 0 40px;
+  font-size: 64px;
+  background-color: #fffff1;
+  color: #424436;
 }
 
 @media (max-width: 768px){

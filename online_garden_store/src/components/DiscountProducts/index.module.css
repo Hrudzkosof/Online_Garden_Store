@@ -1,6 +1,6 @@
 .discountProductsContainer {
     height: 1400px;
-    background-color: #fcfdef;
+    background-color: #fffff1;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -45,5 +45,16 @@ h1 {
         font-size: 48px;
         line-height: 52.8px; 
         margin: 40px 0 20px 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 40px;
+        max-width: 320px;
+    }
+    .discountProductsContainer {
+        grid-template-columns: auto;
+        max-width: 320px;
     }
 }

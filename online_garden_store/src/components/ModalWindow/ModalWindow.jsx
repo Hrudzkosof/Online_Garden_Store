@@ -17,7 +17,7 @@ export default function ModalWindow() {
         <div>
             <IoCloseOutline onClick={closeModalWindow}/>
             <p>Congratulations!</p>
-            <p>Your order has been successfully placed on the website.
+            <p>Your order has been successfully placed on the website. <br/>
             A manager will contact you shortly to confirm your order.</p>
         </div>
     </div>

@@ -36,16 +36,20 @@ export default function MainPage() {
       </div>
 
       <CategoriesContainer categories={categories} limit={4} /> 
+      <Link to='/categories' className={s.categories_media_360}>
+          All Categories
+        </Link>
 
       <DiscountForm />
 
       <div className={s.sales_block}>
         <span className={s.sale_text}>Sale</span> {/* Sale title  */}
         <div className={s.separator}></div> {/* Separator for visual division */}
-        <Link to='/all_sales' className={s.all_sales_link}>All sales</Link>  {/* Link to all sales page  */}
+        <Link to='/all_sales' className={[s.all_sales_link, s.rectangleText ].join(' ')}>All sales</Link>  {/* Link to all sales page  */}
       </div>
 
       <SalesProductsContainer saleProducts={saleProducts} /> {/* Displays sale products in container*/}
+      <Link to='/all_sales' className={s.sale_madia_360}>All sales</Link>
       <Footer />
     </div>
   );
