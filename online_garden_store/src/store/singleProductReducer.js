@@ -8,7 +8,6 @@ const CHANGE_SINGLE_PRODUCT_STATUS = 'CHANGE_SINGLE_PRODUCT_STATUS'
 
 export const loadSingleProductAction = product => ({ type: LOAD_SINGLE_PRODUCT, payload: product })
 
-
 export const changeSingleProductStatusAction = () => ({ type: CHANGE_SINGLE_PRODUCT_STATUS })
 
 export const singleProductReducer = (state = defaultState, action) => { 

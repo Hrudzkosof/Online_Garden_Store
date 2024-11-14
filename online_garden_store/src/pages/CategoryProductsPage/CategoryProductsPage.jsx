@@ -1,23 +1,29 @@
 
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import AllProductCard from '../../components/AllProductCard/AllProductCard';
-import { getCategoryProducts } from '../../requests/categoryProducts_req'; 
-import s from './CategoryProductsPage.module.css';
 import FilterForm from '../../components/FilterForm/FilterForm';
-import Footer from '../../components/Footer/Footer'; 
+import Footer from '../../components/Footer/Footer';
+import { getCategoryProducts } from '../../requests/categoryProducts_req';
+import { loadAllProductsAction } from '../../store/allProductsReducer';
+import s from './CategoryProductsPage.module.css';
 
 export default function CategoryProductsPage() {  // Functional component for displaying products of a specific category
   const { id } = useParams();                     // Get the category ID from the URL parameters
-  const [products, setProducts] = useState([]);   // State to hold products and category information
+     // State to hold products and category information
   const [category, setCategory] = useState(null);
 
-  useEffect(() => {                              // Fetch products for the specific category when the component mounts or the category ID changes
+  const allProducts = useSelector(state => state.oneCategoryProducts)
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
     getCategoryProducts(id).then((data) => {
-      setCategory(data.category);                // Set the category details
-      setProducts(data.data);                    // Set the list of products for this category
+      setCategory(data.category);
+      dispatch(loadAllProductsAction(data.data)) ;
     });
-  }, [id]);                                      // Dependency array ensures the effect runs when the category ID changes
+  }, [id, dispatch]);
 
   return (
     <div>                                        {/* Display the category title if available */}
@@ -29,8 +35,10 @@ export default function CategoryProductsPage() {  // Functional component for di
 
       <FilterForm />                              {/* Render the filter form for product filtering */}
 
-      <div className={s.productsContainer}>       {/* Display the list of products in a grid format */}
-        {products.map((product) => (
+      <div className={s.productsContainer}>
+        {allProducts
+        .filter(product => product.visible)
+        .map((product) => (
           <div key={product.id} className={s.productWrapper}>
             <div className={s.cards_container}>
               <AllProductCard

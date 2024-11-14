@@ -1,3 +1,4 @@
+import { domain } from "../domain";
 import { loadCategoriesAction } from "../store/categoriesReducer";
 
 export const getCategories = () => {                         // Function to fetch categories data from the server

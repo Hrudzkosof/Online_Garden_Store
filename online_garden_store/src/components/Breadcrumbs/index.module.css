@@ -1,0 +1,30 @@
+.breadcrumbs {
+  font-family: Montserrat; /* Set font family */
+  font-size: 16px; /* Set font size */
+  color: #DDDDDD; /* Set text color */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center align items */
+  background-color: #FFFFF1; /* Set background color */
+  height: 80px; /* Set container height */
+}
+
+.breadcrumbsContainer {
+  margin-left: 60px; /* Add left margin */
+}
+
+.crumb {
+  display: inline-block; /* Display inline block */
+  margin: 0 5px; /* Set horizontal spacing */
+}
+
+.link {
+  text-decoration: none; /* Remove text underline */
+  color: #8B8B8B; /* Set link color */
+  padding: 6px 12px; /* Set padding */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #DDDDDD; /* Add border */
+  border-radius: 5px; /* Round corners */
+  width: 120px; /* Set link width */
+  height: 36px; /* Set link height */
+  text-align: center; /* Center text */
+}

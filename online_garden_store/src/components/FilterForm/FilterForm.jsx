@@ -7,12 +7,16 @@ export default function FilterForm({ hideSection }) {
 
     const dispatch = useDispatch();
 
+
+    // Sorting
     const sort = e => dispatch(sortProductsAction(e.target.value));
     
+    // Checkbox
     const [ isChecked, setIsChecked ] = useState(false);
     const handleCheck = () => setIsChecked(!isChecked);
     const handleClick = (e) => dispatch(getDiscountProductsAction(e.target.checked))
 
+    // Filtration
     const [ minValue, setMinValue ] = useState(0);
     const [ maxValue, setMaxValue ] = useState(Infinity);
 
@@ -26,39 +30,34 @@ export default function FilterForm({ hideSection }) {
     
   return (
     <form className={s.filter_form}>
-        
-            <div>
-                <label className={s.label}>Price</label>
-                <input type="text" placeholder='from' name='price_from' onChange={handleMinValue}/>
-                <input type="text" placeholder='to' name='price_to' onChange={handleMaxValue} />
-            </div>
-
-            <div>
-                
-           
-            </div>
-        
+    
+    <div className={s.first_row}>
+        <div>
+            <label className={s.label}>Price</label>
+            <input type="text" placeholder="from" name="price_from" onChange={handleMinValue} />
+            <input type="text" placeholder="to" name="price_to" onChange={handleMaxValue} />
+        </div>
 
         {hideSection !== 'discountedItems' && (
-            <div>
-                <label className={s.checkbox_container}><span className={s.label}>Discounted items</span>
-                    <input type="checkbox"  checked={isChecked} onChange={handleCheck} onClick={handleClick}/>
-                    <span className={s.checkmark}></span>
-                </label>   
-            </div> 
+            <div className={s.checkbox_container}>
+                <label className={s.label}>Discounted items</label>
+                <input type="checkbox" checked={isChecked} onChange={handleCheck} onClick={handleClick} />
+                <span className={s.checkmark}></span>
+            </div>
         )}
+    </div>
 
-        <div>
-            <label className={s.label}>Sorted</label>
-            <select onInput={sort} className={s.sort} name="sort">
+    
+    <div>
+        <label className={s.label}>Sorted</label>
+        <select onInput={sort} className={s.sort} name="sort">
             <option value="default">by default</option>
             <option value="price-asc">Price: Low to High</option>
             <option value="price-desc">Price: High to Low</option>
             <option value="nameAsc">Name: A to Z</option>
             <option value="nameDesc">Name: Z to A</option>
-            </select>
-        </div>
-        
-    </form>
+        </select>
+    </div>
+</form>
   )
 }

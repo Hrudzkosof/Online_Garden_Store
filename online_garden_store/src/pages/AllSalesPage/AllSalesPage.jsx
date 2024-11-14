@@ -8,6 +8,5 @@ export default function AllSalesPage() {
       <DiscountProducts/>
       <Footer/>
     </div>
-    
   )
 }

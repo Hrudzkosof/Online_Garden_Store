@@ -1,24 +1,28 @@
 import React from 'react'
 import s from './DiscountForm.module.css'
 import { addDiscount } from '../../requests/discountForm_req';
+import { useForm } from 'react-hook-form';
 
 export default function DiscountForm() {
-    const submit = e => {
-        e.preventDefault();
-    
-        const { name, number, email } = e.target;
 
-        const getDiscount = {
-            name: name.value,
-            number: number.value,
-            email: email.value
-        }
+    const { register, handleSubmit, reset, formState: { errors } }  = useForm(); 
 
-        addDiscount(getDiscount)
-        console.log(getDiscount)
-
-        e.target.reset();
+    const submit = data => {
+        addDiscount(data);
+        console.log(data);
+        reset();
     }
+
+    // Validation //
+    const nameRegister = register('name', {
+        required: '*The field "Name" is required'
+    });
+    const phoneRegister = register('phone', {
+        required: '*The field "Name" is required'
+    });
+    const emailRegister = register('email', {
+        required: '*The field "Email" is required'
+    });
 
   return (
     <div className={s.discount_form}>
@@ -27,10 +31,10 @@ export default function DiscountForm() {
     
         <div className={s.form_media}>
             <img src="discount.png" alt="discount" />
-            <form className={s.form} onSubmit={submit}>
-                <input type='text' placeholder='Name' name='name'/>
-                <input type='number' placeholder='Phone number' name='number'/>
-                <input type='email' placeholder='Email' name='email'/>
+            <form className={s.form} onSubmit={handleSubmit(submit)}>
+                <input type='text' placeholder='Name' {...nameRegister}/>
+                <input type='number' placeholder='Phone number' {...phoneRegister}/>
+                <input type='email' placeholder='Email' {...emailRegister}/>
                 <button>Get a discount</button>
             </form>
         </div>

@@ -3,6 +3,7 @@ import s from './OrderForm.module.css';
 import { useForm } from 'react-hook-form';
 import { addOrder } from '../requests/orderForm_req'; 
 import { Context } from '../context';
+import { useSelector } from 'react-redux';
 
 export default function OrderForm() {
     const { register, handleSubmit, reset } = useForm();  // Destructure methods from useForm: register for input fields, handleSubmit for form submission, reset to clear the form

@@ -8,8 +8,8 @@ export default function AllProductsContainer({allProducts}) {
     <div className={s.products_container}>
         {
             allProducts
-            .filter(el => el.visible)
-            .map( el => <AllProductCard key={el.id} {...el}/>)
+            .filter(el => el.visible) // Filtering products to only show visible ones
+            .map( el => <AllProductCard key={el.id} {...el}/>) // Mapping each visible product to the AllProductCard component
         }
     </div>
   )

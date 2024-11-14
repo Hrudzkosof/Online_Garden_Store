@@ -1,55 +1,56 @@
-
-
 .amazingDiscountImg {
-    width: 100vw; 
-    height: 600px; 
-    max-width: 1440px;
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center; 
-    background-image: url(./imgDiscount.png);
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+    width: 1440px; /* Full width in pixels */
+    height: 600px; /* Set fixed height */
+    max-width: 1440px; /* Max width restriction */
+    background-repeat: no-repeat; /* Prevent background repetition */
+    background-size: cover; /* Cover background area */
+    background-position: center; /* Center background image */
+    background-image: url(./imgDiscount.png); /* Image URL */
+    margin: 0 auto; /* Center horizontally */
+    position: relative; /* Enable relative positioning */
+    overflow: hidden; /* Hide overflow content */
 }
 
 .amazingDiscountH {
-    font-family: Montserrat;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 105.6px;
-    text-align: left;
-    color: #FFFFFF;
+    font-family: Montserrat; /* Font family */
+    font-size: 80px; /* Large font size */
+    font-weight: 700; /* Bold font weight */
+    line-height: 105.6px; /* Line height */
+    text-align: left; /* Align text left */
+    color: #ffffff; /* White text color */
 }
+
 .amazingDiscountButton {
-    font-family: montserrat !important;;
-    font-size: 20px !important;;
-    font-weight: 600 !important;;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF !important;
-    border-radius: 7px;
-    background-color: #92A134;
-    border: none;
-    height: 58px;
-    width: 218px;
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none; 
-    cursor: pointer; 
-    margin: 20px 30px;
+    font-family: Montserrat, sans-serif; /* Font family */
+    font-size: 20px; /* Button font size */
+    font-weight: 600; /* Button font weight */
+    line-height: 26px; /* Line height */
+    text-align: center; /* Center button text */
+    color: white; /* White text color */
+    border-radius: 7px; /* Rounded corners */
+    background-color: #92A134; /* Green background */
+    border: none; /* Remove border */
+    height: 58px; /* Button height */
+    width: 218px; /* Button width */
+    margin-top: 25px; /* Top margin */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    cursor: pointer; /* Pointer cursor */
+    margin: 20px 30px; /* Button margin */
 }
+
 h1 {
-    width: 1200px;
+    width: 1200px; /* Set width */
 }
+
 .discountText {
-    width: 1360px;
-    height: 400px;
-    margin: 0 auto;
-    top: 40px;
+    width: 1360px; /* Fixed width */
+    height: 400px; /* Set fixed height */
+    margin: 0 auto; /* Center text block */
+    top: 40px; /* Set top margin */
 }
+
 .leer {
     width: 1360px;
     height: 74px;
@@ -66,6 +67,35 @@ h1 {
     font-size: 68px;
 }
 } */
+
+
+@media (max-width: 768px) {
+    .amazingDiscountImg {
+        width: 100vw; /* Займёт всю ширину экрана */
+        height: calc(100vw * (634 / 768)); /* Сохраняет соотношение высоты 634px к ширине 768px */
+        max-width: 768px; /* Ограничение по ширине */
+        max-height: 634px; /* Ограничение по высоте */
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-image: url(./imgDiscount.png);
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .amazingDiscountH {
+        font-size: 66px; /* Уменьшенный размер шрифта для экрана 768px */
+        line-height: 74.8px;
+        max-width: 90%; /* Ограничиваем ширину элемента, чтобы текст переносился */
+        text-align: left;
+        word-wrap: break-word; /* Перенос слов, если текст слишком длинный */
+        width: 740px; /* Фиксированная ширина, как в Figma */
+        
+       
+    }
+
+ 
+}
 
 @media (max-width: 480px) {
 
@@ -85,7 +115,6 @@ h1 {
         /* justify-content: center; */
         overflow: hidden;
     }
-
     .amazingDiscountH {
         font-family: Montserrat, sans-serif;
         font-size: 60px;  /* Уменьшенный размер заголовка */
@@ -101,28 +130,16 @@ h1 {
     }
 
     .amazingDiscountButton {
-        font-family: Montserrat, sans-serif;
-        font-size: 16px;  
-        font-weight: 600;
-        line-height: 20px;
-        text-align: left;
-        color: #FFFFFF;
-        border-radius: 6px;
-        background-color: #92A134;
-        border: none;
-        height: 47px;  
-        width: 199px;  
-        margin-top: 12px;
-        text-decoration: none;
-        cursor: pointer;
-        margin-left: 0;
+        font-size: 14px; /* Decrease font size */
+        height: 40px; /* Adjust button height */
+        width: 150px; /* Adjust button width */
+        margin-top: 10px; /* Adjust margin */
     }
 
     .discountText {
-        width: 100%;
-        max-width: 90%;  
-        text-align: left;
-    } 
+        width: 100%; /* Full width */
+        text-align: left; /* Align text to left */
+    }
 
     /* .leer {
         width: 100%;
