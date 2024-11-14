@@ -1,20 +1,28 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 body {
-  background-color: #FFFFF1;
+  background-color: #fffff1;
 }
 
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  /* flex-wrap: wrap; */
 }
 
 @media all and (max-width: 480px) {
   .wrapper {
-  max-width: 480px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .wrapper {
+  max-width: 768px;
   margin: 0 auto;
   }
 }

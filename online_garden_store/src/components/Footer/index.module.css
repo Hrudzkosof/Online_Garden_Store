@@ -1,33 +1,58 @@
-.footer {
-    height: auto; /* Let the content define the height */
-    margin: 0 16px; /* Smaller margin for mobile */
-    padding: 20px;
-    max-width: 100%; /* Ensure it does not overflow on mobile */
-}
 
 .footerH {
     font-family: Montserrat, sans-serif;
     font-size: 36px; /* Smaller for mobile */
     font-weight: 700;
     color: #424436;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-left: 27px;
 }
 
-.cards1, .cards2 {
-    width: 100%;
-    height: auto; /* Adapt height to content */
+.footerContact {
+    margin: 28px;
+}
+
+    
+ .footer{
+    height: 800px;
+    /* width: 1360px; */
+    margin: 0 auto;
+}
+
+.cards1 {
+    max-width: 780px;
+    width: 57%; 
+    min-height: 138px; 
     background-color: #F2F6D3;
     padding: 20px;
     border: none;
     border-radius: 10px;
-    margin-bottom: 15px; /* Ensure separation between cards */
+}
+
+.cards2 {
+    max-width: 558px; 
+    width: 41%;
+    min-height: 138px; 
+    background-color: #F2F6D3;
+    padding: 23px;
+    border: none;
+    border-radius: 10px;
 }
 
 .cardsMain1, .cardsMain2 {
     display: flex;
-    flex-direction: column;
-    gap: 15px; /* Spacing between elements */
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.cardsMain2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27.6px; 
+}
+.cardsMain2 div {
+    height: auto;
 }
 
 .contactP {
@@ -59,22 +84,60 @@
     margin-right: 12px;
 }
 
-/* Larger Screen Styles */
-@media (min-width: 768px) {
-    .footer {
-        margin: 0 28px;
-        max-width: 95%;
+@media (max-width: 768px){
+    .footer{
+        width: 768px;
+        height: 832px;
+        margin: -10px;
+    }
+    .footerH{
+        font-size: 45px;
+        margin-left: 20px;
+    }
+    .footerContact {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+  
+    .cards1{
+        width: 479px;
+        height: 150px;
+        margin-bottom: 8px;
     }
 
-    .footerH {
-        font-size: 40px; /* Increase font size for tablets */
+    .cards2{
+        width: 229px;
+        height: 150px;
     }
 
-    .cardsMain1, .cardsMain2 {
-        flex-direction: row;
-        justify-content: space-between;
+    .map{
+        width: 725px;
+        height: 250px;
+        
     }
 
+}
+
+
+@media (max-width: 480px){
+    .footerContact {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .cardsMain1 {
+        display: contents;
+    }
+    .cardsMain2 {
+        display: contents;
+    }
+    .cardsMain2 div {
+        height: 145px;
+    }
+    .contactA {
+        font-size: 28px;
+    }
     .cards1 {
         width: 48%; /* Each card takes up half the width */
     }
@@ -105,5 +168,26 @@
 
     .map {
         height: 400px;
+    }
+}
+
+@media (max-width: 360px){
+    .footer {
+        width: 320px;
+    }
+    .footerContact {
+        margin: 0;
+    }
+    .cards1 {
+        width: 320px;
+    }
+    .cards2 {
+        width: 320px;
+    }
+    .map {
+        width: 320px;
+    }
+    .cardsMain2 div {
+        height: auto;
     }
 }

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'; // Import React and hooks
-import { useDispatch, useSelector } from 'react-redux'; // Import Redux hooks
-import { getSaleProducts } from '../../requests/salesProducts'; // API request for sales products
-import DiscountProductsCard from '../DiscountProductsCard/DiscountProductsCard'; // Product card component
-import FilterForm from '../FilterForm/FilterForm'; // Filter form component
-import s from './index.module.css'; // Import styles
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getSaleProducts } from '../../requests/salesProducts';
+import DiscountProductsCard from '../DiscountProductsCard/DiscountProductsCard';
+import FilterForm from '../FilterForm/FilterForm';
+import s from './index.module.css';
 
 export default function DiscountProducts({}) {
   const dispatch = useDispatch(); // Dispatch hook for actions
@@ -22,7 +22,9 @@ export default function DiscountProducts({}) {
       <FilterForm hideSection='discountedItems'/> {/* Filter form for discounts */}
      
       <div className={s.discountProductsContainer}> {/* Container for product cards */}
-        {salesProducts.map((product) => (  // Loop over products
+        {salesProducts
+        .filter(product => product.visible)
+        .map((product) => (  // Loop over products
           
           <div key={product.id} >  {/* Unique key for each product */}
             <DiscountProductsCard

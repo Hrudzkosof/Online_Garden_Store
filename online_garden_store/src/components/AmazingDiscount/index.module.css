@@ -52,63 +52,81 @@ h1 {
 }
 
 .leer {
-    width: 1360px; /* Full width */
-    height: 74px; /* Set height */
-    margin: 0 auto; /* Center element */
+    width: 1360px;
+    height: 74px;
+    margin: 0 auto;
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .amazingDiscountImg {
-        height: 500px; /* Adjust height for smaller screens */
+
+/* @media (max-width: 768px) {
+    .amazingDiscountImg{
+        width: 768px;
     }
 
-    .amazingDiscountH {
-        font-size: 60px; /* Decrease font size for tablets */
-        line-height: 80px; /* Adjust line height */
-    }
-
-    .amazingDiscountButton {
-        font-size: 18px; /* Slightly smaller for tablets */
-        height: 50px; /* Decrease height */
-        width: 200px; /* Decrease width */
-    }
-
-    .discountText {
-        width: 90%; /* Use percentage for better scaling */
-    }
+.amazingDiscountH{
+    font-size: 68px;
 }
+} */
+
 
 @media (max-width: 768px) {
     .amazingDiscountImg {
-        height: 400px; /* Further decrease height for mobile */
-        padding: 0 10px; /* Add padding */
+        width: 100vw; /* Займёт всю ширину экрана */
+        height: calc(100vw * (634 / 768)); /* Сохраняет соотношение высоты 634px к ширине 768px */
+        max-width: 768px; /* Ограничение по ширине */
+        max-height: 634px; /* Ограничение по высоте */
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-image: url(./imgDiscount.png);
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
     }
-
     .amazingDiscountH {
-        font-size: 50px; /* Smaller font for mobile */
-        line-height: 60px; /* Adjust line height */
+        font-size: 66px; /* Уменьшенный размер шрифта для экрана 768px */
+        line-height: 74.8px;
+        max-width: 90%; /* Ограничиваем ширину элемента, чтобы текст переносился */
+        text-align: left;
+        word-wrap: break-word; /* Перенос слов, если текст слишком длинный */
+        width: 740px; /* Фиксированная ширина, как в Figma */
+        
+       
     }
 
-    .amazingDiscountButton {
-        font-size: 16px; /* Decrease font size */
-        height: 45px; /* Adjust button height */
-        width: 180px; /* Adjust button width */
-    }
-
-    .discountText {
-        width: 95%; /* Set width percentage */
-    }
+ 
 }
 
 @media (max-width: 480px) {
-    .amazingDiscountImg {
-        height: 350px; /* Compact height for small screens */
-    }
 
+    .amazingDiscountImg {
+        width: 100vw;  /* Займёт всю ширину экрана */
+        max-width: 100vw;  /* Не выходит за ширину экрана */
+        height: 600px;  /* Уменьшенная высота для компактности */
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+        background-image: url(./imgDiscount.png);
+        margin: 0 auto;  /* Центрирует по горизонтали */
+        /* padding: 0 15px;   */
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
+        overflow: hidden;
+    }
     .amazingDiscountH {
-        font-size: 40px; /* Adapt font size for smaller mobile screens */
-        line-height: 50px; /* Adjust line height */
+        font-family: Montserrat, sans-serif;
+        font-size: 60px;  /* Уменьшенный размер заголовка */
+        font-weight: 700;
+        line-height: 66px;  /* Уменьшенная высота строки */
+        text-align: left;
+        color: #FFFFFF;
+        max-width: 90%;  
+        /* margin: 0 auto; */
+        margin-left: 0;
+        font-family: Montserrat;
+
     }
 
     .amazingDiscountButton {

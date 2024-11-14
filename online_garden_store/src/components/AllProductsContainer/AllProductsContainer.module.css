@@ -7,11 +7,25 @@
     max-width: 100%;
     padding: 10px;
 }
+@media (max-width: 768px){
+    .products_container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 0;
+        gap: 5px;
+    }
 
+}
 @media (max-width: 480px){
     .products_container {
         grid-template-columns: repeat(2, 1fr);
         gap: 0;
         padding-bottom: 0;
+    }
+}
+
+@media (max-width: 360px){
+    .products_container {
+        grid-template-columns: auto;
+        padding: 0;
     }
 }

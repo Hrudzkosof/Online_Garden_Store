@@ -20,6 +20,19 @@
     display: none;
 }
 
+@media (max-width: 768px) {
+    .nav_menu {
+        width: 482px;
+        height: 26px;
+    }
+    .nav_menu > a{
+        font-size: 17px;
+        font-weight: 400;
+       
+        
+    }
+}
+
 @media (max-width: 480px){
     .nav_menu {
         display: none;
@@ -29,7 +42,7 @@
         left: 71%;
         background-color: #FFFFF1;
         width: 282px;
-        height: 1067px;
+        height: 100vh;
         z-index: 200;
         top: 0;
     }
@@ -54,14 +67,11 @@
     .nav_menu.active {
         display: flex;
     }
-    /* .mask {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        background-color: #0000001A;
-        top: 0;
-        left: 0;
-        display: block;
-    } */
+
 }
 
+@media (max-width: 360px) {
+    .nav_menu {
+        width: 220px;
+    }
+}

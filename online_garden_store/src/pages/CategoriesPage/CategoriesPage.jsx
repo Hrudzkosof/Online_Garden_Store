@@ -14,8 +14,10 @@ export default function CategoriesPage() {
   }, [dispatch]);
 
   return (
-    <div className={s.title}>
-      <h1>Categories</h1>
+    <div>
+      <div className="categoriesHeader">
+        <h1>Categories</h1> 
+      </div>
       <CategoriesContainer categories={categories} />
       <Footer />
     </div>

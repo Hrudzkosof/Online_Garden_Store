@@ -82,6 +82,15 @@
     color: black; /* Black link color */
 }
 
+@media (max-width: 768px){
+    .cards {
+        max-width: 338px;
+        margin: 0;
+        
+    }
+    
+}
+
 @media (max-width: 480px){
     .cards {
         width: 210px; /* Smaller card width */
@@ -92,5 +101,13 @@
     .discountProductsCards {
         padding: 0; /* Remove padding */
         justify-content: center; /* Center content */
+    }
+}
+
+@media (max-width: 360px) {
+    .cards   {
+        width: 320px;
+        max-width: 320px;
+        margin-left: 20px;
     }
 }

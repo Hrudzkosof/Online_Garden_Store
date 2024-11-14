@@ -4,8 +4,6 @@
   background-color: #fffff1;
   padding: 20px;
   height: 100%;
-  /* margin-left: 20px;
-    margin-right: 0; */
 }
 
 .cart_page_navigation {
@@ -146,47 +144,189 @@
   flex-direction: column;
 }
 
-@media (max-width: 480px){
-    .cart_page h2 {
-        font-size: 56px; 
-        padding-left: 0px;
-        font-weight: 700px;
-        line-height: 52.8px;
-        text-align: left;
-        margin-left: 10px;
-        width: auto;
-        /* margin: 0; */
-        margin-top: 40px;
-    }
-    .back_to_categories {
-        border: 1px solid lightgrey;
-        border-radius: 6px;
-        padding: 0;
-        font-weight: 500;
-        font-size: 15px;
-        color: lightgrey;
-        background-color: transparent;
-        text-decoration: none;
-        cursor: pointer;
-        margin-right: 10px;
-        height: 40px;
-    }
-    .separator {
-        display: none;
-    }
-    .cart_page {
-        width: 100%;
-        padding: 0;
-    }
-    .cart_page_products {
-        display: contents;
-    }
-    .order_details {
-        width: 440px;
-        height: 424px;
-        padding: 0;
-    }
-    .order_details h3 {
-        font-size: 28px;
-    }
+@media (max-width: 768px){
+  .cart_page {
+    width: 768px;
+
+  }
+  .cart_page h2 {
+    font-size: 56px; 
+    padding-left: 0px;
+    font-weight: 700px;
+    line-height: 52.8px;
+    text-align: left;
+    margin-left: 10px;
+    width: auto;
+    margin-bottom: 40px;
+    
+}
+.back_to_categories {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 15px;
+    color: lightgrey;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 10px;
+    height: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.separator {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #dddddd;
+  margin-left: 15px;
+  margin-right: 0;
+  width: 100px;
+  margin-bottom: 40px;
+ 
+}
+
+.cart_page_products {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+.order_details{
+  width: 100%;
+  margin: 10px;
+  margin-left: -2px;
+}
+.cart_page button{
+  width: 180px;
+}
+
+.order_details > div {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%; 
+}
+.order_details > div > p:first-child{
+  margin-top: 15px;
+}
+
+.order_details > div > p:last-child{
+  font-size: 50px;
+  margin-right: 10px;
+}
+
+.cart_page > a > button{
+  width: 280px; 
+  padding: 10px;
+  
+}
+  
+}
+.back_to_categories_360 {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .cart_page h2 {
+    font-size: 48px;
+    padding-left: 0px;
+    font-weight: 700px;
+    line-height: 52.8px;
+    text-align: left;
+    margin-left: 20px;
+    width: auto;
+    /* margin: 0; */
+    margin-top: 40px;
+  }
+  .back_to_categories {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 15px;
+    color: lightgrey;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 20px;
+    height: 40px;
+  }
+  .separator {
+    display: none;
+  }
+  .cart_page {
+    width: 100%;
+    padding: 0;
+  }
+  .cart_page > p {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  .cart_page button {
+    margin-left: 20px;
+  }
+  .cart_page_products {
+    display: contents;
+  }
+  .order_details {
+    width: 440px;
+    height: 424px;
+    padding: 0;
+    padding: 24px 20px 24px 20px;
+    margin-left: 20px;
+  }
+  .order_details h3 {
+    font-size: 28px;
+  }
+  .order_details > p {
+    font-size: 28px;
+  }
+  .order_details div {
+    width: 400px;
+    height: 53px;
+    align-items: end;
+  }
+  .order_details div p:nth-child(1) {
+    font-size: 28px;
+  }
+  .order_details div p:nth-child(2) {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 360px) {
+  .separator {
+    display: none;
+  }
+  .back_to_categories {
+    display: none;
+  }
+  .cart_page h2 {
+    font-size: 40px;
+  }
+  .order_details {
+    width: 320px;
+  }
+  .order_details div {
+    width: 280px;
+  }
+  .back_to_categories_360 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    color: lightgrey;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    width: 169px;
+    height: 42px;
+    margin-left: 100px;
+    margin-top: 30px;
+  }
 }

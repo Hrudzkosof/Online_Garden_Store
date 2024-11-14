@@ -17,8 +17,8 @@ export default function DiscountProductsCard({ id, title, price, discont_price, 
             <p className={s.discountProductTitle}>{title}</p>  {/*Product title*/}
             <p className={s.discounProductDisPrice}>${discont_price}<span className={s.discountProductPrice}>${price}</span></p>  {/*Product prices*/}
             <p className={s.discountProductDisPercentage}>{discountPercentage} %</p>  {/*Discount percentage*/}
-            <AddToCartButton product={product} />  {/*Add to cart button*/}
           </Link>
+          <AddToCartButton product={product} /> {/*Add to cart button*/}
         </div>
     </div>
   )

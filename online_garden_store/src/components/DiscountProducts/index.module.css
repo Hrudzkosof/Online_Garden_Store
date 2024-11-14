@@ -1,6 +1,6 @@
 .discountProductsContainer {
     height: 1400px; /* Set fixed height */
-    background-color: #fcfdef; /* Light background color */
+    background-color: #fffff1; /* Light background color */
     display: grid; /* Use grid layout */
     grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
     grid-template-rows: repeat(6, 1fr); /* 6 equal-height rows */
@@ -15,6 +15,23 @@ h1 {
     color: #424436; /* Dark grey color */
 }
 
+
+@media (max-width: 768px){
+    .discountProductsContainer{
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        margin-bottom: 20px; 
+
+    }
+    h1{
+        font-size: 56px;
+        line-height: 61.6px; 
+        margin: 40px 0 20px 27px;
+    }
+
+}
 @media (max-width: 480px) { /* For small screens */
     .discountProductsContainer {
       background-color: #FFFFF1; /* Lighter background for mobile */
@@ -28,5 +45,16 @@ h1 {
         font-size: 48px; /* Smaller font size */
         line-height: 52.8px; /* Adjust line height */
         margin: 40px 0 20px 20px; /* Adjust margins */
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 40px;
+        max-width: 320px;
+    }
+    .discountProductsContainer {
+        grid-template-columns: auto;
+        max-width: 320px;
     }
 }
