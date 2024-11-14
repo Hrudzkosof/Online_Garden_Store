@@ -48,6 +48,31 @@
     display: none;
 }
 
+@media (max-width: 768px){
+
+    .header{
+        height: 110px;
+        padding-top: 5px;
+    }
+    .header > div {
+        padding: 0;
+        padding-bottom: 0;
+        align-items: center;
+        height: 100px;
+    }
+
+    .basket{
+        width: 48px;
+        height: 52px;
+        margin: 0 -75px;
+    }
+    .logo{
+        width: 65px;
+        height: 65px;
+    }
+
+}
+
 @media (max-width: 480px){
     .header {
         height: 68px;

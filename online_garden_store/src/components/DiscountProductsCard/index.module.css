@@ -84,6 +84,15 @@
     color: black;
 }
 
+@media (max-width: 768px){
+    .cards {
+        max-width: 338px;
+        margin: 0;
+        
+    }
+    
+}
+
 @media (max-width: 480px){
     .cards {
         width: 210px;

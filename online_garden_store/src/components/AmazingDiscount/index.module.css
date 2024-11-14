@@ -67,6 +67,35 @@ h1 {
 }
 } */
 
+
+@media (max-width: 768px) {
+    .amazingDiscountImg {
+        width: 100vw; /* Займёт всю ширину экрана */
+        height: calc(100vw * (634 / 768)); /* Сохраняет соотношение высоты 634px к ширине 768px */
+        max-width: 768px; /* Ограничение по ширине */
+        max-height: 634px; /* Ограничение по высоте */
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-image: url(./imgDiscount.png);
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .amazingDiscountH {
+        font-size: 66px; /* Уменьшенный размер шрифта для экрана 768px */
+        line-height: 74.8px;
+        max-width: 90%; /* Ограничиваем ширину элемента, чтобы текст переносился */
+        text-align: left;
+        word-wrap: break-word; /* Перенос слов, если текст слишком длинный */
+        width: 740px; /* Фиксированная ширина, как в Figma */
+        
+       
+    }
+
+ 
+}
+
 @media (max-width: 480px) {
 
     .amazingDiscountImg {
