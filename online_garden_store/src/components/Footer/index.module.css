@@ -121,7 +121,7 @@
 
 @media (max-width: 1000px) {
     .footer {
-        width: 90%;
+        width: 95%; 
         margin: 0 auto;
         height: auto;
     }
@@ -132,12 +132,12 @@
 
     .cardsMain1,
     .cardsMain2 {
-        gap: 16px;
+        gap: 20px; 
     }
 
     .cards1,
     .cards2 {
-        width: 48%;
+        width: 49%; 
         height: auto;
         padding: 15px;
     }

@@ -30,3 +30,28 @@ h1 {
         margin: 40px 0 20px 20px;
     }
 }
+
+@media (max-width: 1000px) {
+    .discountProductsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      height: auto; /* Изменено с min-height на height */
+      overflow: visible; /* Убираем авто-скролл */
+    }
+  
+    .discountProductsContainer > div {
+      flex: 1 1 calc(33.33% - 20px);
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+  
+    h1 {
+      font-size: 56px;
+      margin: 20px 0 20px 20px;
+    }
+  }

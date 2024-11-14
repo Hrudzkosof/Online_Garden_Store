@@ -7,29 +7,29 @@ import s from './CategoryProductsPage.module.css';
 import FilterForm from '../../components/FilterForm/FilterForm';
 import Footer from '../../components/Footer/Footer'; 
 
-export default function CategoryProductsPage() {
-  const { id } = useParams();
-  const [products, setProducts] = useState([]);
+export default function CategoryProductsPage() {  // Functional component for displaying products of a specific category
+  const { id } = useParams();                     // Get the category ID from the URL parameters
+  const [products, setProducts] = useState([]);   // State to hold products and category information
   const [category, setCategory] = useState(null);
 
-  useEffect(() => {
+  useEffect(() => {                              // Fetch products for the specific category when the component mounts or the category ID changes
     getCategoryProducts(id).then((data) => {
-      setCategory(data.category);
-      setProducts(data.data);
+      setCategory(data.category);                // Set the category details
+      setProducts(data.data);                    // Set the list of products for this category
     });
-  }, [id]);
+  }, [id]);                                      // Dependency array ensures the effect runs when the category ID changes
 
   return (
-    <div>
+    <div>                                        {/* Display the category title if available */}
       {category && (
         <div>
           <h1 className={s.categoryHeader}>{category.title}</h1>
         </div>
       )}
 
-      <FilterForm />
+      <FilterForm />                              {/* Render the filter form for product filtering */}
 
-      <div className={s.productsContainer}>
+      <div className={s.productsContainer}>       {/* Display the list of products in a grid format */}
         {products.map((product) => (
           <div key={product.id} className={s.productWrapper}>
             <div className={s.cards_container}>
@@ -45,7 +45,7 @@ export default function CategoryProductsPage() {
           </div>
         ))}
       </div>
-      <Footer/>
+      <Footer/>                                   {/* Render the footer at the bottom of the page */}
     </div>
   );
 }

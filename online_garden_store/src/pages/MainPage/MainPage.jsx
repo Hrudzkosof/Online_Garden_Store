@@ -17,16 +17,16 @@ export default function MainPage() {
 
   useEffect(() => {
     getSaleProducts(dispatch).then(products => setSaleProducts(products));
-    dispatch(getCategories());
+    dispatch(getCategories());                                  // Dispatch action to fetch categories
   }, [dispatch]);
 
-  const categories = useSelector(state => state.categories); 
+  const categories = useSelector(state => state.categories);   // Get categories from Redux store
 
   return (
     <div className={s.main_page}>
       <AmazingDiscount />
 
-      <div className={s.headerContainer}>
+      <div className={s.headerContainer}>                      {/* Header section for categories with a link to view all categories */}
         <span className={s.title}>Categories</span>
         <div className={s.line}></div>
         <Link to='/categories' className={s.rectangleText}>
@@ -34,7 +34,7 @@ export default function MainPage() {
         </Link>
       </div>
 
-      <CategoriesContainer categories={categories} limit={4} /> 
+      <CategoriesContainer categories={categories} limit={4} /> {/* Display categories using the CategoriesContainer component, limit to 4 */}
 
       <DiscountForm />
 
