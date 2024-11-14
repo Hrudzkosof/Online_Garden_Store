@@ -1,70 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
-import s from './index.module.css';
+import React from 'react'; // Import React
+import { Link, useLocation } from 'react-router-dom'; // Import Link and location hook
+import s from './index.module.css'; // Import styles
 
 export default function Breadcrumbs() {
-  const location = useLocation();
-  const { product_id } = useParams(); // Get product_id from URL
-  const [productTitle, setProductTitle] = useState('');
-  const [loading, setLoading] = useState(true); // Track loading state
-  const pathnames = location.pathname.split('/').filter(x => x); // Get the path segments
-  let currentLink = '';
+  const location = useLocation(); // Get current path
+  const pathnames = location.pathname.split('/').filter(x => x); // Split path into segments
 
-  // Fetch the product title if on a product page
-  useEffect(() => {
-    if (product_id) {
-      console.log(`Fetching product with ID: ${product_id}`);  // Debug log
+  let currentLink = ''; // Track current link
 
-      // Fetch products from API (change the URL as per your actual API)
-      fetch('http://localhost:3333/products/all')
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Fetched products:", data); // Log the fetched data to inspect the response
-
-          // Find the product with the matching ID
-          const product = data.find((p) => p.id === Number(product_id)); // Compare as numbers
-
-          if (product) {
-            console.log(`Product found: ${product.title}`);  // Log the product title
-            setProductTitle(product.title); // Set the title of the product
-          } else {
-            console.log('Product not found');
-            setProductTitle('Product Not Found'); // If no product matches the ID
-          }
-
-          setLoading(false); // Stop loading once the data is fetched
-        })
-        .catch((error) => {
-          console.error('Error fetching product data:', error);
-          setProductTitle('Error Fetching Product'); // Display an error message
-          setLoading(false); // Stop loading in case of error
-        });
-    } else {
-      setLoading(false); // If no product_id exists, stop loading
-    }
-  }, [product_id]);
-
-  // Generate breadcrumbs based on the current URL path
+  // Generate breadcrumbs
   const crumbs = pathnames.map((crumb, index) => {
     currentLink += `/${crumb}`;
+
+    // Check if last segment
     const isLast = index === pathnames.length - 1;
-    const formattedCrumb = crumb
-      .replace(/-/g, ' ') // Replace hyphens with spaces
-      .replace(/_/g, ' ') // Replace underscores with spaces
-      .charAt(0).toUpperCase() + crumb.slice(1);
 
     return (
-      <React.Fragment key={currentLink}>
-        {!isLast ? (
-          <div className={s.crumb}>
-            <Link to={currentLink} className={s.link}>
-              {formattedCrumb}
+      <React.Fragment key={currentLink} className={s.mainBreadcrumb}> {/* Wrap in fragment */}
+        {!isLast ? ( // Check for non-last breadcrumb
+          <div className={s.crumb}> {/* Breadcrumb item */}
+            <Link to={currentLink} className={s.link}> {/* Breadcrumb link */}
+              {crumb.charAt(0).toUpperCase() + crumb.slice(1)} {/* Capitalize text */}
             </Link>
-            <span className={s.separator}> &gt; </span>
+            {' ⸺'} {/* Separator */}
           </div>
         ) : (
-          <span className={`${s.crumb} ${s.currentCrumb}`}>
-            {product_id && !isNaN(crumb) ? (loading ? 'Loading...' : productTitle) : formattedCrumb}
+          <span className={s.crumb}> {/* Last breadcrumb */}
+            {crumb.charAt(0).toUpperCase() + crumb.slice(1)} {/* Capitalize text */}
           </span>
         )}
       </React.Fragment>
@@ -72,11 +34,11 @@ export default function Breadcrumbs() {
   });
 
   return (
-    <div className={s.breadcrumbs}>
-      <div className={s.breadcrumbsContainer}>
-        <Link to="/" className={s.link}>Main Page</Link>
-        <span className={s.separator}> &gt; </span>
-        {crumbs}
+    <div className={s.breadcrumbs}> {/* Breadcrumb container */}
+      <div className={s.breadcrumbsContainer}> {/* Inner container */}
+       <Link to="/" className={s.link}>Main Page</Link> {/* Link to home */}
+      {' ⸺ '}
+      {crumbs} {/* Display breadcrumb items */}
       </div>
     </div>
   );

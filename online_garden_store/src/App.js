@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs';
 import Header from './components/Header/Header';
 import ModalWindow from './components/ModalWindow/ModalWindow';
 import SecondModalWindow from './components/SecondModalWindow/SecondModalWindow';
@@ -48,8 +47,6 @@ return (
     <SecondModalWindow/>
     <ModalWindow/>
       <Header/>
-
-    <Breadcrumbs />
         <main className='wrapper'>
           <Routes>
             <Route path='/' element={<MainPage/>}/>

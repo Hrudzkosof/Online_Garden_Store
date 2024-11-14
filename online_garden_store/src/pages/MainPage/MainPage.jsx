@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import AmazingDiscount from '../../components/AmazingDiscount/AmazingDiscount';
+import CategoriesContainer from '../../components/CategoryContainer/CategoriesContainer';
+import DiscountForm from '../../components/DiscountForm/DiscountForm';
+import Footer from '../../components/Footer/Footer';
 import SalesProductsContainer from '../../components/SalesProductsContainer/SalesProductsContainer';
 import { getSaleProducts } from '../../requests/salesProducts';
 import s from './MainPage.module.css';
-import AmazingDiscount from '../../components/AmazingDiscount/AmazingDiscount';
-import DiscountForm from '../../components/DiscountForm/DiscountForm';
-import CategoriesContainer from '../../components/CategoryContainer/CategoriesContainer'; 
-import Footer from '../../components/Footer/Footer';
 
 export default function MainPage() {
   const dispatch = useDispatch();
@@ -43,7 +43,7 @@ export default function MainPage() {
       </div>
 
       <SalesProductsContainer saleProducts={saleProducts} />
-      <Footer />
+      <Footer/>
     </div>
   );
 }
