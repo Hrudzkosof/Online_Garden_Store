@@ -11,16 +11,17 @@ import CategoriesContainer from '../../components/CategoryContainer/CategoriesCo
 import Footer from '../../components/Footer/Footer';
 
 export default function MainPage() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // Setting up dispatch to trigger actions in Redux store 
 
-  const [saleProducts, setSaleProducts] = useState([])
+  const [saleProducts, setSaleProducts] = useState([]) // State to hold sale products
 
   useEffect(() => {
+    // Fetch sale products and update state, then fetch categories
     getSaleProducts(dispatch).then(products => setSaleProducts(products));
     dispatch(getCategories());
-  }, [dispatch]);
+  }, [dispatch]); // Dependency array ensures useEffect runs on initial render
 
-  const categories = useSelector(state => state.categories); 
+  const categories = useSelector(state => state.categories);  // Accessing categories from Redux store
 
   return (
     <div className={s.main_page}>
@@ -28,7 +29,7 @@ export default function MainPage() {
 
       <div className={s.headerContainer}>
         <span className={s.title}>Categories</span>
-        <div className={s.line}></div>
+        <div className={s.separator}></div>
         <Link to='/categories' className={s.rectangleText}>
           All Categories
         </Link>
@@ -39,12 +40,12 @@ export default function MainPage() {
       <DiscountForm />
 
       <div className={s.sales_block}>
-        <span className={s.sale_text}>Sale</span>
-        <div className={s.separator}></div>
-        <Link to='/all_sales' className={s.all_sales_link}>All sales</Link>
+        <span className={s.sale_text}>Sale</span> {/* Sale title  */}
+        <div className={s.separator}></div> {/* Separator for visual division */}
+        <Link to='/all_sales' className={s.all_sales_link}>All sales</Link>  {/* Link to all sales page  */}
       </div>
 
-      <SalesProductsContainer saleProducts={saleProducts} />
+      <SalesProductsContainer saleProducts={saleProducts} /> {/* Displays sale products in container*/}
       <Footer />
     </div>
   );

@@ -51,4 +51,17 @@ button:hover {
   background-color: #92A134;
   color: #ffffff;
   margin-bottom: 10px;
+  
+}
+
+
+@media (max-width: 768px){
+  .button {
+    width: 180px;
+  }
+
+  .form > input{
+    width: 138%;
+  }
+
 }

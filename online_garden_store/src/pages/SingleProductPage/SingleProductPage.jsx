@@ -57,13 +57,17 @@ export default function SingleProductPage() {
                             <div>
                                 <h3>{title}</h3>
                             </div>
-                            <div className={s.price_single_product}>
-                                <p>${price}</p>
-                                {discont_price ? <><p>${discont_price}</p> 
+                        <div className={s.price_single_product}>
+                        {discont_price ? (
+                            <>
+                               <p>${discont_price}</p> 
+                                <p>${price}</p>  
                                 <span>{-discountPercent}%</span>
-                                    
-                                </> : null}        
-                            </div>
+                            </>
+                        ) : (
+                            <p>${price}</p> 
+                        )}        
+                    </div>
                             <div className={s.quantity}>
                                 <div className={s.quantity_wrapper}>
                                     <div onClick={decrCount}>-</div>

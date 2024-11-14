@@ -80,6 +80,11 @@
 }
 
 @media (max-width: 768px){
+    .footer{
+        width: 768px;
+        height: 832px;
+        margin: -10px;
+    }
     .footerH{
         font-size: 45px;
         margin-left: 20px;
@@ -97,7 +102,8 @@
     }
 
     .cards2{
-        
+        width: 229px;
+        height: 150px;
     }
 
     .map{

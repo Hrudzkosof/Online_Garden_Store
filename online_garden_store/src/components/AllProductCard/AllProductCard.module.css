@@ -94,11 +94,21 @@
     color: black;
 }
 
+@media (max-width: 768px){
+    .products_card{
+    max-width: 350px;
+    margin: 5px;
+    
+    
+    }
+}
+
 @media (max-width: 480px){
     .products_card {
         width: 210px;
         height: 358px;
         gap: 20px;
         padding-bottom: 0;
+        
     }
 }

@@ -73,10 +73,11 @@
     .title{
     font-size: 50px;
     line-height: 61.6px;
+    /* margin: 5px; */
         
     }
     .rectangleText{
-        margin-right: 8px;
+    margin-right: 18px;
     }
 }
 

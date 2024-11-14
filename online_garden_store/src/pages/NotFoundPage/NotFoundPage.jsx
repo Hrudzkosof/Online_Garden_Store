@@ -12,14 +12,15 @@ export default function NotFoundPage() {
       
     
       <div className={s.not_found_content}>
-        <p className={s.number}>4</p>
-        <img src={mage} alt="MAGE" />
-        <p className={s.number}>4</p>
+        <p className={s.number}>4</p> {/* First "4" in 404  */}
+        <img src={mage} alt="MAGE" />  {/* Image between "4"s for creative 404 look*/}
+        <p className={s.number}>4</p> {/* Second "4" in 404 */}
       </div>
-      <p className={s.error_text}>Page Not Found</p>
-      <p className={s.subtext}>We’re sorry, the page you requested could not be found.<br />
+      <p className={s.error_text}>Page Not Found</p> {/* Main error message */}
+      {/* Subtext providing further details / Подтекст с дополнительной информацией */}
+      <p className={s.subtext}>We’re sorry, the page you requested could not be found.<br /> 
       Please go back to the homepage.</p>
-      <Link to='/' className={s.button}> Go Home</Link>
+      <Link to='/' className={s.button}> Go Home</Link> {/* Button link to return to the homepage */}
       
      
 

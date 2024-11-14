@@ -13,3 +13,17 @@
   justify-content: space-between;
   align-items: center;
 }
+
+
+@media (max-width: 768px){
+  
+  .cartContainer {
+    padding: 0;
+    max-height: 500px; 
+   
+    
+  }
+
+  
+
+}
