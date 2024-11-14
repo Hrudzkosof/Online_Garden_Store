@@ -165,3 +165,12 @@
         width: 184px;
     }
 }
+
+
+  @media (max-width: 768px){
+    .card {
+     width: 712px;
+    }
+  
+    
+  }

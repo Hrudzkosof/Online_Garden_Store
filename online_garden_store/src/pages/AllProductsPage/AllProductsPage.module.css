@@ -6,10 +6,17 @@
   color: #424436;
 }
 
-@media (max-width: 480px) {
-  .title h1 {
-    font-size: 48px;
-    line-height: 52.8px;
-    margin: 40px 0 20px 20px;
-  }
+@media (max-width: 768px){
+    .title h1 {
+        font-size: 56px;
+        line-height: 61.6px; 
+        margin: 40px 0 20px 27px;
+    }
+}
+@media (max-width: 480px){
+    .title h1 {
+        font-size: 48px;
+        line-height: 52.8px; 
+        margin: 40px 0 20px 20px;
+    }
 }

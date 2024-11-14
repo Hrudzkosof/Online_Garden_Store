@@ -7,6 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+    
+    
 }
 
 .title {
@@ -36,6 +38,10 @@
   background-color: transparent;
   text-decoration: none;
   cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 23px;
 }
 
 .sales_block {
@@ -62,6 +68,7 @@
   margin-right: 0;
 }
 
+
 .main_page a.rectangleText {
   text-decoration: none;
   color: black;
@@ -84,7 +91,20 @@
 }
 .sale_madia_360 {
     display: none;
+    
+}@media (max-width: 768px){
+
+    .title{
+    font-size: 50px;
+    line-height: 61.6px;
+    /* margin: 5px; */
+        
+    }
+    .rectangleText{
+    margin-right: 18px;
+    }
 }
+
 
 @media (max-width: 480px) {
   .headerContainer {

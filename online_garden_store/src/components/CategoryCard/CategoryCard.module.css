@@ -35,6 +35,17 @@
     margin-top: 0; 
 }
 
+@media (max-width: 768px){
+    .category_card img {
+        width: 97%; 
+        height: 280px; 
+        object-fit: cover; 
+        border-radius: 12px;
+        margin: 0 10px;
+        
+    }
+}
+
 @media (max-width: 480px){
 
     .category_card img {

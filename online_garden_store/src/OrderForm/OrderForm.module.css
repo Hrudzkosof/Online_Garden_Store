@@ -52,6 +52,19 @@
   background: #707b28;
   color: #ffffff;
   margin-bottom: 10px;
+  
+}
+
+
+@media (max-width: 768px){
+  .button {
+    width: 180px;
+  }
+
+  .form > input{
+    width: 138%;
+  }
+
 }
 
 @media (max-width: 480px) {

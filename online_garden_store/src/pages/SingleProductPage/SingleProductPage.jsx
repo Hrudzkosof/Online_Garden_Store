@@ -9,6 +9,8 @@ import { Context } from '../../context';
 
 export default function SingleProductPage() {
 
+    
+
     const { openSecondModalWindow } = useContext(Context);
     const [count, setCount] = useState(1);
     const [isExpanded, setIsExpanded] = useState(false); // состояние для управления текстом
@@ -33,13 +35,13 @@ export default function SingleProductPage() {
 
     const discountPercent = Math.round(((price - discont_price) / price) * 100);
 
-      // Логика для сокращения текста
-      const maxCharacters = 150;
-      const shortDescription =
-          description && description.length > maxCharacters
-              ? description.slice(0, maxCharacters) + '...'
-              : description;
- 
+     // Логика для сокращения текста
+     const maxCharacters = 150;
+     const shortDescription =
+         description && description.length > maxCharacters
+             ? description.slice(0, maxCharacters) + '...'
+             : description;
+
   return (
     <div>
        <div className={s.layout_container}>   
@@ -55,13 +57,17 @@ export default function SingleProductPage() {
                             <div>
                                 <h3>{title}</h3>
                             </div>
-                            <div className={s.price_single_product}>
-                                <p>${price.toFixed(0)}</p>
-                                {discont_price ? <><p>${discont_price.toFixed(0)}</p> 
+                        <div className={s.price_single_product}>
+                        {discont_price ? (
+                            <>
+                               <p>${discont_price}</p> 
+                                <p>${price}</p>  
                                 <span>{-discountPercent}%</span>
-                                    
-                                </> : null}        
-                            </div>
+                            </>
+                        ) : (
+                            <p>${price}</p> 
+                        )}        
+                    </div>
                             <div className={s.quantity}>
                                 <div className={s.quantity_wrapper}>
                                     <div onClick={decrCount}>-</div>
