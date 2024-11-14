@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import SalesProductsContainer from '../../components/SalesProductsContainer/SalesProductsContainer';
-import { getSaleProducts } from '../../requests/salesProducts'; 
-import { getCategories} from '../../requests/categories_req'
-import s from './MainPage.module.css';
 import AmazingDiscount from '../../components/AmazingDiscount/AmazingDiscount';
+import CategoriesContainer from '../../components/CategoryContainer/CategoriesContainer';
 import DiscountForm from '../../components/DiscountForm/DiscountForm';
-import CategoriesContainer from '../../components/CategoryContainer/CategoriesContainer'; 
 import Footer from '../../components/Footer/Footer';
+import SalesProductsContainer from '../../components/SalesProductsContainer/SalesProductsContainer';
+import { getCategories } from '../../requests/categories_req';
+import { getSaleProducts } from '../../requests/salesProducts';
+import s from './MainPage.module.css';
 
 export default function MainPage() {
   const dispatch = useDispatch(); // Setting up dispatch to trigger actions in Redux store 

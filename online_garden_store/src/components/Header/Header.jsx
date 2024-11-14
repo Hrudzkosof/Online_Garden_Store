@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
+import { RxHamburgerMenu } from "react-icons/rx"
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { Context } from '../../context'
+import basket from '../images/basket.png'
 import logo from '../images/logo.png'
 import NavMenu from '../NavMenu/NavMenu'
 import s from './Header.module.css'
-import basket from '../images/basket.png'
-import { useSelector } from 'react-redux'
-import { RxHamburgerMenu } from "react-icons/rx";
-import { Context } from '../../context'
 
 
 export default function Header() {

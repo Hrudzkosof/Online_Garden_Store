@@ -1,7 +1,7 @@
 
 .footerH {
-    font-family: Montserrat;
-    font-size: 50px; 
+    font-family: Montserrat, sans-serif;
+    font-size: 36px; /* Smaller for mobile */
     font-weight: 700;
     color: #424436;
     margin-top: 50px;
@@ -25,7 +25,7 @@
     width: 57%; 
     min-height: 138px; 
     background-color: #F2F6D3;
-    padding: 25px;
+    padding: 20px;
     border: none;
     border-radius: 10px;
 }
@@ -40,7 +40,7 @@
     border-radius: 10px;
 }
 
-.cardsMain1 {
+.cardsMain1, .cardsMain2 {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -56,30 +56,32 @@
 }
 
 .contactP {
-    font-family: Montserrat;
-    font-size: 18.4px; 
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
     font-weight: 500;
     color: #8B8B8B;
 }
 
 .contactA {
     text-decoration: none;
-    font-family: Montserrat;
-    font-size: 32.2px; 
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
     color: rgb(57, 56, 56);
 }
 
 .map {
-    margin-top: 20px; 
+    margin-top: 20px;
     border: none;
     border-radius: 12px;
     margin-bottom: 30px;
+    width: 100%;
+    height: 250px; /* Default height for mobile */
 }
 
 .contactInstaWhats {
-    font-size: 34.96px; 
+    font-size: 28px;
     color: #424436;
-    margin-right: 18.4px; 
+    margin-right: 12px;
 }
 
 @media (max-width: 768px){
@@ -137,25 +139,36 @@
         font-size: 28px;
     }
     .cards1 {
-        width: 440px;
-        height: 114px;
-        margin-bottom: 12px;
-    }
-    .cards2 {
-        width: 440px;
-        height: 114px;
-        margin-bottom: 12px;
+        width: 48%; /* Each card takes up half the width */
     }
 
-    .footerH {
-        margin-left: 25px;
+    .cards2 {
+        width: 48%;
     }
 
     .map {
-        width: 440px;
-        height: 250px;
+        height: 300px; /* Larger height for bigger screens */
     }
-   
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .footer {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .footerH {
+        font-size: 50px;
+    }
+
+    .cards1, .cards2 {
+        width: 47%; /* Slightly smaller width for more space */
+    }
+
+    .map {
+        height: 400px;
+    }
 }
 
 @media (max-width: 360px){

@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
+import ModalWindow from './components/ModalWindow/ModalWindow';
+import SecondModalWindow from './components/SecondModalWindow/SecondModalWindow';
+import { Context } from './context';
 import AllProductsPage from './pages/AllProductsPage/AllProductsPage';
 import AllSalesPage from './pages/AllSalesPage/AllSalesPage';
 import CartPage from './pages/CartPage/CartPage';
+import CategoriesPage from './pages/CategoriesPage/CategoriesPage';
+import CategoryProductsPage from './pages/CategoryProductsPage/CategoryProductsPage';
 import MainPage from './pages/MainPage/MainPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import SingleProductPage from './pages/SingleProductPage/SingleProductPage';
-import CategoriesPage from './pages/CategoriesPage/CategoriesPage';
-import CategoryProductsPage from './pages/CategoryProductsPage/CategoryProductsPage'
-import ModalWindow from './components/ModalWindow/ModalWindow';
-import { Context } from './context';
-import { useDispatch } from 'react-redux';
 import { clearCartAction } from './store/cartReducer';
-import SecondModalWindow from './components/SecondModalWindow/SecondModalWindow';
 
 
 
@@ -72,6 +72,3 @@ return (
 };
 
 export default App;
-/**
- 
- */

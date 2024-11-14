@@ -1,13 +1,13 @@
 
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import AllProductCard from '../../components/AllProductCard/AllProductCard';
-import { getCategoryProducts } from '../../requests/categoryProducts_req'; 
-import s from './CategoryProductsPage.module.css';
 import FilterForm from '../../components/FilterForm/FilterForm';
-import Footer from '../../components/Footer/Footer'; 
-import { useDispatch, useSelector } from 'react-redux';
+import Footer from '../../components/Footer/Footer';
+import { getCategoryProducts } from '../../requests/categoryProducts_req';
 import { loadAllProductsAction } from '../../store/allProductsReducer';
+import s from './CategoryProductsPage.module.css';
 
 export default function CategoryProductsPage() {
   const { id } = useParams();
