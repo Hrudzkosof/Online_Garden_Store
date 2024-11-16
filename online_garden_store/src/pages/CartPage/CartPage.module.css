@@ -87,6 +87,7 @@
 
 .order_details {
   margin-top: 20px;
+  /* margin-right: 20px; */
   display: flex;
   flex-direction: column;
   background: #f2f6d3;
@@ -144,7 +145,7 @@
   flex-direction: column;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 481px){
   .cart_page {
     width: 768px;
 
@@ -155,7 +156,7 @@
     font-weight: 700px;
     line-height: 52.8px;
     text-align: left;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     width: auto;
     margin-bottom: 40px;
     
@@ -170,7 +171,7 @@
     background-color: transparent;
     text-decoration: none;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 0;
     height: 40px;
     margin-bottom: 40px;
     display: flex;
@@ -196,7 +197,7 @@
 }
 .order_details{
   width: 100%;
-  margin: 10px;
+  /* margin: 10px; */
   margin-left: -2px;
 }
 .cart_page button{
@@ -332,7 +333,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 769px) {
 
   .cart_page h2 {
       font-size: 48px;  
@@ -341,26 +342,24 @@
 
   .back_to_categories {
     font-size: 14px; 
-    height: 32px;  
+    /* height: 32px;   */
     white-space: nowrap; 
+    margin-right: 0;
   }
 
-  .cart_page_products {
-      display: flex;
-      flex-direction: column;  
-      align-items: center;
-      gap: 20px;  
-  }
-
+ 
   .order_details {
-      width: 100%;
+      width: 50%;
       padding: 16px;  
-      height: auto;  
+      /* height: auto;   */
       display: flex;
       flex-direction: column;
-      align-items: center; 
+      /* align-items: center;  */
       justify-content: center; 
-      margin: 0 auto; 
+      /* margin: 0 auto;  */
+  }
+  .order_details div {
+    justify-content: flex-start;
   }
 
   .cart_page {
@@ -378,11 +377,14 @@
 
   .cart_page button {
       font-size: 18px;  
-      width: 240px;  
+      /* width: 240px;   */
       padding: 12px 30px; 
       margin: 20px auto 0; 
   }
 
+  .order_details div p:nth-child(2) {
+    margin-left: 25px;
+  }
 
   .order_details_wrapper {
     display: flex;

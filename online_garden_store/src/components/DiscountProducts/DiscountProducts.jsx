@@ -17,7 +17,7 @@ export default function DiscountProducts({}) {
 
   return (
     <div>
-      <h1>Discounted items</h1>  {/* Title for section */}
+      <h1 className={s.discount_title}>Discounted items</h1>  {/* Title for section */}
 
       <FilterForm hideSection='discountedItems'/> {/* Filter form for discounts */}
      

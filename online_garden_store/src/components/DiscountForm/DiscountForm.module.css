@@ -66,6 +66,31 @@ button:hover {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) and (min-width: 481px){
+  .discount_form {
+    max-width: 728px;
+    margin: auto;
+  }
+  .discount_form p {
+    font-size: 56px;
+    width: 688px;
+  }
+  .discount_form img {
+    width: 50%; 
+    height: auto;
+    object-fit: cover;
+    margin-left: 0;
+  }
+  .form {
+    width: 334px; 
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .form > input {
+    height: 58px;
+  }
+}
+
 @media (max-width: 480px){
   .discount_form p{
     font-family: Montserrat;
@@ -128,10 +153,11 @@ button:hover {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 769px){
   .discount_form {
     padding: 32px 16px 0px 16px; 
     margin: 20px; 
+    width: 960px;
   }
 
   .discount_form p {
@@ -150,7 +176,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     gap: 20px; 
   }
 

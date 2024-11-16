@@ -15,15 +15,16 @@
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 481px){
   
   .cartContainer {
     padding: 0;
     max-height: 500px; 
-   
-    
   }
-
-  
-
+}
+@media (max-width: 1000px) and (min-width: 769px){
+    .cartContainer {
+        margin: 10px;
+        padding: 0;
+    }
 }

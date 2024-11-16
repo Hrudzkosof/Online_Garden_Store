@@ -9,7 +9,7 @@
   width: calc(100% - 30px);
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 481px){
     .sales_container{
         grid-template-columns: repeat(2, 1fr); 
         gap: 20px;
@@ -30,5 +30,11 @@
       grid-template-columns: auto;
       width: 320px;
       padding: 0;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 769px){
+    .sales_container {
+        padding: 0;
     }
 }

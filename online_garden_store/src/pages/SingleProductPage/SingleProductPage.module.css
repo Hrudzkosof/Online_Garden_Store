@@ -204,11 +204,11 @@
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 481px){
     .layout_container {
         width: 100%;
         margin: 20px auto;
-        padding: 0 10px;
+        padding: 0 20px;
         height: auto;
     }
 
@@ -319,7 +319,7 @@
         max-width: 400px;
         height: 50px;
         font-size: 18px;
-        margin-top: 45px;
+        margin-top: 27px;
         margin-left: 12px;
         padding: 10px;
     }
@@ -333,10 +333,6 @@
         padding: 0 10px; 
         margin-left: -285px;
     }
-
-
-
-
 }
 
 @media (max-width: 480px) {
@@ -488,12 +484,12 @@
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 769px){
     .layout_container {
-        width: 90%;
+        width: 960px;
         margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 20px;
+        /* margin-right: auto; */
         height: auto;
     }
 
@@ -506,26 +502,26 @@
 
     .single_product_card img {
         width: 100%;
-        max-width: 600px;
+        max-width: 470px;
         height: auto;
         border-radius: 12px;
         object-fit: contain;
     }
 
-    .product_page {
+    /* .product_page {
         width: 100%;
         max-width: 600px;
         margin-left: 0;
-    }
+    } */
 
     .product_page h3 {
         font-size: 32px;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .price_single_product {
-        flex-direction: column;
-        align-items: center;
+        /* flex-direction: column; */
+        align-items: start;
         margin-top: 20px;
     }
 
@@ -543,29 +539,31 @@
         margin-top: 10px;
     }
 
-    .quantity {
+    /* .quantity {
         flex-direction: column;
         align-items: center;
         gap: 10px;
         margin-top: 20px;
-    }
+    } */
 
     .quantity_wrapper {
         width: 200px;
-        gap: 10px;
+        padding: 0;
+        gap: 0;
+        /* gap: 10px; */
     }
 
     .quantity_wrapper div,
     .quantity_wrapper p {
-        width: 50px;
-        height: 50px;
+        width: 58px;
+        height: 58px;
         font-size: 24px;
     }
 
     .quantity button {
         width: 100%;
         max-width: 300px;
-        height: 50px;
+        height: 58px;
         margin-top: 15px;
         font-size: 18px;
     }

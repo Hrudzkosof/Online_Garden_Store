@@ -167,10 +167,43 @@
 }
 
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) and (min-width: 481px){
     .card {
-     width: 712px;
+     width: 728px;
     }
-  
-    
+  }
+
+  @media (max-width: 1000px) and (min-width: 769px){
+    .details {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 470px;
+        width: auto;
+        min-height: 192px;
+        gap: 10px;
+    }
+    .card img {
+        height: auto;
+    }
+    .title {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .quantityControls {
+        position: relative;
+        left: 0;
+        margin: 0;
+        width: max-content;
+    }
+    .quantityPrice > p {
+        position: relative;
+        top: 0;
+        left: 0;
+
+    }
+    .quantityPrice {
+    flex-direction: column;
+    }
   }

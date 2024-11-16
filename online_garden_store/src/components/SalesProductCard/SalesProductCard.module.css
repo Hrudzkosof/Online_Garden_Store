@@ -80,10 +80,10 @@
     font-size: 16px;
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) and (min-width: 481px){
     .sales_card{
         max-width: 340px;
-        max-height: 354px;
+        max-height: auto;
         margin-left: 40px;
         
        

@@ -44,10 +44,10 @@ export default function CartItem({ id, title, image, price, discont_price, count
           </div>
 
           {/* Displays the total price for this item */}
-          <p className={s.price}>${totalPrice.toFixed(2)}</p>
+          <p className={s.price}>${totalPrice.toFixed(0)}</p>
 
          {/* Shows original price if there’s a discount*/}
-          {discont_price && <span className={s.originalPrice}>${originalPrice.toFixed(2)}</span>}
+          {discont_price && <span className={s.originalPrice}>${originalPrice.toFixed(0)}</span>}
         </div>
       </div>
 
