@@ -7,7 +7,7 @@ import AddToCartButton from '../AddToCartButton/AddToCartButton'; // Import Add 
 export default function DiscountProductsCard({ id, title, price, discont_price, image }) {
 
     const discountPercentage = Math.round(((price - discont_price) / price) * 100); // Calculate discount percentage
-    const product = { title, price, discont_price, image }; // Create product object for cart
+    const product = {id, title, price, discont_price, image }; // Create product object for cart
 
   return (
     <div className={s.discountProductsCards}>  {/*Main card container*/}
