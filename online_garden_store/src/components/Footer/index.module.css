@@ -1,0 +1,230 @@
+
+.footerH {
+    font-family: Montserrat, sans-serif;
+    font-size: 36px; /* Smaller for mobile */
+    font-weight: 700;
+    color: #424436;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-left: 27px;
+}
+
+.footerContact {
+    margin: 28px;
+}
+
+    
+ .footer{
+    height: 800px;
+    /* width: 1360px; */
+    margin: 0 auto;
+}
+
+.cards1 {
+    max-width: 780px;
+    width: 57%; 
+    min-height: 138px; 
+    background-color: #F2F6D3;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+.cards2 {
+    max-width: 558px; 
+    width: 41%;
+    min-height: 138px; 
+    background-color: #F2F6D3;
+    padding: 23px;
+    border: none;
+    border-radius: 10px;
+}
+
+.cardsMain1, .cardsMain2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.cardsMain2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27.6px; 
+}
+.cardsMain2 div {
+    height: auto;
+}
+
+.contactP {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #8B8B8B;
+}
+
+.contactA {
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    color: rgb(57, 56, 56);
+}
+
+.map {
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 250px; /* Default height for mobile */
+}
+
+.contactInstaWhats {
+    font-size: 28px;
+    color: #424436;
+    margin-right: 12px;
+}
+
+@media (max-width: 768px) and (min-width: 481px){
+    .footer{
+        width: 768px;
+        height: 832px;
+        margin: -10px;
+    }
+    .footerH{
+        font-size: 45px;
+        margin-left: 28px;
+    }
+    .footerContact {
+        display: flex;
+        flex-direction: column;
+        /* margin: 20px; */
+        margin-left: 28px;
+        margin-right: 11px;
+    }
+  
+    .cards1{
+        width: 479px;
+        height: 150px;
+        /* margin-bottom: 8px; */
+    }
+
+    .cards2{
+        width: 229px;
+        /* height: 150px; */
+    }
+
+    .map{
+        width: 725px;
+        height: 250px;
+        
+    }
+
+}
+
+
+@media (max-width: 480px){
+    .footerContact {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .cardsMain1 {
+        display: contents;
+    }
+    .cardsMain2 {
+        display: contents;
+    }
+    /* .cardsMain2 div {
+        height: 145px;
+    } */
+   
+    .contactA {
+        font-size: 28px;
+    }
+    .cards1 {
+        width: 440px; 
+        margin-bottom: 10px;
+        min-height: 114px;
+    }
+
+    .cards2 {
+        width: 440px;
+        margin-bottom: 10px;
+        min-height: 114px;
+    }
+
+    .map {
+        height: 300px; 
+    }
+}
+
+@media (max-width: 360px){
+    .footer {
+        width: 320px;
+    }
+    .footerH {
+        margin-left: 0;
+    }
+    .footerContact {
+        margin: 0;
+    }
+    .cards1 {
+        width: 320px;
+    }
+    .cards2 {
+        width: 320px;
+    }
+    .map {
+        width: 320px;
+    }
+    .cardsMain2 div {
+        height: auto;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 769px) {
+    .footer {
+        width: 95%; 
+        margin: 0 auto;
+        height: auto;
+    }
+    .footerContact {
+        margin: 0;
+        width: 960px;
+    }
+
+    .footerH {
+        font-size: 36px;
+        margin-left: 0;
+    }
+
+    .cardsMain1,
+    .cardsMain2 {
+        gap: 20px; 
+    }
+
+    .cards1,
+    .cards2 {
+        width: 49%; 
+        height: auto;
+        padding: 15px;
+    }
+
+    .contactP {
+        font-size: 16px;
+    }
+
+    .contactA {
+        font-size: 28px;
+    }
+
+    .contactInstaWhats {
+        font-size: 30px;
+    }
+
+    .map {
+        width: 100%;
+        height: 250px;
+        margin-top: 20px;
+    }
+}

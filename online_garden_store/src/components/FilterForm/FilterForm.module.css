@@ -1,0 +1,225 @@
+.filter_form {
+  display: flex;
+  margin: 25px;
+  padding: 10px;
+  gap: 20px;
+  background-color: #FFFFF1;
+}
+.first_row {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  width: auto; 
+}
+
+.label {
+    height: 26px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: left;
+    color: #424436;
+    width: 200px;
+    margin-right: 15px;
+}
+.label_check {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: left;
+    color: #424436;
+    margin-bottom: 5px;
+}
+
+.filter_form input[type="text"] {
+  width: 112px;
+  height: 36px;
+  gap: 10px;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  margin: 5px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+.filter_form input[type="text"]::placeholder {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20.16px;
+    text-align: left;
+    color: #8B8B8B;
+
+}
+  
+  input[type="checkbox"] {
+   display: none;
+   }
+
+  .checkmark {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    border: 1px solid #DDDDDD;
+    margin: 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .checkmark:hover {
+    border-color: #999;
+  }
+  
+  input[type="checkbox"]:checked + .checkmark {
+    background-color: #6c5ce7;
+    border-color: #6c5ce7; 
+  }
+  .checkmark::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+  }
+
+  input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+  }
+  
+  select {
+    width: 150px; 
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #DDDDDD;
+    background-color: white;
+    color: #424436;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .sort {
+    width: 200px;
+    height: 36px;
+    padding: 8px 8px 8px 16px;
+    gap: 10px;
+    border-radius: 6px;
+    border: 1px solid #dddddd;
+    margin: 5px;
+    margin-bottom: 10px;
+    background: #ffffff;
+  }
+
+  @media (max-width: 768px) and (min-width: 481px){
+    .filter_form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+  }
+
+ 
+  .filter_form > div:nth-child(1),
+  .filter_form > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  }
+
+ 
+  .filter_form > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+  }
+
+  
+  .filter_form input[type="text"] {
+      width: 80px;
+      padding-left: 15px;
+  }
+
+  .filter_form > div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+
+  
+  .filter_form > div:nth-child(3) {
+      width: 100%;
+  }
+
+  .sort {
+    margin-left: -130px;
+  }
+
+}
+
+
+
+  @media (max-width: 480px) {
+    .filter_form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 10px;
+    }
+
+    .first_row,
+    .filter_form > div {
+      width: 80%; 
+      display: flex;
+      flex-direction: column; 
+    }
+    .first_row {
+        align-items: baseline;
+    }
+   
+    .filter_form input[type="text"] {
+      width: 30%;
+    }
+
+    .checkbox_container {
+      display: flex;
+      align-items: center;
+      margin-left: -80px;
+    }
+
+    .filter_form > div:last-child {
+      width: 100%; 
+      display: flex;
+      align-items: center;
+      flex-direction: row; 
+      
+  }
+
+  .sort {
+      width: auto; 
+      margin-top: 0; 
+      margin-left: -130px;
+  }
+  }
+  @media (max-width: 1000px) and (min-width: 769px){
+    .filter_form {
+        padding-left: 0;
+        margin: 20px;
+    }
+  }
+
+

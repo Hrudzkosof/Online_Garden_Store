@@ -1,0 +1,187 @@
+.amazingDiscountImg {
+    width: 1440px; /* Full width in pixels */
+    height: 600px; /* Set fixed height */
+    max-width: 1440px; /* Max width restriction */
+    background-repeat: no-repeat; /* Prevent background repetition */
+    background-size: cover; /* Cover background area */
+    background-position: center; /* Center background image */
+    background-image: url(./imgDiscount.png); /* Image URL */
+    margin: 0 auto; /* Center horizontally */
+    position: relative; /* Enable relative positioning */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.amazingDiscountH {
+    font-family: Montserrat; /* Font family */
+    font-size: 80px; /* Large font size */
+    font-weight: 700; /* Bold font weight */
+    line-height: 105.6px; /* Line height */
+    text-align: left; /* Align text left */
+    color: #ffffff; /* White text color */
+}
+
+.amazingDiscountButton {
+    font-family: Montserrat, sans-serif; /* Font family */
+    font-size: 20px; /* Button font size */
+    font-weight: 600; /* Button font weight */
+    line-height: 26px; /* Line height */
+    text-align: center; /* Center button text */
+    color: white; /* White text color */
+    border-radius: 7px; /* Rounded corners */
+    background-color: #92A134; /* Green background */
+    border: none; /* Remove border */
+    height: 58px; /* Button height */
+    width: 218px; /* Button width */
+    margin-top: 25px; /* Top margin */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    cursor: pointer; /* Pointer cursor */
+    margin: 20px 30px; /* Button margin */
+    text-decoration: none;
+}
+
+h1 {
+    width: 1200px; /* Set width */
+}
+
+.discountText {
+    width: 1360px; /* Fixed width */
+    height: 400px; /* Set fixed height */
+    margin: 0 auto; /* Center text block */
+    top: 40px; /* Set top margin */
+}
+
+.leer {
+    width: 1360px;
+    height: 74px;
+    margin: 0 auto;
+}
+
+
+
+
+@media (max-width: 768px) and (min-width: 481px){
+    .amazingDiscountImg {
+        width: 100vw;
+        height: calc(100vw * (634 / 768)); 
+        max-width: 768px; 
+        max-height: 634px; 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center;
+        background-image: url(./imgDiscount.png);
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+    .amazingDiscountH {
+        font-size: 66px; 
+        line-height: 74.8px;
+        max-width: 90%; 
+        text-align: left;
+        word-wrap: break-word; 
+        width: 740px; 
+        
+       
+    }
+
+ 
+}
+
+@media (max-width: 480px) {
+
+    .amazingDiscountImg {
+        width: 100vw;  
+        max-width: 100vw;  
+        height: 600px; 
+        background-repeat: no-repeat;
+        background-size: cover; 
+        background-position: center; 
+        background-image: url(./imgDiscount.png);
+        margin: 0 auto;  
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .amazingDiscountH {
+        font-family: Montserrat, sans-serif;
+        font-size: 60px; 
+        font-weight: 700;
+        line-height: 66px;  
+        text-align: left;
+        color: #FFFFFF;
+        max-width: 90%;  
+        margin: 0 auto;
+        margin-left: 20px;
+        
+
+    }
+
+    .amazingDiscountButton {
+        font-size: 14px; 
+        height: 40px; 
+        width: 150px; 
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .discountText {
+        width: 100%; /* Full width */
+        text-align: left; /* Align text to left */
+    }
+
+}
+    @media (max-width: 1000px) and (min-width: 769px) {
+
+        .amazingDiscountImg {
+            max-width: 100vw;  
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .amazingDiscountH {
+            font-family: Montserrat, sans-serif;
+            font-size: 75px; 
+            font-weight: 700;
+            line-height: 90px;  
+            text-align: left;
+            color: #FFFFFF;
+            max-width: 90%;  
+            margin-left: 0;
+        }
+    
+        .amazingDiscountButton {
+            font-family: Montserrat, sans-serif;
+            font-size: 16px;  
+            font-weight: 600;
+            line-height: 20px;
+            text-align: center;
+            color: #FFFFFF;
+            border-radius: 6px;
+            background-color: #92A134;
+            border: none;
+            height: 50px; 
+            width: 180px;  
+            margin-top: 60px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 0;
+        }
+    
+        .discountText {
+            width: 90%; 
+            text-align: left;
+            margin: 0 auto;
+        }
+    
+        .leer {
+            width: 100%;
+            height: 50px; 
+            margin: 0 auto;
+        }
+    }

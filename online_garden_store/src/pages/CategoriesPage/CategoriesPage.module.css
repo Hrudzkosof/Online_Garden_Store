@@ -1,0 +1,18 @@
+.title h1 {
+  font-family: montserrat;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 64px;
+  background-color: #fffff1;
+  color: #424436;
+  line-height: 70.4px;
+}
+
+@media (max-width: 480px) {
+  .title h1 {
+    font-size: 48px;
+    line-height: 52.8px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,40 @@
+.sales_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: p auto;
+  background-color: #fffff1;
+  max-width: 100%;
+  padding: 10px;
+  width: calc(100% - 30px);
+}
+
+@media (max-width: 768px) and (min-width: 481px){
+    .sales_container{
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        justify-items: center; 
+
+    }
+}
+
+@media (max-width: 480px) {
+  .sales_container {
+    grid-template-columns: repeat(2, 1fr);
+        
+  }
+}
+
+@media (max-width: 360px){
+    .sales_container {
+      grid-template-columns: auto;
+      width: 320px;
+      padding: 0;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 769px){
+    .sales_container {
+        padding: 0;
+    }
+}

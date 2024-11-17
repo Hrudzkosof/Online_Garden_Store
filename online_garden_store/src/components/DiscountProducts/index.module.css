@@ -1,0 +1,87 @@
+.discountProductsContainer {
+    height: 1400px; 
+    background-color: #fffff1; 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(6, 1fr); 
+}
+
+h1 {
+    font-family: Montserrat; 
+    font-size: 64px; 
+    font-weight: 700; 
+    text-align: left; 
+    margin: 0 30px; 
+    color: #424436; 
+}
+
+
+@media (max-width: 768px) and (min-width: 481px){
+    .discountProductsContainer{
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+        margin-bottom: 20px; 
+
+    }
+    h1{
+        font-size: 56px;
+        line-height: 61.6px; 
+        margin: 40px 0 20px 27px;
+    }
+
+}
+@media (max-width: 480px) { 
+    .discountProductsContainer {
+      background-color: #FFFFF1; 
+      padding: 20px; 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      padding: 0; 
+      height: auto; 
+    }
+    h1 {
+        font-size: 48px; 
+        line-height: 52.8px; 
+        margin: 40px 0 20px 20px; 
+    }
+}
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 40px;
+        max-width: 320px;
+    }
+    .discountProductsContainer {
+        grid-template-columns: auto;
+        max-width: 320px;
+    }
+}
+
+
+@media (max-width: 1000px) and (min-width: 769px){
+    .discountProductsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      height: auto; 
+      overflow: visible; 
+    }
+  
+    .discountProductsContainer > div {
+      flex: 1 1 calc(33.33% - 20px);
+     
+      box-sizing: border-box;
+      min-width: 0;
+      max-width: 300px;
+    }
+  
+    .discount_title {
+      font-size: 56px;
+      margin: 20px 0 20px 20px;
+    }
+  }

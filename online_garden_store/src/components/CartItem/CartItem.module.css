@@ -1,0 +1,223 @@
+.card {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    display: flex;
+    padding: 3px;
+    justify-content: space-between;
+    width: 800px;
+    margin: 10px auto;
+    position: relative;
+    align-items: stretch;
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.title {
+    position: absolute;
+    top: 20px; 
+    left: 25%;
+    font-size: 20px;
+    font-family: montserrat;
+   
+}
+
+.card svg {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.quantityPrice > p {
+    position: absolute;
+    left: 50%;
+    margin: 10px 0;
+    top: 73px;
+    font-size: 40px;
+    font-weight: 550;
+    color: rgb(66, 65, 65);
+    margin-right: 10px;
+    font-family: montserrat;
+  }
+  
+.quantityPrice > span {
+    font-size: 20px; 
+    color: #8B8B8B;
+    text-decoration: line-through; 
+    position: absolute;
+    left: 70%;
+    margin: 10px 0;
+    top: 90px;
+    margin-left: -60px;
+    
+}
+
+  .quantityControls{
+    position: absolute;
+    left: 25%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 70px;
+
+  }
+  .quantityControls > div:first-child{
+    outline: 1px solid lightgray;
+    padding: 0 18px ;
+    border-radius: 5px;
+    font-size: 40px;
+    font-family: montserrat;  
+    font-weight: 200;
+
+  }
+
+  .quantityControls > p {
+    padding: 0 15px ;
+    font-size: 20px;
+    font-family: montserrat;
+    box-sizing: border-box;
+    font-weight: 550;
+    padding: 0 30px;
+    padding-top: 15px;
+
+  }
+
+  .quantityControls > div:last-child{
+    outline: 1px solid lightgray;
+    padding: 0 15px ;
+    border-radius: 5px;
+    font-size: 40px;
+    font-family: montserrat;
+    font-weight: 200;
+
+  }
+
+
+@media (max-width: 480px){
+    .card {
+        width: 440px;
+        /* height: 175px; */
+    }
+    .card img {
+        width: 210px;
+        height: 175px;
+    }
+    .details {
+        flex-direction: column;
+        width: 210px;
+        min-height: 175px;
+    }
+    .title {
+        position: relative;
+        left: 0;
+        font-size: 18px;
+        top: 0;
+        width: 154px;
+    }
+    .quantityControls {
+        position: relative;
+        padding: 0;
+        width: 164px;
+        height: 47px;
+        left: 0;
+        margin-top: 5px;
+        justify-content: center;
+    }
+    .quantityPrice {
+        position: relative;  
+        flex-direction: column;
+    }
+    .quantityPrice p {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .quantityPrice span {
+        margin: 0;
+        left: 50%;
+    }
+    .quantityControls div:first-child {
+        width: 43px;
+        height: 44px;
+    }
+    .quantityControls p {
+        height: 47px;
+        padding-top: 10px;
+    }
+    .quantityControls div:nth-child(3) {
+        width: 43px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 360px) {
+    .card {
+        width: 320px;
+    }
+    .card img {
+        width: 116px;
+    }
+    .details {
+        width: 184px;
+    }
+    .quantityPrice > span{
+        margin-top: -10px;
+        margin-left: 5px;
+    }
+}
+
+
+  @media (max-width: 768px) and (min-width: 481px){
+    .card {
+     width: 728px;
+    }
+    .quantityPrice > span{
+        margin-left: -30px;
+    }
+  }
+
+  @media (max-width: 1000px) and (min-width: 769px){
+    .details {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 470px;
+        width: auto;
+        min-height: 192px;
+        gap: 10px;
+    }
+    .card img {
+        height: auto;
+    }
+    .title {
+        position: relative;
+        left: 0;
+        top: 5px;
+        margin-right: 25px;
+    }
+    .quantityControls {
+        position: relative;
+        left: 0;
+        margin: 0;
+        width: max-content;
+    }
+    .quantityPrice > p {
+        position: relative;
+        top: 0;
+        left: 0;
+
+    }
+    .quantityPrice {
+    flex-direction: column;
+    }
+    .quantityPrice > span {
+        margin-top: 57px;
+        margin-left: -50px;
+    }
+
+  }

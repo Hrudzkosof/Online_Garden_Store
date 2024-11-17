@@ -1,0 +1,124 @@
+.discountProductsCards {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.cards {
+    width: 100%; 
+    max-width: 300px; 
+    margin: 10px; 
+    overflow: hidden; 
+    border: 1px solid lightgrey; 
+    border-radius: 8px; /* Rounded corners */
+    flex-direction: column; /* Stack elements vertically */
+    display: flex; /* Use flexbox */
+    height: 350px; /* Fixed card height */
+    background-color: white; /* White background */
+    position: relative; /* Relative positioning */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    padding-bottom: 10px; /* Padding at bottom */
+    text-align: left; /* Left align text */
+    
+}
+
+.discountProductImg {
+    width: 100%; /* Full width image */
+    height: 250px; /* Fixed image height */
+    object-fit: contain; /* Contain image */
+    border-bottom: 1px solid lightgrey; /* Border below image */
+}
+
+.discountProductTitle {
+    white-space: nowrap; /* Prevent title wrap */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Show ellipsis for overflow */
+    width: 100%; /* Full width title */
+    display: block; /* Block element */
+    padding: 10px; /* Padding around title */
+    font-family: montserrat; /* Font family */
+    margin-left: 10px; /* Left margin */
+}
+
+.discounProductDisPrice {
+    font-size: 28px; /* Larger discount price */
+    color: rgb(66, 65, 65); /* Text color */
+    margin-top: 0; /* Remove top margin */
+    padding-bottom: 5px; /* Bottom padding */
+    font-weight: 550; /* Font weight */
+    margin: 0 19px; /* Horizontal margin */
+    font-family: montserrat; /* Font family */
+}
+
+.discountProductPrice {
+    text-decoration: line-through; /* Strikethrough price */
+    color: grey; /* Grey color */
+    font-size: 18px; /* Smaller font size */
+    padding: 3px; /* Padding around price */
+    font-family: montserrat; /* Font family */
+    font-weight: 400; /* Regular font weight */
+}
+
+.cards:hover {
+    transform: scale(1.05); /* Scale on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.discountProductDisPercentage {
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Position from top */
+    right: 10px; /* Position from right */
+    background-color: #F26D22; /* Orange background */
+    color: white; /* White text */
+    font-weight: bold; /* Bold font */
+    padding: 5px; /* Padding around percentage */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.discountProductsCards a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Black link color */
+}
+
+@media (max-width: 768px) and (min-width: 481px){
+    .cards {
+        max-width: 350px;
+        margin: 0; 
+    }
+    .discountProductsCards {
+        padding-left: 10px;
+    }
+    
+}
+
+@media (max-width: 480px){
+    .cards {
+        width: 210px; /* Smaller card width */
+        height: 358px; /* Adjust height */
+        gap: 20px; /* Set gap */
+        padding: 0; /* No padding */
+    }
+    .discountProductsCards {
+        padding: 0; /* Remove padding */
+        justify-content: center; /* Center content */
+    }
+}
+
+@media (max-width: 360px) {
+    .cards   {
+        width: 320px;
+        max-width: 320px;
+        margin-left: 20px;
+    }
+}
+@media (max-width: 1000px) and (min-width: 769px){
+    .discountProductsCards {
+        padding: 0;
+    }
+    .cards {
+        margin: 0;
+    }
+}

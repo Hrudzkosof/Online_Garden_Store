@@ -1,0 +1,149 @@
+.container {
+    background-color: #FFFFF1; 
+    padding: 20px;
+  }
+  
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 50px; 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700; 
+    color: #424436; 
+    letter-spacing: 2px; 
+    padding: 10px; 
+    margin-left: -23px; 
+  }
+  
+  .line {
+    flex-grow: 1; 
+    height: 2px; 
+    background-color: lightgrey; 
+    margin-left: 15px; 
+    margin-right: 0; 
+  }
+  
+  .rectangle {
+    border: 1px solid #DDDDDD; 
+    padding: 5px; 
+    border-radius: 5px; 
+    background-color: transparent; 
+  }
+  
+  .rectangleText {
+    color: gray; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    padding: 5px; 
+  }
+  
+  .rectangleText:hover {
+    color: gray; 
+    text-decoration: none; 
+    background-color: transparent; 
+  }
+  
+  .categoriesList {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    gap: 10px; 
+  }
+  
+  .allCategoriesLink {
+    color: gray; 
+    text-decoration: none; 
+    background: transparent; 
+    border: none; 
+    font-size: 1rem;
+    padding: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+  }
+  
+  .allCategoriesLink:hover {
+    color: gray; 
+    text-decoration: none; 
+    background: transparent; 
+  }
+
+@media (max-width: 768px) and (min-width: 481px){
+  .container{
+    background-color: #FFFFF1; 
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: -8px;
+  }
+  .categoriesList {
+    width: 728px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    background-color: #FFFFF1; 
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categoriesList {
+    width: 440px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+  }
+
+}
+@media (max-width: 360px){
+  .categoriesList {
+    grid-template-columns: auto;
+    width: 320px;
+  }
+
+
+}
+@media (max-width: 360px){
+  .categoriesList {
+    grid-template-columns: auto;
+    width: 320px;
+  }
+
+
+}
+
+@media (max-width: 1000px) and (min-width: 769px){
+  .container {
+  grid-template-columns: 1fr; 
+    
+
+  .categoriesList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 8px; 
+  }
+  .categoriesListMain {
+    display: flex;
+  }
+
+  .title {
+    font-size: 30px; 
+  }
+
+  .rectangleText {
+    font-size: 0.9rem; 
+  }
+  }
+  
+}

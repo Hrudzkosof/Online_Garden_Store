@@ -1,0 +1,230 @@
+.main_page {
+  background-color: #fffff1;
+  padding: 0;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #424436;
+  padding-left: 25px;
+  font-family: montserrat;
+  line-height: 70.4px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: lightgrey;
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.rectangleText {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 300;
+  font-size: 15px;
+  color: lightgrey;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 23px;
+}
+
+.sales_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.sale_text {
+  font-size: 50px;
+  font-weight: bold;
+  color: #424436;
+  padding-left: 25px;
+  font-family: montserrat;
+  line-height: 70.4px;
+}
+
+.separator {
+  flex-grow: 1;
+  height: 2px;
+  background-color: lightgrey;
+  margin-left: 15px;
+  margin-right: 0;
+}
+
+.main_page a.rectangleText {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  font-size: 15px;
+  color: lightgray;
+}
+
+.all_sales_link {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 28px;
+}
+.media_360 {
+  display: none;
+}
+.categories_media_360 {
+  display: none;
+}
+.sale_madia_360 {
+  display: none;
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  .headerContainer {
+    margin-top: 40px;
+  }
+
+  .title {
+    font-size: 50px;
+    line-height: 61.6px;
+    /* margin: 5px; */
+  }
+  .rectangleText {
+    margin-right: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    padding: 0 20px;
+  }
+
+  .title {
+    font-size: 48px;
+    color: #424436;
+    padding-left: 0px;
+    font-family: Montserrat;
+    font-weight: 700px;
+    line-height: 52.8px;
+    text-align: left;
+    margin-left: 0;
+    width: auto;
+    margin: 0;
+  }
+
+  .rectangleText {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 15px;
+    color: lightgrey;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 0;
+  }
+  .all_sales_link {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .rectangleText {
+    display: none;
+  }
+  .all_sales_link {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
+  .separator {
+    display: none;
+  }
+  .categories_media_360 {
+    display: flex;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #8b8b8b;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    width: 145px;
+    height: 42px;
+    text-align: center;
+    align-items: center;
+    margin-left: 110px;
+    justify-content: center;
+  }
+  .sale_madia_360 {
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    color: #8b8b8b;
+    text-decoration: none;
+    cursor: pointer;
+    width: 145px;
+    height: 42px;
+    align-items: center;
+    margin-left: 110px;
+    justify-content: center;
+    display: flex;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 769px) {
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+    /* padding: 0 20px; */
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #424436;
+    font-family: Montserrat;
+    line-height: 50px;
+    padding-left: 10px;
+  }
+
+  .line {
+    flex-grow: 1;
+    height: 1.5px;
+    background-color: lightgrey;
+    margin: 0 15px;
+  }
+
+  .rectangleText {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: lightgrey;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 10px;
+    /* margin-left: 10px;
+        margin-right: 28px;  */
+  }
+}
