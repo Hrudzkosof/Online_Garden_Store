@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <div className={[s.header, menuActive ? s.active : ''].join(' ')}>
-      <div className={s.wrapper}> {/* Wrapper for centering and layout*/}
+      <div className="wrapper"> {/* Wrapper for centering and layout*/}
           <Link to='/'> {/* Logo link to homepage */}
               <img src={logo} alt="LOGO" className={s.logo} />
           </Link>
