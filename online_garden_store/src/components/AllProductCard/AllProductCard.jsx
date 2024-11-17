@@ -36,7 +36,7 @@ export default function AllProductCard({ id, image, title, price, discont_price 
         </div>
       </Link>
         {/* Button to add product to cart */}
-      <AddToCartButton product={{ id, image, title, price }} />
+      <AddToCartButton product={{ id, image, title, price, discont_price }} />
     </div>
     </div>
   );
