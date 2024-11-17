@@ -39,7 +39,6 @@
 .filter_form input[type="text"] {
   width: 112px;
   height: 36px;
-  /* padding: 8px 16px 8px 16px; */
   gap: 10px;
   border-radius: 6px;
   border: 1px solid #dddddd;
@@ -57,12 +56,6 @@
     color: #8B8B8B;
 
 }
-
-  .checkbox_container {
-    /* display: flex; */
-    /* position: relative; */
-    /* align-items: center; */
-  }
   
   input[type="checkbox"] {
    display: none;
@@ -72,7 +65,6 @@
     display: inline-block;
     width: 36px;
     height: 36px;
-    /* padding: 8px 8px 8px 16px; */
     border-radius: 6px;
     border: 1px solid #DDDDDD;
     margin: 20px;
@@ -88,7 +80,7 @@
   
   input[type="checkbox"]:checked + .checkmark {
     background-color: #6c5ce7;
-    border-color: #6c5ce7; /* Цвет границы при активном состоянии */
+    border-color: #6c5ce7; 
   }
   .checkmark::after {
     content: '';
@@ -100,7 +92,7 @@
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
-    display: none; /* Скрыта по умолчанию */
+    display: none;
   }
 
   input[type="checkbox"]:checked + .checkmark::after {

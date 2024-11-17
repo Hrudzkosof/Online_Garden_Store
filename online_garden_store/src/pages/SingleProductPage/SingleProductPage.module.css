@@ -533,6 +533,7 @@
     .price_single_product p:nth-child(2) {
         font-size: 32px;
         text-decoration: line-through;
+        margin-top: -5px;
     }
 
     .price_single_product > span {

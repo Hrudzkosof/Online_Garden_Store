@@ -1,18 +1,18 @@
 .discountProductsContainer {
-    height: 1400px; /* Set fixed height */
-    background-color: #fffff1; /* Light background color */
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
-    grid-template-rows: repeat(6, 1fr); /* 6 equal-height rows */
+    height: 1400px; 
+    background-color: #fffff1; 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(6, 1fr); 
 }
 
 h1 {
-    font-family: Montserrat; /* Font family for header */
-    font-size: 64px; /* Large font size */
-    font-weight: 700; /* Bold font weight */
-    text-align: left; /* Align text left */
-    margin: 0 30px; /* Horizontal margins */
-    color: #424436; /* Dark grey color */
+    font-family: Montserrat; 
+    font-size: 64px; 
+    font-weight: 700; 
+    text-align: left; 
+    margin: 0 30px; 
+    color: #424436; 
 }
 
 
@@ -32,19 +32,19 @@ h1 {
     }
 
 }
-@media (max-width: 480px) { /* For small screens */
+@media (max-width: 480px) { 
     .discountProductsContainer {
-      background-color: #FFFFF1; /* Lighter background for mobile */
-      padding: 20px; /* Add padding */
-      display: grid; /* Grid layout for mobile */
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
-      padding: 0; /* Remove extra padding */
-      height: auto; /* Set auto height */
+      background-color: #FFFFF1; 
+      padding: 20px; 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      padding: 0; 
+      height: auto; 
     }
     h1 {
-        font-size: 48px; /* Smaller font size */
-        line-height: 52.8px; /* Adjust line height */
-        margin: 40px 0 20px 20px; /* Adjust margins */
+        font-size: 48px; 
+        line-height: 52.8px; 
+        margin: 40px 0 20px 20px; 
     }
 }
 
@@ -74,7 +74,7 @@ h1 {
   
     .discountProductsContainer > div {
       flex: 1 1 calc(33.33% - 20px);
-      /* margin-bottom: 20px; */
+     
       box-sizing: border-box;
       min-width: 0;
       max-width: 300px;

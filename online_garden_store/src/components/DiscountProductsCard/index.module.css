@@ -1,17 +1,17 @@
 .discountProductsCards {
-    display: flex; /* Use flexbox layout */
-    flex-wrap: wrap; /* Wrap flex items */
-    justify-content: space-between; /* Space between items */
-    gap: 20px; /* Gap between items */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 20px; 
     padding: 20px; 
 }
 
 .cards {
-    width: 100%; /* Full width */
-    max-width: 300px; /* Maximum width */
+    width: 100%; 
+    max-width: 300px; 
     margin: 10px; 
-    overflow: hidden; /* Hide overflow content */
-    border: 1px solid lightgrey; /* Border around card */
+    overflow: hidden; 
+    border: 1px solid lightgrey; 
     border-radius: 8px; /* Rounded corners */
     flex-direction: column; /* Stack elements vertically */
     display: flex; /* Use flexbox */
@@ -21,6 +21,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
     padding-bottom: 10px; /* Padding at bottom */
     text-align: left; /* Left align text */
+    
 }
 
 .discountProductImg {
