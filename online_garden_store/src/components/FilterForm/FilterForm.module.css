@@ -23,6 +23,18 @@
     width: 200px;
     margin-right: 15px;
 }
+.label_check {
+    display: flex;
+    align-items: center;
+    height: 26px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: left;
+    color: #424436;
+    margin-bottom: 5px;
+}
 
 .filter_form input[type="text"] {
   width: 112px;
@@ -47,9 +59,9 @@
 }
 
   .checkbox_container {
-    display: flex;
-    position: relative;
-    align-items: center;
+    /* display: flex; */
+    /* position: relative; */
+    /* align-items: center; */
   }
   
   input[type="checkbox"] {
@@ -63,7 +75,8 @@
     /* padding: 8px 8px 8px 16px; */
     border-radius: 6px;
     border: 1px solid #DDDDDD;
-    margin: 5px;
+    margin: 20px;
+    margin-bottom: 20px;
     background: #ffffff;
     position: relative;
     cursor: pointer;
@@ -119,7 +132,7 @@
     background: #ffffff;
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) and (min-width: 481px){
     .filter_form {
       display: flex;
       flex-direction: column;
@@ -182,7 +195,9 @@
       display: flex;
       flex-direction: column; 
     }
-
+    .first_row {
+        align-items: baseline;
+    }
    
     .filter_form input[type="text"] {
       width: 30%;
@@ -207,6 +222,12 @@
       margin-top: 0; 
       margin-left: -130px;
   }
+  }
+  @media (max-width: 1000px) and (min-width: 769px){
+    .filter_form {
+        padding-left: 0;
+        margin: 20px;
+    }
   }
 
 

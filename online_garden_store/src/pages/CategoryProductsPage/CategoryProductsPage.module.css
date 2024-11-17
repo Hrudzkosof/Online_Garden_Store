@@ -17,7 +17,21 @@
   max-width: 300px;
 }
 
-
+@media (max-width: 768px) and (min-width: 481px) {
+    .productsContainer {
+        width: 728px;
+        margin: 0;
+        justify-content: space-around;
+    }
+    .cards_container {
+        width: 354px;
+        max-width: 354px;
+    }
+    .productWrapper {
+        margin: 8px;
+        margin-left: 0;
+    }
+}
 
 @media (max-width: 480px) {
   .productsContainer {
@@ -41,7 +55,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 769px) {
     .productsContainer {
         display: flex;
         flex-wrap: wrap; 
@@ -50,7 +64,7 @@
 
     .productWrapper {
         width: 45%; 
-        max-width: 250px; 
+        /* max-width: 250px;  */
         margin: 10px;
     }
 

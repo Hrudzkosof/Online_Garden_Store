@@ -6,7 +6,7 @@
   color: #424436;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 481px){
     .title h1 {
         font-size: 56px;
         line-height: 61.6px; 
@@ -18,5 +18,10 @@
         font-size: 48px;
         line-height: 52.8px; 
         margin: 40px 0 20px 20px;
+    }
+}
+@media (max-width: 1000px) and (min-width: 769px){
+    .title h1 {
+        margin-left: 20px;
     }
 }

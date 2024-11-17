@@ -7,11 +7,12 @@
     max-width: 100%;
     padding: 10px;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 481px){
     .products_container {
         grid-template-columns: repeat(2, 1fr);
         padding-bottom: 0;
-        gap: 5px;
+        /* gap: 5px; */
+        margin-left: 10px;
     }
 
 }
@@ -27,5 +28,13 @@
     .products_container {
         grid-template-columns: auto;
         padding: 0;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 769px){
+    .products_container {
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 0;
+        gap: 0;
     }
 }

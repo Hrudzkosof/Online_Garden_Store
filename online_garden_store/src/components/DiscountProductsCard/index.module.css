@@ -3,13 +3,13 @@
     flex-wrap: wrap; /* Wrap flex items */
     justify-content: space-between; /* Space between items */
     gap: 20px; /* Gap between items */
-    padding: 20px; /* Add padding */
+    padding: 20px; 
 }
 
 .cards {
     width: 100%; /* Full width */
     max-width: 300px; /* Maximum width */
-    margin: 10px; /* Margin around card */
+    margin: 10px; 
     overflow: hidden; /* Hide overflow content */
     border: 1px solid lightgrey; /* Border around card */
     border-radius: 8px; /* Rounded corners */
@@ -82,11 +82,13 @@
     color: black; /* Black link color */
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 481px){
     .cards {
-        max-width: 338px;
-        margin: 0;
-        
+        max-width: 350px;
+        margin: 0; 
+    }
+    .discountProductsCards {
+        padding-left: 10px;
     }
     
 }
@@ -109,5 +111,13 @@
         width: 320px;
         max-width: 320px;
         margin-left: 20px;
+    }
+}
+@media (max-width: 1000px) and (min-width: 769px){
+    .discountProductsCards {
+        padding: 0;
+    }
+    .cards {
+        margin: 0;
     }
 }

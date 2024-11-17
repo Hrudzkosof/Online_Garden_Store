@@ -38,6 +38,7 @@
     justify-content: center; /* Center horizontally */
     cursor: pointer; /* Pointer cursor */
     margin: 20px 30px; /* Button margin */
+    text-decoration: none;
 }
 
 h1 {
@@ -69,7 +70,7 @@ h1 {
 } */
 
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 481px){
     .amazingDiscountImg {
         width: 100vw; /* Займёт всю ширину экрана */
         height: calc(100vw * (634 / 768)); /* Сохраняет соотношение высоты 634px к ширине 768px */
@@ -100,40 +101,38 @@ h1 {
 @media (max-width: 480px) {
 
     .amazingDiscountImg {
-        width: 100vw;  /* Займёт всю ширину экрана */
-        max-width: 100vw;  /* Не выходит за ширину экрана */
-        height: 600px;  /* Уменьшенная высота для компактности */
+        width: 100vw;  
+        max-width: 100vw;  
+        height: 600px; 
         background-repeat: no-repeat;
         background-size: cover; 
         background-position: center; 
         background-image: url(./imgDiscount.png);
-        margin: 0 auto;  /* Центрирует по горизонтали */
-        /* padding: 0 15px;   */
+        margin: 0 auto;  
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
-        /* justify-content: center; */
         overflow: hidden;
     }
     .amazingDiscountH {
         font-family: Montserrat, sans-serif;
-        font-size: 60px;  /* Уменьшенный размер заголовка */
+        font-size: 60px; 
         font-weight: 700;
-        line-height: 66px;  /* Уменьшенная высота строки */
+        line-height: 66px;  
         text-align: left;
         color: #FFFFFF;
         max-width: 90%;  
-        /* margin: 0 auto; */
-        margin-left: 0;
-        font-family: Montserrat;
+        margin: 0 auto;
+        margin-left: 20px;
+        
 
     }
 
     .amazingDiscountButton {
-        font-size: 14px; /* Decrease font size */
-        height: 40px; /* Adjust button height */
-        width: 150px; /* Adjust button width */
-        margin-top: 10px; /* Adjust margin */
+        font-size: 14px; 
+        height: 40px; 
+        width: 150px; 
+        margin-top: 20px;
+        margin-left: 20px;
     }
 
     .discountText {
@@ -141,30 +140,23 @@ h1 {
         text-align: left; /* Align text to left */
     }
 
-    /* .leer {
-        width: 100%;
-        max-width: 90%;
-        height: 50px;  
-        background-color: rgba(0, 0, 0, 0.3); 
-        margin: 0 auto;
-    }  */
-
-    @media (max-width: 1000px) {
+}
+    @media (max-width: 1000px) and (min-width: 769px) {
 
         .amazingDiscountImg {
-            width: 95vw;  
-            height: auto;  
-            max-width: 95vw;  
-            min-height: 400px;  
+            width: 100vh;  
+            /* height: auto;   */
+            max-width: 100vw;  
+            /* height: 400px;   */
             background-repeat: no-repeat;
-            background-size: contain; 
+            /* background-size: contain;  */
             background-position: center;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
-    
+
         .amazingDiscountH {
             font-family: Montserrat, sans-serif;
             font-size: 50px; 
@@ -203,8 +195,7 @@ h1 {
         .leer {
             width: 100%;
             height: 50px; 
-            background-color: rgba(0, 0, 0, 0.3);
+            /* background-color: rgba(0, 0, 0, 0.3); */
             margin: 0 auto;
         }
     }
-}

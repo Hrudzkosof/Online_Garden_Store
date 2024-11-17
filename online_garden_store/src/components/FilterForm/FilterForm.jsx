@@ -14,7 +14,10 @@ export default function FilterForm({ hideSection }) {
     // Checkbox
     const [ isChecked, setIsChecked ] = useState(false);
     const handleCheck = () => setIsChecked(!isChecked);
-    const handleClick = (e) => dispatch(getDiscountProductsAction(e.target.checked))
+    const handleClick = (e) =>{ 
+        console.log('handleClick', e.target.checked); 
+        dispatch(getDiscountProductsAction(e.target.checked));
+    }
 
     // Filtration
     const [ minValue, setMinValue ] = useState(0);
@@ -40,9 +43,9 @@ export default function FilterForm({ hideSection }) {
 
         {hideSection !== 'discountedItems' && (
             <div className={s.checkbox_container}>
-                <label className={s.label}>Discounted items</label>
+                <label className={s.label_check}>Discounted items
                 <input type="checkbox" checked={isChecked} onChange={handleCheck} onClick={handleClick} />
-                <span className={s.checkmark}></span>
+                <span className={s.checkmark}></span></label>
             </div>
         )}
     </div>

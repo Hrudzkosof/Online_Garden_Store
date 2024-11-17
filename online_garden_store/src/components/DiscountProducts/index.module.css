@@ -16,7 +16,7 @@ h1 {
 }
 
 
-@media (max-width: 768px){
+@media (max-width: 768px) and (min-width: 481px){
     .discountProductsContainer{
         height: auto;
         display: grid;
@@ -60,7 +60,7 @@ h1 {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 769px){
     .discountProductsContainer {
       display: flex;
       flex-wrap: wrap;
@@ -74,12 +74,13 @@ h1 {
   
     .discountProductsContainer > div {
       flex: 1 1 calc(33.33% - 20px);
-      margin-bottom: 20px;
+      /* margin-bottom: 20px; */
       box-sizing: border-box;
       min-width: 0;
+      max-width: 300px;
     }
   
-    h1 {
+    .discount_title {
       font-size: 56px;
       margin: 20px 0 20px 20px;
     }
