@@ -7,9 +7,15 @@ export default function AddToCartButton({ product }) {
     const dispatch = useDispatch();
     const [isClicked, setIsClicked] = useState(false); // State to track if the button has been clicked
 
+
     // Function to handle button click
     const handleClick = () => {      
         // Dispatch action to add the product to the cart with a count of 1
+
+                                     // Function to handle button click
+    const handleClick = () => {  
+            // Dispatch action to add the product to the cart with a count of 1
+
         dispatch(addProductToCartAction({ ...product, count: 1 }));
         setIsClicked(true); // Set the state to "clicked" to change the button style
     };

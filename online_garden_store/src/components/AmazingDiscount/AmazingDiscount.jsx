@@ -1,7 +1,7 @@
-import React, { useState } from 'react'; // Import React and hooks
-import { Link } from 'react-router-dom'; // Import Link component
-import DiscountProducts from '../DiscountProducts/DiscountProducts'; // Import discount component
-import s from './index.module.css'; // Import CSS module styles
+import React, { useState } from 'react'; 
+import { Link } from 'react-router-dom'; 
+import DiscountProducts from '../DiscountProducts/DiscountProducts'; 
+import s from './index.module.css'; 
 
 export default function AmazingDiscount() {
   const [showDiscountProducts, setShowDiscountProducts] = useState(false) // Manage discount visibility state
