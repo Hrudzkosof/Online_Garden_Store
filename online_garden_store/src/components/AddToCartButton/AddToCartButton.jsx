@@ -9,9 +9,7 @@ export default function AddToCartButton({ product }) {
 
 
     // Function to handle button click
-    const handleClick = () => {      
-        // Dispatch action to add the product to the cart with a count of 1
-
+   
                                      // Function to handle button click
     const handleClick = () => {  
             // Dispatch action to add the product to the cart with a count of 1
