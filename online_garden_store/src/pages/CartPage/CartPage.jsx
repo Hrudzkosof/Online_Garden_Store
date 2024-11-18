@@ -9,8 +9,7 @@ import OrderForm from '../../OrderForm/OrderForm'
 export default function CartPage() {
 
   const cartState = useSelector(store => store.cart)
-  console.log(cartState)
-
+  
   const totalCount = cartState.reduce((acc, el) => acc + el.count, 0);
   const totalSum = cartState.reduce((acc, el) => acc + (el.discont_price ? el.discont_price * el.count : el.price * el.count), 0).toFixed(2)
 

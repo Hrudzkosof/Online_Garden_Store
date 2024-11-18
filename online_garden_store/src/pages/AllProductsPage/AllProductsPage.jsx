@@ -2,10 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import AllProductsContainer from '../../components/AllProductsContainer/AllProductsContainer';
 import { showAllProducts } from '../../requests/products';
-
 import FilterForm from '../../components/FilterForm/FilterForm';
-
-  
 import s from './AllProductsPage.module.css'
 import Footer from '../../components/Footer/Footer';
 

@@ -1,3 +1,4 @@
+import { domain } from '../../domain';
 import React from 'react'
 import s from './SalesProductCard.module.css'
 import { Link } from 'react-router-dom';
@@ -16,7 +17,7 @@ export default function SalesProductCard({id, title, price, discont_price, image
       
       {/* Link to the product detail page / Ссылка на страницу с деталями продукта */}
       <Link to={`/products/${id}`}>
-      <img src={`http://localhost:3333${image}`} alt={title} />
+      <img src={`${domain}${image}`} alt={title} />
       </Link>
 
       <div>

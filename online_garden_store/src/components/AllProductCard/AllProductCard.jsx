@@ -1,3 +1,4 @@
+import { domain } from '../../domain';
 import React from 'react';
 import s from './AllProductCard.module.css';
 import { Link } from 'react-router-dom';
@@ -20,7 +21,7 @@ export default function AllProductCard({ id, image, title, price, discont_price 
 
       {/*Link to navigate to product's detailed page */}
       <Link to={`/products/${id}`}>
-        <img src={`http://localhost:3333${image}`} alt={title} />
+        <img src={`${domain}${image}`} alt={title} />
         <div>
           <p className={s.card_title}>{title}</p>
           <div className={s.prices}>
