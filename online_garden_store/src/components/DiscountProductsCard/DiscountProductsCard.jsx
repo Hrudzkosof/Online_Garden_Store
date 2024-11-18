@@ -1,3 +1,4 @@
+import { domain } from '../../domain';
 import React from 'react'; // Import React library
 import { Link } from 'react-router-dom'; // Import Link component for routing
 import s from './index.module.css'; // Import CSS module styles
@@ -13,7 +14,7 @@ export default function DiscountProductsCard({ id, title, price, discont_price, 
     <div className={s.discountProductsCards}>  {/*Main card container*/}
         <div className={s.cards}>  {/*Individual card wrapper*/}
           <Link to={`/products/${id}`}>  {/*Link to individual product page*/}
-            <img className={s.discountProductImg} src={`http://localhost:3333${image}`} alt={title}/>  {/*Product image*/}
+            <img className={s.discountProductImg} src={`${domain}${image}`} alt={title}/>  {/*Product image*/}
             <p className={s.discountProductTitle}>{title}</p>  {/*Product title*/}
             <p className={s.discounProductDisPrice}>${discont_price}<span className={s.discountProductPrice}>${price}</span></p>  {/*Product prices*/}
             <p className={s.discountProductDisPercentage}>{discountPercentage} %</p>  {/*Discount percentage*/}

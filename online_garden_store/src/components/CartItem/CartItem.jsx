@@ -1,3 +1,4 @@
+import { domain } from '../../domain';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { decrementCountAction, deleteProductFromCartAction, incrementCountAction } from '../../store/cartReducer';
@@ -30,7 +31,7 @@ export default function CartItem({ id, title, image, price, discont_price, count
   return (
     <div className={s.card}>
       <div>
-        <img src={`http://localhost:3333${image}`} alt={title} />
+        <img src={`${domain}${image}`} alt={title} />
       </div>
 
       <div className={s.details}>

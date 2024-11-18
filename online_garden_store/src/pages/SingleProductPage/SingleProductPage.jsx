@@ -6,6 +6,7 @@ import { Context } from '../../context';
 import { getSingleProduct } from '../../requests/products';
 import { addProductToCartAction } from '../../store/cartReducer';
 import s from './SingleProductPage.module.css';
+import { domain } from '../../domain';
 
 export default function SingleProductPage() {
 
@@ -51,7 +52,7 @@ export default function SingleProductPage() {
           ? 'Product info is loading' 
           : <div className={s.single_product_card}>
                 <div>
-                    <img src={`http://localhost:3333${image}`} alt={title} />
+                    <img src={`${domain}${image}`} alt={title} />
                             
                         <div className={s.product_page}>
                             <div>
